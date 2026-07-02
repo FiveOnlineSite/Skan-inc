@@ -1,4 +1,4 @@
-<?php if (!defined('SITE_ROOT')) define('SITE_ROOT', '/Skan-codex'); ?>
+<?php if (!defined('SITE_ROOT')) define('SITE_ROOT', '/skaninc'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
