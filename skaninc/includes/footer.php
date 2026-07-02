@@ -23,7 +23,7 @@
         <h4>Products</h4>
         <a href="#">Fogging Machine</a>
         <a href="#">Mosquito Fogging Machine</a>
-        <a href="#">Clean Room Equipment</a>
+        <a href="<?php echo SITE_ROOT; ?>/fogging-machine-decontamination.php">Fogging Machine & Decontamination</a>
         <a href="#">Disinfectant &amp; Chemicals</a>
         <a href="#">Disposables</a>
       </div>

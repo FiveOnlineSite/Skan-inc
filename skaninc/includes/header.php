@@ -1,4 +1,4 @@
-<?php if (!defined('SITE_ROOT')) define('SITE_ROOT', '/Skan-inc'); ?>
+<?php if (!defined('SITE_ROOT')) define('SITE_ROOT', '/Skan-codex'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,11 +53,11 @@
                   </div>
                   <h5>Mosquito Fogging Machine</h5>
                 </a>
-                <a href="#" class="mega-menu-card">
+                <a href="<?php echo SITE_ROOT; ?>/fogging-machine-decontamination.php" class="mega-menu-card">
                   <div class="mega-menu-img">
-                    <img src="<?php echo SITE_ROOT; ?>/images/product-cleanroom.jpg" alt="Clean Room Equipment">
+                    <img src="<?php echo SITE_ROOT; ?>/images/product-cleanroom.jpg" alt="Fogging Machine & Decontamination">
                   </div>
-                  <h5>Clean Room Equipment</h5>
+                  <h5>Fogging Machine & Decontamination</h5>
                 </a>
                 <a href="#" class="mega-menu-card">
                   <div class="mega-menu-img">

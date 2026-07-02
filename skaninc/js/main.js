@@ -204,6 +204,33 @@ document.addEventListener('DOMContentLoaded', function () {
     goToPage(Math.min(currentPage, getTotalPages() - 1));
   });
 
+  // ── Product Category Tabs ──
+  var tabButtons = document.querySelectorAll('.tab-btn');
+  if (tabButtons.length) {
+    tabButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.dataset.tabTarget;
+
+        tabButtons.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        document.querySelectorAll('.tab-panel').forEach(function (panel) {
+          var isTarget = panel.id === target;
+          panel.classList.toggle('active', isTarget);
+          if (isTarget) {
+            panel.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+              el.classList.add('visible');
+            });
+          }
+        });
+      });
+    });
+  }
+
   // ── Scroll Animations ──
   var animateElements = document.querySelectorAll('.animate-on-scroll');
 
