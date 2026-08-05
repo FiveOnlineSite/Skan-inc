@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Arrow Icon Container" clip-path="url(#clip0_0_23)">
+<circle id="Ellipse 8" cx="14" cy="14" r="14" fill="var(--fill-0, white)"/>
+<g id="arrow-right-up-line">
+<path id="Vector" d="M17.3364 11.8452L10.1643 19.0173L8.98576 17.8388L16.1579 10.6667H9.83644V9H19.0031V18.1667H17.3364V11.8452Z" fill="var(--fill-0, black)"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_23">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
