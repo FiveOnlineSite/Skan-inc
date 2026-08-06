@@ -1251,11 +1251,21 @@ img {
 /* ── Purpose-Built Solutions list ── */
 
 .product-list {
-  padding: 60px 0 80px;
+  padding: 24px 0;
 }
 
 .product-list.pb-0 {
   padding-bottom: 24px;
+}
+
+section.fogging-page-section,
+.fogging-testimonials .testimonials {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.product-list.compact-table-spacing {
+  padding-bottom: 0;
 }
 
 .product-list-inner {
@@ -1287,6 +1297,10 @@ img {
 }
 
 .product-row.no-bottom-divider {
+  border-bottom: none;
+}
+
+.product-row:has(+ .comparison) {
   border-bottom: none;
 }
 
@@ -1477,6 +1491,14 @@ img {
 
 .tab-panel .comparison {
   padding-bottom: 80px;
+}
+
+#air-handling-units-ahu .comparison,
+#surgeon-control-panels .comparison,
+#pass-boxes .comparison,
+#air-showers-tunnels .comparison,
+#equipment-accessories .comparison {
+  padding-bottom: 40;
 }
 
 .comparison-inner {

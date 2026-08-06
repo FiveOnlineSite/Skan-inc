@@ -114,7 +114,7 @@ $comparisonRows = [
 </section>
 
 <!-- Intro -->
-<section class="product-intro">
+<section class="product-intro fogging-page-section">
   <div class="product-intro-inner animate-on-scroll">
     <h2>What is Fogging Machine & Decontamination</h2>
     <p>Fogging Machine or Fumigation machine are equipment that are used to eradicate, germs, pests and other harmful
@@ -130,7 +130,7 @@ $comparisonRows = [
 </section>
 
 <!-- Tabs -->
-<section class="product-list pb-0">
+<section class="product-list pb-0 fogging-page-section">
   <div class="product-list-inner">
     <h2 class="animate-on-scroll">Purpose-Built Solutions in this Category</h2>
 
@@ -185,7 +185,7 @@ $comparisonRows = [
 
 <!-- Testimonials Section -->
 <!-- Comparison At A Glance -->
-<section class="comparison">
+<section class="comparison fogging-page-section">
   <div class="comparison-inner">
     <h2 class="animate-on-scroll">Comparison At A Glance</h2>
 
@@ -214,6 +214,8 @@ $comparisonRows = [
   </div>
 </section>
 
-<?php include 'includes/testimonials.php'; ?>
+<div class="fogging-testimonials">
+  <?php include 'includes/testimonials.php'; ?>
+</div>
 
 <?php include 'includes/footer.php'; ?>
