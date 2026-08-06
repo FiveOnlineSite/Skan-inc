@@ -38,7 +38,7 @@ $products = [
 
   <!-- Product Hero -->
   <section class="product-hero animate-fade-up">
-    <img src="images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
+    <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
     <div class="product-hero-overlay"></div>
     <div class="product-hero-content">
       <h1><?php echo $pageTitle; ?></h1>
@@ -61,7 +61,7 @@ $products = [
       <?php foreach ($products as $index => $product): ?>
       <div class="product-row<?php echo $index % 2 === 1 ? ' reverse' : ''; ?> animate-on-scroll">
         <div class="product-row-image">
-          <img src="<?php echo $product['image']; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
+          <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
         </div>
         <div class="product-row-info">
           <h3><?php echo htmlspecialchars($product['title']); ?></h3>
@@ -74,7 +74,7 @@ $products = [
           </div>
           <a href="#" class="btn-outline">
             Download Brochure
-            <img src="images/icon-download.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
           </a>
         </div>
       </div>

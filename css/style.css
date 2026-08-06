@@ -431,7 +431,7 @@ img {
    ══════════════════════════════ */
 
 .about {
-  background: #fffffc;
+  background: #fff;
   padding: 140px 0 88px;
 }
 
@@ -487,7 +487,7 @@ img {
    ══════════════════════════════ */
 
 .products {
-  background: #fffffc;
+  background: #fff;
   padding: 60px 0 80px;
 }
 
@@ -601,8 +601,8 @@ img {
    ══════════════════════════════ */
 
 .testimonials {
-  background: #fffffc;
-  padding: 60px 0 80px;
+  background: #fff;
+  padding: 10px 0 80px;
   overflow: hidden;
 }
 
@@ -691,7 +691,6 @@ img {
   line-height: 20px;
   color: #333;
 }
-
 
 /* Exactly three testimonial cards are visible on desktop. */
 @media (min-width: 769px) {
@@ -812,7 +811,6 @@ img {
   color: #ed1c24;
 }
 
-
 .footer-category-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -866,6 +864,319 @@ img {
 }
 
 /* ══════════════════════════════
+  ABOUT US PAGE
+   ══════════════════════════════ */
+.about-page-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+.about-hero-page {
+  position: relative;
+  height: 646px;
+  overflow: hidden;
+}
+.about-hero-page > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-hero-page-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.about-hero-page h1 {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  line-height: 56px;
+  color: #fff;
+}
+.about-overview {
+  padding: 60px 0;
+}
+.about-overview-copy h2,
+.about-certificates h2,
+.about-trust > .about-page-container > h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  color: #1d1d1d;
+}
+.about-overview-copy p {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #444;
+}
+.about-milestones {
+  display: grid;
+  grid-template-columns: repeat(3, 285px);
+  justify-content: start;
+  gap: 16px;
+  margin-top: 52px;
+}
+.about-milestone {
+  min-height: 136px;
+  padding: 6px 20px;
+  border-left: 4px solid #ed1c24;
+}
+.about-milestone img,
+.about-trust-title img {
+  width: 32px;
+  height: 32px;
+}
+.about-milestone h3 {
+  margin-top: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #111;
+  white-space: nowrap;
+}
+.about-milestone p {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #444;
+  white-space: nowrap;
+}
+.about-certificates {
+  padding: 60px 0;
+  background: #fff;
+}
+.about-certificates h2,
+.about-trust > .about-page-container > h2 {
+  text-align: center;
+}
+.about-certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 180px);
+  justify-content: center;
+  align-items: center;
+  gap: 10;
+  margin-top: 48px;
+}
+.about-certificate-grid img {
+  width: 160px;
+  height: 170px;
+  object-fit: contain;
+}
+.about-mission {
+  position: relative;
+  padding: 60px 24px;
+  background: url("../images/about-mission.png") center/cover no-repeat;
+}
+.about-mission:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(3px);
+}
+.about-mission-card {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 72px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+}
+.about-mission-copy {
+  padding: 40px;
+}
+.about-mission-copy h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  color: #ed1c24;
+}
+.about-mission-copy p {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.about-mission-image {
+  min-height: 357px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.about-mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-trust {
+  padding: 60px 0;
+  background: #fff;
+}
+.about-trust-layout {
+  display: grid;
+  grid-template-columns: 1fr 385px 1fr;
+  align-items: center;
+  gap: 30px;
+  margin-top: 60px;
+}
+.about-trust-column {
+  display: grid;
+  gap: 72px;
+}
+.about-trust-item {
+  min-height: 208px;
+  padding: 24px 22px;
+  border-left: 2px solid #2e3192;
+}
+.about-trust-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.about-trust-title h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #111;
+}
+.about-trust-item p {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #444;
+}
+.about-trust-image {
+  height: 499px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.about-trust-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .about-page-container {
+    padding: 0 40px;
+  }
+  .about-hero-page {
+    height: 520px;
+  }
+  .about-certificate-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .about-certificate-grid img {
+    width: min(100%, 130px);
+    height: 140px;
+    margin: 0 auto;
+  }
+  .about-trust-layout {
+    grid-template-columns: 1fr 300px 1fr;
+  }
+  .about-mission-card {
+    gap: 32px;
+  }
+}
+@media (max-width: 900px) {
+  .about-milestones {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .about-page-container {
+    padding: 0 20px;
+  }
+  .about-hero-page {
+    height: 360px;
+  }
+  .about-hero-page h1 {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .about-overview,
+  .about-certificates,
+  .about-trust {
+    padding: 48px 0;
+  }
+  .about-overview-copy h2,
+  .about-certificates h2,
+  .about-trust > .about-page-container > h2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .about-milestones {
+    grid-template-columns: 1fr;
+    margin-top: 36px;
+  }
+  .about-certificate-grid {
+    grid-template-columns: repeat(2, minmax(120px, 180px));
+    justify-content: center;
+  }
+  .about-certificate-grid img {
+    width: 110px;
+    height: 120px;
+  }
+  .about-mission {
+    padding: 40px 20px;
+  }
+  .about-mission-card {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+  .about-mission-copy {
+    padding: 24px 8px;
+  }
+  .about-mission-image {
+    min-height: 280px;
+  }
+  .about-trust-layout {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+  .about-trust-column {
+    gap: 24px;
+  }
+  .about-trust-image {
+    grid-row: 2;
+    width: min(100%, 385px);
+    margin: 0 auto;
+  }
+  .about-trust-item {
+    min-height: 0;
+  }
+}
+@media (max-width: 480px) {
+  .about-page-container {
+    padding: 0 20px;
+  }
+  .about-hero-page {
+    height: 300px;
+  }
+  .about-certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .about-certificate-grid img {
+    width: 90px;
+    height: 100px;
+  }
+  .about-mission-copy h2 {
+    font-size: 21px;
+    line-height: 32px;
+  }
+  .about-trust-image {
+    height: 420px;
+  }
+}
+
+/* ══════════════════════════════
    PRODUCT DETAIL PAGE
    ══════════════════════════════ */
 
@@ -912,7 +1223,7 @@ img {
 /* ── Intro ("What is...") ── */
 
 .product-intro {
-  background: #fffffa;
+  background: #fff;
   padding: 60px 0;
 }
 
@@ -943,6 +1254,10 @@ img {
   padding: 60px 0 80px;
 }
 
+.product-list.pb-0 {
+  padding-bottom: 24px;
+}
+
 .product-list-inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -968,6 +1283,10 @@ img {
 }
 
 .product-row:last-child {
+  border-bottom: none;
+}
+
+.product-row.no-bottom-divider {
   border-bottom: none;
 }
 
@@ -1068,6 +1387,42 @@ img {
 
 /* ── Tabs (Product Category Tabs) ── */
 
+.tabs-click-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 auto 14px;
+  color: #555;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.tabs-click-arrow {
+  color: #ed1c24;
+  font-size: 24px;
+  font-weight: 700;
+  animation: tabArrowBounce 1.4s ease-in-out infinite;
+}
+
+@keyframes tabArrowBounce {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tabs-click-arrow {
+    animation: none;
+  }
+}
+
 .tabs-nav {
   display: flex;
   flex-wrap: wrap;
@@ -1116,8 +1471,12 @@ img {
 /* ── Comparison At A Glance ── */
 
 .comparison {
-  background: #fffffa;
+  background: #fff;
   padding: 0px 0 80px;
+}
+
+.tab-panel .comparison {
+  padding-bottom: 80px;
 }
 
 .comparison-inner {
@@ -1140,6 +1499,14 @@ img {
   overflow-x: auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
+}
+
+.comparison-note {
+  max-width: 1120px;
+  margin: 28px auto 0;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #555;
 }
 
 .comparison-table {
@@ -1660,8 +2027,8 @@ img {
    ══════════════════════════════ */
 .faq-section {
   max-width: 900px;
-  margin: 80px auto;
-  padding: 56px 48px;
+  margin: 0 auto 60px;
+  padding: 40px 48px 30px;
   background: #fff;
   border-radius: 16px;
 }
@@ -1682,7 +2049,13 @@ img {
   border-radius: 10px;
   margin-bottom: 16px;
   overflow: hidden;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
 }
 
 .faq-question {
@@ -1700,7 +2073,9 @@ img {
   align-items: center;
   gap: 18px;
   color: #1d1d1d;
-  transition: background 0.25s ease, color 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
 .faq-question:hover {
@@ -1724,7 +2099,9 @@ img {
   background: rgba(237, 28, 36, 0.1);
   color: #ed1c24;
   font-size: 23px;
-  transition: transform 0.3s ease, background 0.25s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.25s ease;
 }
 
 .faq-answer {
@@ -1766,7 +2143,7 @@ img {
   }
 
   .faq-section {
-    padding: 40px 20px;
+    padding: 32px 20px 24px;
   }
 
   .container {
@@ -1985,9 +2362,10 @@ img {
   line-height: 22px;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
-
 
 .form-status.is-hiding {
   opacity: 0;

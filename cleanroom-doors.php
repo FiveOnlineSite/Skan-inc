@@ -77,7 +77,7 @@ $comparisonRows = [
 
 <!-- Product Hero -->
 <section class="product-hero animate-fade-up">
-  <img src="images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo $pageTitle; ?></h1>
@@ -134,6 +134,15 @@ $comparisonRows = [
   <div class="product-list-inner">
     <h2 class="animate-on-scroll">Purpose-Built Solutions in this Category</h2>
 
+    <p class="tabs-click-hint animate-on-scroll">
+
+      <span>Select a tab below to explore the available products</span>
+
+      <span class="tabs-click-arrow" aria-hidden="true">&#8595;</span>
+
+    </p>
+
+
     <div class="tabs-nav animate-on-scroll" role="tablist">
       <?php foreach ($tabs as $index => $tab): ?>
         <button type="button" class="tab-btn<?php echo $index === 0 ? ' active' : ''; ?>"
@@ -153,7 +162,7 @@ $comparisonRows = [
         <?php foreach ($tab['products'] as $pIndex => $product): ?>
           <div class="product-row<?php echo $pIndex % 2 === 1 ? ' reverse' : ''; ?> animate-on-scroll">
             <div class="product-row-image">
-              <img src="<?php echo $product['image']; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
+              <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
             </div>
             <div class="product-row-info">
               <h3><?php echo htmlspecialchars($product['title']); ?></h3>
@@ -168,7 +177,7 @@ $comparisonRows = [
               <?php endif; ?>
               <a href="#" class="btn-outline">
                 Download Brochure
-                <img src="images/icon-download.svg" alt="">
+                <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
               </a>
             </div>
           </div>
@@ -178,13 +187,8 @@ $comparisonRows = [
   </div>
 </section>
 
-<!-- Testimonials Section -->
-
-<?php include 'includes/testimonials.php'; ?>
-
-
 <!-- FAQ Section -->
-<section class="faq-section">
+<section class="faq-section animate-on-scroll">
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
@@ -234,5 +238,9 @@ $comparisonRows = [
     </div>
   </div>
 </section>
+
+<!-- Testimonials Section -->
+
+<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

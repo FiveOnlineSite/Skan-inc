@@ -6,7 +6,7 @@ $tabs = [
     'id' => 'air-handling-units-ahu',
     'label' => 'Air Handling Units (AHU)',
     'title' => 'Air Handling Units (AHU)',
-    'description' => 'An AHU\'s specification is really three separate decisions made together, not three alternative products. Casing construction, cooling mechanism, and airflow type are each chosen independently based on what the room needs. Double skin, thermal break casings are now the standard specification for pharma and cleanroom AHUs, since a single-skin casing is more prone to sweating and energy loss. DX units are practical where a facility has no chilled water infrastructure, since they carry their own refrigerant circuit and don\'t depend on a central plant. FAHUs are specified specifically where a room\'s design calls for once-through ventilation rather than recirculation, such as certain isolation areas or spaces with a defined fresh air requirement independent of the rest of the facility.',
+    'description' => 'An AHU\'s specification is really three separate decisions made together, not three alternative products. Casing construction, cooling mechanism, and airflow type are each chosen independently based on what the room needs.',
     'products' => [],
   ],
   [
@@ -82,12 +82,14 @@ $comparisonRows = [
   'Cooling mechanism' => ['DX (direct expansion) / Chilled water coil', 'DX: smaller sites, no chilled water plant. Chilled water: larger facilities drawing off a central plant'],
   'Airflow type' => ['Recirculating / FAHU (100% fresh air)', 'FAHU: once-through ventilation, isolation areas, or a defined fresh air makeup independent of the main system'],
 ];
+$ahuTableNote = 'Double skin, thermal break casings are now the standard specification for pharma and cleanroom AHUs, since a single-skin casing is more prone to sweating and energy loss. DX units are practical where a facility has no chilled water infrastructure, since they carry their own refrigerant circuit and don\'t depend on a central plant. FAHUs are specified specifically where a room\'s design calls for once-through ventilation rather than recirculation, such as certain isolation areas or spaces with a defined fresh air requirement independent of the rest of the facility.';
+
 ?>
 <?php include 'includes/header.php'; ?>
 
 <!-- Product Hero -->
 <section class="product-hero animate-fade-up">
-  <img src="images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo $pageTitle; ?></h1>
@@ -116,6 +118,15 @@ $comparisonRows = [
     <h2 class="animate-on-scroll">
       Purpose-Built Solutions in this Category
     </h2>
+
+    <p class="tabs-click-hint animate-on-scroll">
+
+      <span>Select a tab below to explore the available products</span>
+
+      <span class="tabs-click-arrow" aria-hidden="true">&#8595;</span>
+
+    </p>
+
 
     <div class="tabs-nav animate-on-scroll" role="tablist">
       <?php foreach ($tabs as $index => $tab): ?>
@@ -160,6 +171,7 @@ $comparisonRows = [
                   </tbody>
                 </table>
               </div>
+              <p class="comparison-note animate-on-scroll"><?php echo htmlspecialchars($ahuTableNote); ?></p>
             </div>
           </section>
         <?php endif; ?>
@@ -167,7 +179,7 @@ $comparisonRows = [
         <?php foreach ($tab['products'] as $pIndex => $product): ?>
           <div class="product-row<?php echo $pIndex % 2 === 1 ? ' reverse' : ''; ?> animate-on-scroll">
             <div class="product-row-image">
-              <img src="<?php echo htmlspecialchars($product['image']); ?>"
+              <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>"
                 alt="<?php echo htmlspecialchars($product['title']); ?>">
             </div>
 
@@ -189,7 +201,7 @@ $comparisonRows = [
 
               <a href="#" class="btn-outline">
                 Download Brochure
-                <img src="images/icon-download.svg" alt="">
+                <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
               </a>
             </div>
           </div>
@@ -199,12 +211,8 @@ $comparisonRows = [
   </div>
 </section>
 
-<!-- Testimonials Section -->
-<?php include 'includes/testimonials.php'; ?>
-
-
 <!-- FAQ Section -->
-<section class="faq-section">
+<section class="faq-section animate-on-scroll">
   <h2>Frequently Asked Questions</h2>
 
   <div class="faq-item">
@@ -255,5 +263,8 @@ $comparisonRows = [
     </div>
   </div>
 </section>
+
+<!-- Testimonials Section -->
+<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

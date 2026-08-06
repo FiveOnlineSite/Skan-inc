@@ -3,6 +3,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 
 require __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 $mailConfig = require __DIR__ . '/mail-config.php';
 $pageTitle = 'Contact Us';
@@ -84,7 +85,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
       $mail->Body = $htmlBody;
       $mail->AltBody = $plainBody;
       $mail->send();
-      header('Location: contact.php?sent=1', true, 303);
+      header('Location: ' . SITE_ROOT . '/contact.php?sent=1', true, 303);
       exit;
     } catch (Throwable $exception) {
       error_log('Contact form SMTP error: ' . $exception->getMessage());

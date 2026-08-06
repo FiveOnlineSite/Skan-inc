@@ -62,7 +62,7 @@ $faqs = [
 <?php include 'includes/header.php'; ?>
 
 <section class="product-hero animate-fade-up">
-  <img src="images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
@@ -80,6 +80,15 @@ $faqs = [
 <section class="product-list pb-0">
   <div class="product-list-inner">
     <h2 class="animate-on-scroll">Purpose-Built Solutions in this Category</h2>
+
+    <p class="tabs-click-hint animate-on-scroll">
+
+      <span>Select a tab below to explore the available products</span>
+
+      <span class="tabs-click-arrow" aria-hidden="true">&#8595;</span>
+
+    </p>
+
 
     <div class="tabs-nav animate-on-scroll" role="tablist">
       <?php foreach ($tabs as $index => $tab): ?>
@@ -134,9 +143,7 @@ $faqs = [
   </div>
 </section>
 
-<?php include 'includes/testimonials.php'; ?>
-
-<section class="faq-section">
+<section class="faq-section animate-on-scroll">
   <h2>Frequently Asked Questions</h2>
   <?php foreach ($faqs as $faq): ?>
     <div class="faq-item">
@@ -150,5 +157,7 @@ $faqs = [
     </div>
   <?php endforeach; ?>
 </section>
+
+<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

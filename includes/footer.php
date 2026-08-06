@@ -14,7 +14,7 @@
       <div class="footer-links">
         <h4>Quick Links</h4>
         <a href="<?php echo SITE_ROOT; ?>/">Home</a>
-        <a href="<?php echo SITE_ROOT; ?>/#about">About Us</a>
+        <a href="<?php echo SITE_ROOT; ?>/about.php">About Us</a>
         <a href="<?php echo SITE_ROOT; ?>/#testimonials">Media</a>
         <a href="<?php echo SITE_ROOT; ?>/contact.php">Contact Us</a>
       </div>

@@ -4,7 +4,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="images/hero-image.jpg" alt="">
+      <img src="<?php echo SITE_ROOT; ?>/images/hero-image.jpg" alt="">
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content animate-fade-up">
@@ -16,17 +16,17 @@
     <!-- Awards Bar -->
     <div class="awards-bar animate-fade-up">
       <div class="award-item">
-        <img src="images/icon-calendar.svg" alt="" class="award-icon">
+        <img src="<?php echo SITE_ROOT; ?>/images/icon-calendar.svg" alt="" class="award-icon">
         <h3>20+ Years Of Experience</h3>
         <p>Delighting customers since 2000.</p>
       </div>
       <div class="award-item">
-        <img src="images/icon-file.svg" alt="" class="award-icon">
+        <img src="<?php echo SITE_ROOT; ?>/images/icon-file.svg" alt="" class="award-icon">
         <h3>ISO 9001: 2008 Accredited</h3>
         <p>World class quality assurance.</p>
       </div>
       <div class="award-item">
-        <img src="images/icon-award.svg" alt="" class="award-icon">
+        <img src="<?php echo SITE_ROOT; ?>/images/icon-award.svg" alt="" class="award-icon">
         <h3>Bhartiya Udyog Pratibha Award</h3>
         <p>For Innovative fumigation method.</p>
       </div>
@@ -43,7 +43,7 @@
         <a href="#" class="btn btn-primary">Know More</a>
       </div>
       <div class="about-image animate-on-scroll">
-        <img src="images/secondary-image.jpg" alt="Skan Inc. clean room">
+        <img src="<?php echo SITE_ROOT; ?>/images/secondary-image.jpg" alt="Skan Inc. clean room">
       </div>
     </div>
   </section>
@@ -54,50 +54,50 @@
       <h2 class="animate-on-scroll">Solutions for Hygiene, Disinfection &amp; Controlled Environments</h2>
       <div class="products-grid">
         <div class="product-card animate-on-scroll">
-          <img src="images/product-fogging.jpg" alt="Fogging Machine">
+          <img src="<?php echo SITE_ROOT; ?>/images/product-fogging.jpg" alt="Fogging Machine">
           <div class="product-overlay"></div>
           <a href="#" class="product-arrow">
-            <img src="images/arrow-icon.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon.svg" alt="">
           </a>
           <div class="product-label">
             <span>Fogging Machine</span>
           </div>
         </div>
         <div class="product-card animate-on-scroll">
-          <img src="images/product-mosquito.jpg" alt="Mosquito Fogging Machine">
+          <img src="<?php echo SITE_ROOT; ?>/images/product-mosquito.jpg" alt="Mosquito Fogging Machine">
           <div class="product-overlay"></div>
           <a href="#" class="product-arrow">
-            <img src="images/arrow-icon-2.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
           </a>
           <div class="product-label">
             <span>Mosquito Fogging Machine</span>
           </div>
         </div>
         <div class="product-card animate-on-scroll">
-          <img src="images/product-disposables.jpg" alt="Disposables">
+          <img src="<?php echo SITE_ROOT; ?>/images/product-disposables.jpg" alt="Disposables">
           <div class="product-overlay"></div>
           <a href="#" class="product-arrow">
-            <img src="images/arrow-icon-2.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
           </a>
           <div class="product-label">
             <span>Disposables</span>
           </div>
         </div>
         <div class="product-card animate-on-scroll">
-          <img src="images/product-disposables2.jpg" alt="Disposables">
+          <img src="<?php echo SITE_ROOT; ?>/images/product-disposables2.jpg" alt="Disposables">
           <div class="product-overlay"></div>
           <a href="#" class="product-arrow">
-            <img src="images/arrow-icon-2.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
           </a>
           <div class="product-label">
             <span>Disposables</span>
           </div>
         </div>
         <div class="product-card product-card-wide animate-on-scroll">
-          <img src="images/product-cleanroom.jpg" alt="Clean Room Equipment">
+          <img src="<?php echo SITE_ROOT; ?>/images/product-cleanroom.jpg" alt="Clean Room Equipment">
           <div class="product-overlay"></div>
           <a href="#" class="product-arrow">
-            <img src="images/arrow-icon-2.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
           </a>
           <div class="product-label">
             <span>Clean Room Equipment</span>

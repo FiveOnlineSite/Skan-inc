@@ -62,7 +62,7 @@ $faqs = [
 </style>
 
 <section class="product-hero animate-fade-up">
-  <img src="images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
@@ -84,7 +84,7 @@ $faqs = [
     <?php foreach ($solutions as $index => $solution): ?>
       <div class="product-row<?php echo $index % 2 === 1 ? ' reverse' : ''; ?> animate-on-scroll">
         <div class="product-row-image">
-          <img src="<?php echo htmlspecialchars($solution['image']); ?>"
+          <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($solution['image'], '/')); ?>"
             alt="<?php echo htmlspecialchars($solution['title']); ?>">
         </div>
         <div class="product-row-info">
@@ -96,7 +96,7 @@ $faqs = [
 
           <a href="#" class="btn-outline">
             Download Brochure
-            <img src="images/icon-download.svg" alt="">
+            <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
           </a>
         </div>
       </div>
@@ -130,9 +130,7 @@ $faqs = [
   </div>
 </section>
 
-<?php include 'includes/testimonials.php'; ?>
-
-<section class="faq-section">
+<section class="faq-section animate-on-scroll">
   <h2>Frequently Asked Questions</h2>
   <?php foreach ($faqs as $faq): ?>
     <div class="faq-item">
@@ -146,5 +144,7 @@ $faqs = [
     </div>
   <?php endforeach; ?>
 </section>
+
+<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>
