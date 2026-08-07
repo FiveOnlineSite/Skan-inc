@@ -113,7 +113,7 @@ $ahuTableNote = '';
 </section>
 
 <!-- Tabs -->
-<section class="product-list pb-0 compact-table-spacing">
+<section class="product-list">
   <div class="product-list-inner">
     <h2 class="animate-on-scroll">
       Purpose-Built Solutions in this Category

@@ -1250,21 +1250,12 @@ img {
 /* ── Purpose-Built Solutions list ── */
 
 .product-list {
-  padding: 24px 0;
-}
-
-.product-list.pb-0 {
-  padding-bottom: 24px;
+  padding: 20px 0;
 }
 
 section.fogging-page-section,
 .fogging-testimonials .testimonials {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.product-list.compact-table-spacing {
-  padding-bottom: 0;
+  padding-top: 30px;
 }
 
 .product-list-inner {
@@ -2084,7 +2075,7 @@ section.fogging-page-section,
   width: 100%;
   background: #fff;
   border: none;
-  padding: 18px 20px;
+  padding: 15px;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
