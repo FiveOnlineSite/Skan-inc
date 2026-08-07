@@ -6,7 +6,7 @@ $tabs = [
     'id' => 'air-handling-units-ahu',
     'label' => 'Air Handling Units (AHU)',
     'title' => 'Air Handling Units (AHU)',
-    'description' => 'An AHU\'s specification is really three separate decisions made together, not three alternative products. Casing construction, cooling mechanism, and airflow type are each chosen independently based on what the room needs.',
+    'description' => 'An AHU\'s specification is really three separate decisions made together, not three alternative products. Casing construction, cooling mechanism, and airflow type are each chosen independently based on what the room needs. Double skin, thermal break casings are now the standard specification for pharma and cleanroom AHUs, since a single-skin casing is more prone to sweating and energy loss. DX units are practical where a facility has no chilled water infrastructure, since they carry their own refrigerant circuit and don\'t depend on a central plant. FAHUs are specified specifically where a room\'s design calls for once-through ventilation rather than recirculation, such as certain isolation areas or spaces with a defined fresh air requirement independent of the rest of the facility.',
     'products' => [],
   ],
   [
@@ -82,7 +82,7 @@ $comparisonRows = [
   'Cooling mechanism' => ['DX (direct expansion) / Chilled water coil', 'DX: smaller sites, no chilled water plant. Chilled water: larger facilities drawing off a central plant'],
   'Airflow type' => ['Recirculating / FAHU (100% fresh air)', 'FAHU: once-through ventilation, isolation areas, or a defined fresh air makeup independent of the main system'],
 ];
-$ahuTableNote = 'Double skin, thermal break casings are now the standard specification for pharma and cleanroom AHUs, since a single-skin casing is more prone to sweating and energy loss. DX units are practical where a facility has no chilled water infrastructure, since they carry their own refrigerant circuit and don\'t depend on a central plant. FAHUs are specified specifically where a room\'s design calls for once-through ventilation rather than recirculation, such as certain isolation areas or spaces with a defined fresh air requirement independent of the rest of the facility.';
+$ahuTableNote = '';
 
 ?>
 <?php include 'includes/header.php'; ?>

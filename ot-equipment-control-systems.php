@@ -19,7 +19,7 @@ $tabs = [
     'id' => 'ot-equipment',
     'label' => 'OT Equipment',
     'title' => 'OT Equipment',
-    'description' => '',
+    'description' => 'OT equipment supports safe, efficient surgical workflows by placing lighting, medical utilities, imaging support, and scrub facilities where the clinical team needs them. Each solution is selected to suit the procedure mix, room layout, infection-control requirements, and day-to-day working practices of the operating theatre.',
     'products' => [
       [
         'title' => 'LED Surgical Lights',

@@ -731,7 +731,7 @@ img {
    ══════════════════════════════ */
 
 .footer {
-  background: #fcfcfc;
+  background: #f7f7f7;
   padding: 48px 0 0;
 }
 
@@ -1220,11 +1220,10 @@ img {
   max-width: 723px;
 }
 
-/* ── Intro ("What is...") ── */
 
 .product-intro {
-  background: #fff;
-  padding: 60px 0;
+  background: #f7f7f7;
+  padding: 72px 0 60px;
 }
 
 .product-intro-inner {
@@ -1498,7 +1497,7 @@ section.fogging-page-section,
 #pass-boxes .comparison,
 #air-showers-tunnels .comparison,
 #equipment-accessories .comparison {
-  padding-bottom: 40;
+  padding-bottom: 40px;
 }
 
 .comparison-inner {
@@ -1958,7 +1957,7 @@ section.fogging-page-section,
   }
 
   .product-intro {
-    padding: 40px 0;
+    padding: 52px 0 40px;
   }
 
   .product-intro-inner,
@@ -2048,11 +2047,12 @@ section.fogging-page-section,
    FAQ Section
    ══════════════════════════════ */
 .faq-section {
-  max-width: 900px;
-  margin: 0 auto 60px;
-  padding: 40px 48px 30px;
-  background: #fff;
-  border-radius: 16px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 40px max(48px, calc((100% - 900px) / 2 + 48px)) 30px;
+  background: #f7f7f7;
+  border-radius: 0;
 }
 
 .faq-section h2 {
@@ -2445,5 +2445,48 @@ section.fogging-page-section,
   .contact-submit,
   .form-status {
     grid-column: 1;
+  }
+}
+/* Consistent vertical rhythm across all content sections. */
+.products,
+.about-overview,
+.about-certificates,
+.about-mission,
+.about-trust,
+.contact-page,
+.product-intro,
+.product-list,
+.comparison,
+.faq-section,
+.testimonials,
+section.fogging-page-section,
+.fogging-testimonials .testimonials {
+  padding-block: 40px;
+}
+
+.faq-section {
+  margin-bottom: 0;
+}
+
+/* The awards card extends 87px below the desktop hero. */
+.about {
+  padding: 127px 0 40px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding-block: 40px;
+  }
+}
+/* Keep all comparison and table section titles consistent. */
+.comparison-inner > h2 {
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .comparison-inner > h2 {
+    font-size: 24px;
+    line-height: 1.3;
   }
 }

@@ -47,20 +47,6 @@ $faqs = [
 ?>
 <?php include 'includes/header.php'; ?>
 
-<style>
-  .mgps-standards {
-    padding-top: 16px;
-    padding-bottom: 56px;
-  }
-
-  @media (max-width: 768px) {
-    .mgps-standards {
-      padding-top: 0;
-      padding-bottom: 40px;
-    }
-  }
-</style>
-
 <section class="product-hero animate-fade-up">
   <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
   <div class="product-hero-overlay"></div>
