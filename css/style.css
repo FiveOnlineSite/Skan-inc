@@ -874,7 +874,7 @@ img {
 }
 .about-hero-page {
   position: relative;
-  height: 646px;
+  height: 577px;
   overflow: hidden;
 }
 .about-hero-page > img {
@@ -1067,7 +1067,7 @@ img {
     padding: 0 40px;
   }
   .about-hero-page {
-    height: 520px;
+    height: 420px;
   }
   .about-certificate-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -1094,7 +1094,7 @@ img {
     padding: 0 20px;
   }
   .about-hero-page {
-    height: 360px;
+    height: 320px;
   }
   .about-hero-page h1 {
     font-size: 32px;
