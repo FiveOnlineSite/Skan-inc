@@ -1480,14 +1480,11 @@ section.fogging-page-section,
 }
 
 .tab-panel .comparison {
-  padding-bottom: 80px;
+  padding-bottom: 16px;
 }
 
-#air-handling-units-ahu .comparison,
-#surgeon-control-panels .comparison,
-#pass-boxes .comparison,
-#air-showers-tunnels .comparison,
-#equipment-accessories .comparison {
+#surgeon-control-panels > .comparison,
+#equipment-accessories > .comparison {
   padding-bottom: 40px;
 }
 
@@ -2458,6 +2455,12 @@ section.fogging-page-section,
 .faq-section {
   margin-bottom: 0;
 }
+
+/* Tighten tabbed table sections when they lead directly into an FAQ. */
+.product-list.product-list--tables-before-faq {
+  padding-bottom: 16px;
+}
+
 
 /* The awards card extends 87px below the desktop hero. */
 .about {
