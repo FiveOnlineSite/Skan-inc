@@ -10,28 +10,28 @@ $tabs = [
     'products' => [
       [
         'title' => 'Turnkey Pharma Cleanroom Projects',
-        'image' => 'images/product-ulv-skd1100.jpg',
+        'image' => 'images/products/ot-1.png',
         'description' => 'A turnkey pharmaceutical cleanroom project starts from the classification the space needs to hold, whether an ISO 14644 class or GMP grade, and works backward to the panel specification, HVAC capacity, utilities, and layout. Civil work, panel installation, HVAC integration, and utilities are planned against the same classification target from the outset rather than allowing each trade to work from separate assumptions.',
       ],
       [
         'title' => 'Modular Operation Theatre Turnkey Setup',
-        'image' => 'images/product-power-jet.jpg',
+        'image' => 'images/products/ot-2.png',
         'description' => 'A modular operation theatre turnkey setup brings together panels and flooring, hermetically sealed doors, HVAC and laminar airflow, OT equipment and control panels, and medical gas outlets in one room designed around the surgical workflow. It is delivered as one coordinated build because a modular OT rarely performs as intended when these systems are assembled without considering how they interact.',
       ],
       [
         'title' => 'BSL-2 / BSL-3 Laboratory Infrastructure',
-        'image' => 'images/product-vapor-jet.jpg',
+        'image' => 'images/products/ot-3.png',
         'description' => 'Biosafety-level laboratories are built around containment, not just cleanliness. The correct infrastructure is selected against the risk of the biological agents involved and the facility-specific containment standard, with BSL-3 environments requiring considerably more demanding engineering controls than a standard pharmaceutical cleanroom.',
         'comparison' => 'bsl',
       ],
       [
         'title' => 'IVF Lab Controlled Environments',
-        'image' => 'images/product-ulv-tantra.jpg',
+        'image' => 'images/products/ot-4.png',
         'description' => 'IVF laboratory controlled environments account for embryo sensitivity to air quality, temperature stability, and volatile organic compound levels beyond standard cleanroom particle counts. They are built with tighter VOC filtration and environmental stability control than a general pharmaceutical cleanroom.',
       ],
       [
         'title' => 'CSSD',
-        'image' => 'images/product-roto-matic.jpg',
+        'image' => 'images/products/ot-5.png',
         'description' => 'A Central Sterile Services Department handles the receiving, cleaning, sterilisation, and storage of surgical instruments for an entire hospital. Its layout follows a strict one-directional flow from dirty to clean to sterile storage so instruments never move backward through a completed stage. A poorly planned flow creates cross-contamination risk regardless of the quality of the sterilisation equipment.',
       ],
     ],
@@ -44,23 +44,23 @@ $tabs = [
     'products' => [
       [
         'title' => 'DQ / IQ / OQ / PQ Documentation Services',
-        'image' => 'images/product-infekto-cide-n.png',
+        'image' => 'images/products/ot-1.png',
         'description' => 'DQ, IQ, OQ, and PQ form the standard validation lifecycle a pharmaceutical cleanroom or critical facility follows before approval for use. Documentation through each stage is what a regulatory inspection or internal quality audit reviews, so the paperwork matters as much as the physical testing behind it.',
         'comparison' => 'qualification',
       ],
       [
         'title' => 'HEPA Filter Integrity Testing (DOP)',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-2.png',
         'description' => 'HEPA filter integrity testing is commonly called DOP testing after the dispersed oil particulate method historically used. A generated aerosol is introduced upstream of the filter and downstream air is scanned for particle concentration above the allowed threshold, indicating a breach in the filter media or a gap at the frame seal. Testing is repeated at defined intervals throughout a cleanroom\'s operational life because filter integrity degrades over time.',
       ],
       [
         'title' => 'Particle Count Mapping & Air Velocity Tests',
-        'image' => 'images/product-infekto-derm-chg.png',
+        'image' => 'images/products/ot-3.png',
         'description' => 'Particle count mapping measures airborne particle concentration at multiple points to confirm that the room meets its intended ISO or GMP classification. Air velocity testing checks whether airflow at HEPA filter faces or within a laminar flow zone falls inside the design range. Both are performed at commissioning and repeated periodically because a room can drift out of classification over time without an obvious change in use.',
       ],
       [
         'title' => 'AMC (Annual Maintenance Contracts)',
-        'image' => 'images/product-infekto-zyme-multi.png',
+        'image' => 'images/products/ot-4.png',
         'description' => 'Annual maintenance contracts cover scheduled servicing, filter changes, damper checks, AHU servicing, and periodic testing rather than reactive repair after failure. Cleanrooms and OTs degrade quietly, and airflow, pressure, or filtration problems are not always obvious in daily use, which makes scheduled maintenance especially important in critical facilities.',
       ],
     ],

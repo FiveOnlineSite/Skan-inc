@@ -17,19 +17,19 @@ $tabs = [
     'products' => [
       [
         'title' => 'Vertical Laminar Airflow Benches',
-        'image' => 'images/product-infekto-cide-n.png',
+        'image' => 'images/products/ot-1.png',
         'desc' => 'Used in laboratories and smaller cleanroom operations where a specific work area, not the whole room, needs a higher cleanliness standard. Air drawn through a HEPA filter at the top, delivered downward across the work surface in a steady, unidirectional stream. Keeps particles from settling on the process happening at the bench.',
         'variants' => ['Mopping', 'Fogging'],
       ],
       [
         'title' => 'Ceiling Suspended LAF (Modular OT)',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-2.png',
         'desc' => 'Same principle at a larger scale; the standard air delivery method over an operating table in a modular OT. Positioned directly above the surgical field, delivering continuous downward filtered airflow. Keeps the immediate surgical field cleaner than surrounding room air, even during an active procedure with staff movement nearby.',
         'variants' => [],
       ],
       [
         'title' => 'HEPA Filter Modules (Mini-Pleat, Gel Seal)',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-3.png',
         'desc' => 'HEPA filter modules are the filtration component that makes both LAF systems above work, not a separate category of unit. Mini-pleat construction packs more filter media into a compact housing, increasing effective filtration area without increasing footprint, useful where space above the OT ceiling is limited. Gel seal closes the filter pack into its frame using a gel-filled channel the filter\'s knife-edges seat into, eliminating the gap air could otherwise bypass through. A HEPA filter is only as effective as its seal. Excellent filter media with a poor frame seal will still leak unfiltered air around its edges.',
         'variants' => [],
       ],
@@ -43,31 +43,31 @@ $tabs = [
     'products' => [
       [
         'title' => 'Ducting (GI / Aluminium)',
-        'image' => 'images/product-infekto-cide-n.png',
+        'image' => 'images/products/ot-1.png',
         'desc' => 'Carries air between the AHU and terminal outlets in the cleanroom or OT. Choice between galvanised iron and aluminium comes down to weight, cost, and corrosion exposure. Aluminium is the lighter option where weight matters for installation or structural reasons.',
         'variants' => ['Mopping', 'Fogging'],
       ],
       [
         'title' => 'FRP Ducting',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-2.png',
         'desc' => 'Used where the airstream carries corrosive fumes or the environment itself is corrosive. Fibre-reinforced plastic resists chemical attack that would degrade GI or aluminium over time. More common in specific pharmaceutical fume extraction than general supply/return ductwork.',
         'variants' => [],
       ],
       [
         'title' => 'Volume Control Dampers (VCD)',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-3.png',
         'desc' => 'Regulate airflow quantity through a duct section. Balance the system so each room or zone gets the airflow it was designed for, rather than air following the path of least resistance.',
         'variants' => [],
       ],
       [
         'title' => 'Motorised Fire & Smoke Dampers',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-4.png',
         'desc' => 'Installed where ductwork passes through fire-rated walls or floors. Close automatically on fire or smoke detection, stopping flame and smoke travelling through the duct network. A life safety component as much as an HVAC one; placement is typically dictated by the building\'s fire safety design.',
         'variants' => [],
       ],
       [
         'title' => 'Return Air Risers',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/ot-5.png',
         'desc' => 'Carry air back from the room to the AHU, completing the airflow loop. Sizing and placement affect how evenly a room\'s pressure and airflow pattern hold up in practice. Poorly placed risers are a common reason a room fails to hold its intended pressure cascade, even with a correctly sized AHU.',
         'variants' => [],
       ],

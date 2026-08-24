@@ -14,7 +14,7 @@ $tabs = [
       ],
       [
         'title' => 'SKANFOG POWER-JET',
-        'image' => 'images/products/power-jet.jpg',
+        'image' => 'images/products/power-jet.png',
         'desc' => 'SKANFOG Power-jet an excellent product for air sterilization and disinfection. It is suitable for up-to 15000 Cu ft of space treatment with a height cover of up-to 20 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. Its specially designed double layer intake air filter prevents external dust/dirt entry which helps protect the motor. This machine is suitable for ICU, NICU, Vaccine Manufacturing, Hatchery & Poultry usage.',
         'variants' => ['Plastic', 'Stainless Steel'],
       ],
