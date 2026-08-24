@@ -43,7 +43,7 @@
         <a href="#" class="btn btn-primary">Know More</a>
       </div>
       <div class="about-image animate-on-scroll">
-        <img src="<?php echo SITE_ROOT; ?>/images/secondary-image.jpg" alt="Skan Inc. clean room">
+        <img src="<?php echo SITE_ROOT; ?>/images/products/ot-2.png" alt="Skan Inc. clean room">
       </div>
     </div>
   </section>
@@ -54,7 +54,7 @@
       <h2 class="animate-on-scroll">Solutions for Hygiene, Disinfection &amp; Controlled Environments</h2>
       <div class="products-grid">
         <div class="product-card animate-on-scroll">
-          <img src="<?php echo SITE_ROOT; ?>/images/product-fogging.jpg" alt="Fogging Machine">
+          <img src="<?php echo SITE_ROOT; ?>/images/products/mosquito-fogger.png" alt="Fogging Machine">
           <div class="product-overlay"></div>
           <a href="#" class="product-arrow">
             <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon.svg" alt="">
