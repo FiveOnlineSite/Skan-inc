@@ -10,22 +10,22 @@ $tabs = [
     'products' => [
       [
         'title' => 'SS Perforated & Cross-Over Benches',
-        'image' => 'images/product-ulv-skd1100.jpg',
+        'image' => 'images/products/cross-over-bench.png',
         'description' => 'SS perforated and cross-over benches are positioned at cleanroom entry points, where personnel change footwear or gowning between classification zones. The perforated top lets air pass through rather than settle on the surface, while the cross-over design enforces one-directional movement between the clean and less-clean sides so contamination does not travel back across the boundary.',
       ],
       [
         'title' => 'Sterile Garment Storage Cabinets',
-        'image' => 'images/product-power-jet.jpg',
+        'image' => 'images/products/garment-storage-cabinet.png',
         'description' => 'Sterile garment storage cabinets hold gowning, masks, and sterile apparel in a closed unit until needed. They keep cleaned garments protected between uses rather than exposed on open shelving and are typically positioned close to the gowning area for direct storage-to-changing movement.',
       ],
       [
         'title' => 'SS Cleanroom Lockers & Writing Desks',
-        'image' => 'images/product-vapor-jet.jpg',
+        'image' => 'images/products/cross-over-bench.png',
         'description' => 'SS cleanroom lockers and writing desks provide personal storage and workspace built to the same hygiene standard as fixed cleanroom furniture. Unlike standard office furniture, they avoid seams, joints, and absorbent surfaces that would make wipe-down and disinfection difficult.',
       ],
       [
         'title' => 'Instrument & Dressing Trolleys',
-        'image' => 'images/product-ulv-tantra.jpg',
+        'image' => 'images/products/garment-storage-cabinet.png',
         'description' => 'Instrument and dressing trolleys are mobile units for moving sterile instruments, dressings, and supplies within the OT or cleanroom. They use smooth, easily wiped surfaces with locking castors for stability while stationary and are built to the same cleanability standard as fixed furniture because they may move between classification zones during a single shift.',
       ],
     ],
@@ -38,17 +38,17 @@ $tabs = [
     'products' => [
       [
         'title' => 'Industrial Ultrasonic Cleaners',
-        'image' => 'images/product-roto-matic.jpg',
+        'image' => 'images/products/ultrasonic-cleaners.png',
         'description' => 'Industrial ultrasonic cleaners use high-frequency sound waves in a liquid bath to dislodge contamination from instruments and components. They reach gaps, threads, and cavities that manual scrubbing cannot access reliably and are commonly used ahead of sterilisation in CSSD and in pharmaceutical settings requiring thorough between-batch cleaning.',
       ],
       [
         'title' => 'Fume Hoods & Chemical Storage Cabinets',
-        'image' => 'images/product-infekto-cide-n.png',
+        'image' => 'images/products/fume-hood.png',
         'description' => 'A fume hood draws air through the work opening and exhausts it outside the building, protecting staff from hazardous vapour exposure during active work. Chemical storage cabinets provide ventilated, contained storage matched to the specific chemical class, because flammable, corrosive, and toxic materials each carry different storage requirements.',
       ],
       [
         'title' => 'Bio-Safety Cabinets (Class II, Type A2 / B1 / B2)',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/bio-safety-cabinets.png',
         'description' => 'Bio-safety cabinets protect the operator, the sample, and the environment at once, using HEPA-filtered airflow to contain biological material while supplying clean air to the work surface. The A2, B1, and B2 types differ mainly in how they handle exhaust air. A cabinet rated for biological containment alone does not protect against chemical vapour exposure the way a properly ducted B1 or B2 unit does, so selecting the correct type matters.',
       ],
     ],

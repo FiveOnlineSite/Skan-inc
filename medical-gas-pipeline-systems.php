@@ -4,22 +4,22 @@ $pageTitle = 'Medical Gas Pipeline Systems';
 $solutions = [
   [
     'title' => 'Gas Manifold Systems',
-    'image' => 'images/product-ulv-skd1100.jpg',
+    'image' => 'images/products/medical-gas-pipeline.png',
     'description' => 'Gas manifold systems regulate and switch between primary and reserve gas cylinder banks at the source. They ensure supply continues uninterrupted if the primary bank runs low or needs replacement.',
   ],
   [
     'title' => 'Area Alarm Valve Boxes',
-    'image' => 'images/product-power-jet.jpg',
+    'image' => 'images/products/medical-gas-pipeline.png',
     'description' => 'Area alarm valve boxes are positioned at zone entry points along the pipeline. They allow a section to be isolated for maintenance without shutting off supply to the rest of the facility, monitor line pressure, and trigger an alarm if it falls outside the expected range.',
   ],
   [
     'title' => 'Medical Gas Outlets (BS / DIN / American Standards)',
-    'image' => 'images/product-vapor-jet.jpg',
+    'image' => 'images/products/medical-gas-pipeline.png',
     'description' => 'Outlet and equipment connectors are not interchangeable across standards, so the outlet configuration is matched to what the hospital\'s existing equipment is already built to accept.',
   ],
   [
     'title' => 'Bed Head Panels (Integrated Outlets & Electricals)',
-    'image' => 'images/product-ulv-tantra.jpg',
+    'image' => 'images/products/medical-gas-pipeline.png',
     'description' => 'Bed head panels combine gas outlets, electrical sockets, lighting controls, and communication points in a single wall-mounted unit above the bed. They keep the area around the patient clear of separate fittings and cabling while simplifying routine use and future servicing, since outlets and electrical points are accessed from one panel rather than scattered across the wall.',
   ],
 ];

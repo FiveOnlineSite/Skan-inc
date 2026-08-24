@@ -23,7 +23,7 @@ $tabs = [
     'products' => [
       [
         'title' => 'LED Surgical Lights',
-        'image' => 'images/product-ulv-skd1100.jpg',
+        'image' => 'images/products/led-surgical-lights.png',
         'desc' => 'LED lighting has largely replaced halogen for surgical use: it runs cooler at the point of use and gives more consistent output over the length of a procedure. The dome mounts on an arm system so the team can reposition it mid-procedure without adjusting the whole fixture.',
         'spec_columns' => ['Configuration', 'Typical Use'],
         'spec_rows' => [
@@ -33,7 +33,7 @@ $tabs = [
       ],
       [
         'title' => 'OT Pendants (Anaesthesia / Surgical / Endoscopy)',
-        'image' => 'images/product-power-jet.jpg',
+        'image' => 'images/products/ot-pendant.png',
         'desc' => 'Pendants suspend equipment, gas outlets, and power from the ceiling instead of routing them along the floor, keeping the area around the table clear of cables and trip hazards. A single OT may use more than one pendant type depending on the range of procedures it supports.',
         'spec_columns' => ['Pendant Type', 'Brings to the Table', 'Positioned At'],
         'spec_rows' => [
@@ -44,12 +44,12 @@ $tabs = [
       ],
       [
         'title' => 'LED X-Ray View Boxes (Slim Digital)',
-        'image' => 'images/product-vapor-jet.jpg',
+        'image' => 'images/products/x-ray-view-box.png',
         'desc' => 'Useful in the OT for quickly displaying film or printed imaging mid-procedure, without bringing in a workstation or monitor. Slim digital LED replaces older fluorescent-backlit versions, offering more even illumination and a lower profile. It mounts flush or near-flush to the wall, which is relevant where wall space and cleanability are both at a premium.',
       ],
       [
         'title' => 'Medical Scrub Stations (1 / 2 / 3 Bay)',
-        'image' => 'images/product-ulv-tantra.jpg',
+        'image' => 'images/products/medical-scrub-station.png',
         'desc' => 'Bay count is selected based on how many staff need to scrub simultaneously, driven by surgical team size and how quickly the OT turns over between cases. Operation type is a separate decision from bay count.',
         'spec_columns' => ['Operation Type', 'Mechanism', 'Preferred When'],
         'spec_rows' => [

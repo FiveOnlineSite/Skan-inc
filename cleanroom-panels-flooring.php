@@ -10,25 +10,25 @@ $tabs = [
     'products' => [
       [
         'title' => 'PUF (Polyurethane Foam) Insulated Panels',
-        'image' => 'images/product-ulv-skd1100.jpg',
+        'image' => 'images/products/puf-pannels.png',
         'desc' => 'Rigid foam core, strong thermal insulation for its weight. Standard choice where fire rating is not the primary driver. Available in 30mm, 50mm, 80mm, and 100mm, selected by insulation need and structural span. Skin options: PPGI — cost-effective, general manufacturing areas. Stainless steel (304/316L) — frequent washdown, high corrosion exposure, areas near autoclaves. HPL (antibacterial) — smoother finish, more common in hospital/OT interiors than heavy industrial pharma. The skin is a specification decision based on the room&apos;s use, not a finish preference. We work through this with the client and consultant during design.',
         'variants' => [],
       ],
       [
         'title' => 'Rockwool High-Density Mineral Wool Panels (Fire Rated)',
-        'image' => 'images/product-power-jet.jpg',
+        'image' => 'images/products/rockwool.png',
         'desc' => 'Mineral wool core, non-combustible as a material property (not a Skan-applied certification). Specified wherever fire codes or risk assessments call for a fire-resistant envelope. Same 30–100mm thickness range and PPGI/SS/HPL skin options as PUF. Trade-off: heavier and costlier than PUF at the same thickness. Specify it where fire rating is a genuine requirement, not as a default across a whole facility.',
         'variants' => [],
       ],
       [
         'title' => 'PVC Panels',
-        'image' => 'images/product-mosquito-fogger.png',
+        'image' => 'images/products/pvc-pannel.png',
         'desc' => 'Lighter, simpler than a sandwich panel; smooth and moisture-resistant. No meaningful thermal insulation value. Used in lab interiors, smaller cleanroom cabins, and lower-classification areas where speed or budget matters more than insulation. Not a substitute for PUF/Rockwool in classified envelopes needing thermal control',
         'variants' => [],
       ],
       [
         'title' => 'Aluminium Clip-In Tiles (Ceiling only)',
-        'image' => 'images/product-mosquito-fogger.png',
+        'image' => 'images/products/aluminium-clip-tiles.png',
         'desc' => 'Ceiling only, not used for walls. Grid-suspended: individual tiles lift out for access to ducting, lighting, filter housings above. Chosen for light weight, corrosion resistance, and service access, not insulation.',
         'variants' => [],
       ],
@@ -42,13 +42,13 @@ $tabs = [
     'products' => [
       [
         'title' => 'Vinyl Flooring',
-        'image' => 'images/product-infekto-cide-n.png',
+        'image' => 'images/products/vinyl-flooring.png',
         'desc' => 'Vinyl flooring is supplied in sheet form and welded at the seams to create a continuous, monolithic surface with no open joints for contamination to collect in. We generally install vinyl flooring at 2mm thickness, which is standard for this category of product. Conductive / anti-static vinyl — controls static discharge to protect equipment or reduce ignition risk around fine powders and solvents. Surface resistance depends on the specific brand and product used per project; we confirm the figure against the material actually specified, rather than quote one number for every job. Homogeneous vinyl — uniform composition through its full depth, so wear doesn&apos;t expose a different layer underneath. Standard choice for general cleanroom areas, corridors, and non-OT hospital zones.',
         'variants' => ['Mopping', 'Fogging'],
       ],
       [
         'title' => 'Epoxy & Specialized Flooring',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/epoxy-flooring.png',
         'desc' => 'Self-levelling epoxy — poured and trowelled, fully seamless including into the coving detail. Common for OT flooring and sterile manufacturing where seam-free continuity matters. Good chemical resistance to disinfectants. PU coating — protective topcoat over epoxy or as a standalone finish, applied thinner than the base flooring system. Adds abrasion, chemical, or UV resistance depending on formulation and expected wear profile.',
         'variants' => [],
       ],

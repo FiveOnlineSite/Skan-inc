@@ -10,19 +10,19 @@ $tabs = [
     'products' => [
       [
         'title' => 'Single Leaf Cleanroom Doors',
-        'image' => 'images/product-ulv-skd1100.jpg',
+        'image' => 'images/products/single-leaf-cleanroom-doors.png',
         'desc' => 'Standard specification for most cleanroom openings: manufacturing rooms, airlocks, general labs. Leaf built as a sandwich panel, matching the wall panels around it, so the door isn&apos;t the weak point in an otherwise sealed, insulated room. Used wherever traffic and equipment/personnel size don&apos;t require a wider opening.',
         'variants' => [],
       ],
       [
         'title' => 'Double Leaf Cleanroom Doors',
-        'image' => 'images/product-power-jet.jpg',
+        'image' => 'images/products/double-leaf-cleanroom-doors.png',
         'desc' => 'Wider clear opening for equipment, trolleys, or hospital beds. Used at material transfer points and entrances to larger cleanrooms or OT complexes. Active/passive leaf convention: the passive leaf stays closed in normal use, opening only when full width is needed, preserving seal integrity for routine traffic',
         'variants' => [],
       ],
       [
         'title' => 'SS 304 Pharma Grade Swing Doors',
-        'image' => 'images/product-vapor-jet.jpg',
+        'image' => 'images/products/ss-304.png',
         'desc' => 'Stainless steel 304 finish in place of painted or laminate surfaces. Specified for frequent washdown, corrosive cleaning agents, or higher hygiene requirements. Common in wet-process pharma areas, CSSD, and zones adjoining autoclave rooms',
         'variants' => ['Plastic', 'Stainless Steel'],
       ],
@@ -36,25 +36,25 @@ $tabs = [
     'products' => [
       [
         'title' => 'Hermetically Sealed OT Doors (Automatic/Manual)',
-        'image' => 'images/product-infekto-cide-n.png',
-        'desc' => 'Full compression seal around the frame, beyond what a gasketed swing door provides. Protects the OT&apos;s pressure cascade, where even small air leakage at the door can let contaminated air reach the sterile field. Automatic version preferred in OT settings, since it lets staff move between rooms without touching the door, important when hand contact needs to be minimised.',
+        'image' => 'images/products/hermetic-ot-doors.png',
+        'desc' => 'Full compression seal around thSingle Leaf Cleanroom Doorse frame, beyond what a gasketed swing door provides. Protects the OT&apos;s pressure cascade, where even small air leakage at the door can let contaminated air reach the sterile field. Automatic version preferred in OT settings, since it lets staff move between rooms without touching the door, important when hand contact needs to be minimised.',
         'variants' => ['Mopping', 'Fogging'],
       ],
       [
         'title' => 'Automatic Sensor-Based Sliding Doors',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/lead-lining-door.png',
         'desc' => 'Motion or proximity sensors for hands-free operation. Used where hands-free movement matters but a full hermetic seal isn&apos;t the primary requirement. Typical in general hospital corridors and non-critical cleanroom transitions.',
         'variants' => [],
       ],
       [
         'title' => 'Lead-Lined Radiation Shielding Doors',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/lead-lining-door.png',
         'desc' => 'Shielding layer, typically lead, contains radiation within the room during operation. Required shielding level is determined by the equipment type and output inside the room. Specified as part of the facility&apos;s radiation safety design, in line with AERB requirements. Lead equivalence varies by application and is confirmed against the specific room and equipment during project planning, not supplied as a fixed standard specification.',
         'variants' => [],
       ],
       [
         'title' => 'ICU Glass Sliding Doors',
-        'image' => 'images/product-infekto-derm-bkc.png',
+        'image' => 'images/products/icu-glass-sliding-door.png',
         'desc' => 'Glass panel allows visual monitoring from the nursing station or corridor without entering the room. Supports frequent patient observation in ICU settings without unnecessary door traffic. Sliding and sealing specification follows the same considerations as other cleanroom sliding doors, adapted for visibility.',
         'variants' => [],
       ],
