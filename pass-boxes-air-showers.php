@@ -62,7 +62,7 @@ $faqs = [
 <?php include 'includes/header.php'; ?>
 
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner-pass-box.png" alt="<?php echo htmlspecialchars($pageTitle); ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>

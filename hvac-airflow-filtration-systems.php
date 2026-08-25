@@ -89,7 +89,7 @@ $ahuTableNote = '';
 
 <!-- Product Hero -->
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner-hvac.png" alt="<?php echo $pageTitle; ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo $pageTitle; ?></h1>
@@ -199,10 +199,12 @@ $ahuTableNote = '';
                 </div>
               <?php endif; ?>
 
-              <a href="#" class="btn-outline">
-                Download Brochure
-                <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
-              </a>
+              <?php if (!empty($product['brochure'])): ?>
+                <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                  Download Brochure
+                  <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+                </a>
+              <?php endif; ?>
             </div>
           </div>
         <?php endforeach; ?>

@@ -80,7 +80,7 @@ $faqs = [
 <?php include 'includes/header.php'; ?>
 
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner-cleanroom-furniture.png" alt="<?php echo htmlspecialchars($pageTitle); ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
@@ -135,10 +135,12 @@ $faqs = [
             <div class="product-row-info">
               <h3><?php echo htmlspecialchars($product['title']); ?></h3>
               <p><?php echo htmlspecialchars($product['description']); ?></p>
-              <a href="#" class="btn-outline">
-                Download Brochure
-                <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
-              </a>
+              <?php if (!empty($product['brochure'])): ?>
+                <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                  Download Brochure
+                  <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+                </a>
+              <?php endif; ?>
             </div>
           </div>
         <?php endforeach; ?>

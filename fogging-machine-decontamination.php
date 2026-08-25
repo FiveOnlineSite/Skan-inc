@@ -11,18 +11,21 @@ $tabs = [
         'image' => 'images/products/ulv-skd1100.jpg',
         'desc' => 'SKANFOG ULV is a highly effective and economical product for vapor generation / dry fumigation. It is suitable for up-to 10000 Cu ft of space treatment with a height cover of up-to 20 Ft. It generates consistent submicron particle size to create a uniform spread & has enough contact time to achieve maximum disinfection. It comes with an easy to clean, non-corrosive 5 L SS tank. Plastic tank is optional. This machine is suitable for OT, Injectable Mfg., Vaccine Mfg. & Food processing industry usage.',
         'variants' => ['Plastic', 'Stainless Steel'],
+        'brochure' => 'pdf/skd-1100.pdf',
       ],
       [
         'title' => 'SKANFOG POWER-JET',
         'image' => 'images/products/power-jet.png',
         'desc' => 'SKANFOG Power-jet an excellent product for air sterilization and disinfection. It is suitable for up-to 15000 Cu ft of space treatment with a height cover of up-to 20 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. Its specially designed double layer intake air filter prevents external dust/dirt entry which helps protect the motor. This machine is suitable for ICU, NICU, Vaccine Manufacturing, Hatchery & Poultry usage.',
         'variants' => ['Plastic', 'Stainless Steel'],
+        'brochure' => 'pdf/skaninc-power-jet.pdf',
       ],
       [
         'title' => 'SKANFOG VAPOR-JET',
         'image' => 'images/products/vapor-jet.jpg',
         'desc' => 'SKANFOG Vapor-jet machine generates a consistent particle size of 0.3 to 1 Micron. It is suitable for up-to 16000 Cu ft of space treatment with a height cover of up-to 25 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. It is equipped with a high-quality double stage, tapered fan vacuum motor and a timer for auto switch off. This machine is suitable for OT, ICU, Cathlab, Pharma lab, food processing & packaging industry usage.',
         'variants' => ['Plastic', 'Stainless Steel'],
+        'brochure' => 'pdf/skan-fog-vapor-jet.pdf',
       ],
       [
         'title' => 'SKAN FOG ULV TANTRA',
@@ -35,6 +38,7 @@ $tabs = [
         'image' => 'images/products/roto-matic.png',
         'desc' => 'The oscillating system in SKAN FOG ROTO-MATIC Table is specifically designed to extract better efficiency from our spot foggers. The table does not allow droplets to accumulate and condense and ensures that the fogger covers a large area with uniform fog particle distribution. Built with SS 304, it can easily carry 20kg. It rotates 360 Degree with the fogger machine placed on top at a speed of 2 RPM. A unique technical feature allows uninterrupted power supply to the fogger machine during continuous rotation.',
         'variants' => [],
+        'brochure' => 'pdf/skan-fog-rotomatic-turn-table.pdf',
       ],
       [
         'title' => 'Mosquito Fogging Machine',
@@ -106,7 +110,7 @@ $comparisonRows = [
 
 <!-- Product Hero -->
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo $pageTitle; ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner-fogging.png" alt="<?php echo $pageTitle; ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo $pageTitle; ?></h1>
@@ -171,10 +175,12 @@ $comparisonRows = [
                   <?php endforeach; ?>
                 </div>
               <?php endif; ?>
-              <a href="#" class="btn-outline">
-                Download Brochure
-                <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
-              </a>
+              <?php if (!empty($product['brochure'])): ?>
+                <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                  Download Brochure
+                  <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+                </a>
+              <?php endif; ?>
             </div>
           </div>
         <?php endforeach; ?>

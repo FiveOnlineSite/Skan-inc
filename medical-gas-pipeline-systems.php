@@ -48,7 +48,7 @@ $faqs = [
 <?php include 'includes/header.php'; ?>
 
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner-medical-pipeline.png" alt="<?php echo htmlspecialchars($pageTitle); ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
@@ -80,10 +80,12 @@ $faqs = [
             <p><?php echo htmlspecialchars($solution['description']); ?></p>
           <?php endif; ?>
 
-          <a href="#" class="btn-outline">
-            Download Brochure
-            <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
-          </a>
+          <?php if (!empty($solution['brochure'])): ?>
+            <a href="<?php echo htmlspecialchars($solution['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
+              Download Brochure
+              <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+            </a>
+          <?php endif; ?>
         </div>
       </div>
 

@@ -108,7 +108,7 @@
               </div>
             </div>
           </div>
-          <a href="<?php echo SITE_ROOT; ?>/#testimonials" class="nav-link">Media</a>
+          <a href="<?php echo SITE_ROOT; ?>/media.php" class="nav-link">Media</a>
         </nav>
         <a href="<?php echo SITE_ROOT; ?>/contact.php" class="btn btn-primary nav-cta">Contact Us</a>
       </div>

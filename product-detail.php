@@ -72,10 +72,12 @@ $products = [
             <span class="variant-tag"><?php echo htmlspecialchars($variant); ?></span>
             <?php endforeach; ?>
           </div>
-          <a href="#" class="btn-outline">
-            Download Brochure
-            <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
-          </a>
+          <?php if (!empty($product['brochure'])): ?>
+            <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
+              Download Brochure
+              <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+            </a>
+          <?php endif; ?>
         </div>
       </div>
       <?php endforeach; ?>

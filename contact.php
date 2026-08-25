@@ -4,7 +4,7 @@ require __DIR__ . '/includes/contact-handler.php';
 <?php include 'includes/header.php'; ?>
 
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/product-detail-hero.jpg" alt="Contact Skan Inc.">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner-contact.png" alt="Contact Skan Inc.">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1>Contact Us</h1>
