@@ -16,9 +16,12 @@ $products = [
   ],
   [
     'title' => 'SKANFOG ULV SKD-1100',
-    'image' => 'images/product-ulv-skd1100.jpg',
+    'image' => 'images/products/ulv-skd1100-plastic.png',
     'desc'  => 'SKANFOG ULV is a highly effective and economical product for vapor generation / dry fumigation. It is suitable for up-to 10000 Cu ft of space treatment with a height cover of up-to 20 Ft. It generates consistent submicron particle size to create a uniform spread & has enough contact time to achieve maximum disinfection. It comes with an easy to clean, non-corrosive 5 L SS tank. Plastic tank is optional. This machine is suitable for OT, Injectable Mfg., Vaccine Mfg. & Food processing industry usage.',
-    'variants' => ['Plastic', 'Stainless Steel'],
+    'variants' => [
+      ['label' => 'Plastic', 'image' => 'images/products/ulv-skd1100-plastic.png'],
+      ['label' => 'Stainless Steel', 'image' => 'images/products/ulv-skd1100-steel.png'],
+    ],
   ],
   [
     'title' => 'SKAN FOG ROTO – MATIC TURN TABLE',
@@ -66,12 +69,22 @@ $products = [
         <div class="product-row-info">
           <h3><?php echo htmlspecialchars($product['title']); ?></h3>
           <p><?php echo $product['desc']; ?></p>
-          <p class="variant-label">Available Variants:</p>
-          <div class="variant-tags">
-            <?php foreach ($product['variants'] as $variant): ?>
-            <span class="variant-tag"><?php echo htmlspecialchars($variant); ?></span>
-            <?php endforeach; ?>
-          </div>
+          <?php if (!empty($product['variants'])): ?>
+            <p class="variant-label">Available Variants:</p>
+            <div class="variant-tags">
+              <?php foreach ($product['variants'] as $variantIndex => $variant): ?>
+                <?php
+                $variantLabel = is_array($variant) ? $variant['label'] : $variant;
+                $variantImage = is_array($variant) && !empty($variant['image']) ? $variant['image'] : $product['image'];
+                ?>
+                <button class="variant-tag<?php echo $variantIndex === 0 ? ' is-active' : ''; ?>" type="button"
+                  data-variant-image="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($variantImage, '/')); ?>"
+                  data-variant-label="<?php echo htmlspecialchars($variantLabel, ENT_QUOTES); ?>">
+                  <?php echo htmlspecialchars($variantLabel); ?>
+                </button>
+              <?php endforeach; ?>
+            </div>
+          <?php endif; ?>
           <?php if (!empty($product['brochure'])): ?>
             <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
               Download Brochure
@@ -83,8 +96,5 @@ $products = [
       <?php endforeach; ?>
     </div>
   </section>
-
-  <!-- Testimonials Section -->
-  <?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

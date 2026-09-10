@@ -44,7 +44,7 @@ $tabs = [
         'title' => 'Vinyl Flooring',
         'image' => 'images/products/vinyl-flooring.png',
         'desc' => 'Vinyl flooring is supplied in sheet form and welded at the seams to create a continuous, monolithic surface with no open joints for contamination to collect in. We generally install vinyl flooring at 2mm thickness, which is standard for this category of product. Conductive / anti-static vinyl — controls static discharge to protect equipment or reduce ignition risk around fine powders and solvents. Surface resistance depends on the specific brand and product used per project; we confirm the figure against the material actually specified, rather than quote one number for every job. Homogeneous vinyl — uniform composition through its full depth, so wear doesn&apos;t expose a different layer underneath. Standard choice for general cleanroom areas, corridors, and non-OT hospital zones.',
-        'variants' => ['Mopping', 'Fogging'],
+        'variants' => [],
       ],
       [
         'title' => 'Epoxy & Specialized Flooring',
@@ -242,9 +242,5 @@ $comparisonRows = [
     </div>
   </div>
 </section>
-
-<!-- Testimonials Section -->
-
-<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

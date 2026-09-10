@@ -40,7 +40,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     $formMessage = 'Please enter a valid email address.';
   } elseif ($mailConfig['username'] === '' || $mailConfig['password'] === '') {
     $formStatus = 'error';
-    $formMessage = 'Email delivery is not configured yet. Please email us directly at skaninc1@gmail.com.';
+    $formMessage = 'Email delivery is not configured yet. Please email us directly at info@skaninc.com.';
     error_log('Contact form SMTP credentials are not configured.');
   } else {
     $safeSubject = preg_replace('/[\r\n]+/', ' ', $values['subject']);
@@ -90,7 +90,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
     } catch (Throwable $exception) {
       error_log('Contact form SMTP error: ' . $exception->getMessage());
       $formStatus = 'error';
-      $formMessage = 'We could not send your enquiry right now. Please email us directly at skaninc1@gmail.com.';
+      $formMessage = 'We could not send your enquiry right now. Please email us directly at info@skaninc.com.';
     }
   }
 }

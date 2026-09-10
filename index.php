@@ -19,17 +19,22 @@
     <div class="award-item">
       <img src="<?php echo SITE_ROOT; ?>/images/icon-calendar.svg" alt="" class="award-icon">
       <h3>20+ Years Of Experience</h3>
-      <p>Delighting customers since 2000.</p>
+      <p>Delighting customers since 2002.</p>
     </div>
     <div class="award-item">
       <img src="<?php echo SITE_ROOT; ?>/images/icon-file.svg" alt="" class="award-icon">
-      <h3>ISO 9001: 2008 Accredited</h3>
+      <h3>ISO 13485:2016 Accredited</h3>
       <p>World class quality assurance.</p>
     </div>
     <div class="award-item">
       <img src="<?php echo SITE_ROOT; ?>/images/icon-award.svg" alt="" class="award-icon">
       <h3>Bhartiya Udyog Pratibha Award</h3>
       <p>For Innovative fumigation method.</p>
+    </div>
+    <div class="award-item">
+      <img src="<?php echo SITE_ROOT; ?>/images/icon-certificate.svg" alt="" class="award-icon">
+      <h3>CDSCO Registered</h3>
+      <p>Registered medical device manufacturer.</p>
     </div>
   </div>
 </section>
@@ -47,7 +52,7 @@
       <p>A vast experience in the medical equipment and instrument field coupled with a strong market expertise enables
         us to provide customized solutions and consistently deliver results as per your expectation. This is a testament
         to the fact that our clientele includes renowned health facilities.</p>
-      <a href="#" class="btn btn-primary">Know More</a>
+      <a href="<?php echo SITE_ROOT; ?>/about.php" class="btn btn-primary">Know More</a>
     </div>
     <div class="about-image animate-on-scroll">
       <img src="<?php echo SITE_ROOT; ?>/images/products/ot-2.png" alt="Skan Inc. clean room">
@@ -61,7 +66,7 @@
     <h2 class="animate-on-scroll">Solutions for Hygiene, Disinfection &amp; Controlled Environments</h2>
     <div class="products-grid">
       <div class="product-card animate-on-scroll">
-        <img src="<?php echo SITE_ROOT; ?>/images/products/mosquito-fogger.png" alt="Fogging Machine">
+        <img src="<?php echo SITE_ROOT; ?>/images/products/fogging-machine.png" alt="Fogging Machine">
         <div class="product-overlay"></div>
         <a href="<?php echo SITE_ROOT; ?>/fogging-machine-decontamination.php" class="product-arrow" aria-label="View Fogging Machine solutions">
           <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon.svg" alt="">
@@ -165,5 +170,41 @@
 
 <!-- Testimonials Section -->
 <?php include 'includes/testimonials.php'; ?>
+
+<!-- Trusted Clients Section -->
+<section class="trusted-clients" aria-labelledby="trustedClientsTitle">
+  <div class="trusted-clients-inner">
+    <h2 id="trustedClientsTitle" class="animate-on-scroll">Our Trusted Clients</h2>
+    <div class="trusted-clients-marquee animate-on-scroll" aria-label="Our trusted clients">
+      <div class="trusted-clients-viewport">
+        <div class="trusted-clients-track">
+          <div class="trusted-clients-group">
+          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/railways.png"
+              alt="Indian Railways"></div>
+          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/holy-cross.jpg"
+              alt="Holy Cross Hospital" loading="lazy"></div>
+          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/cardiac.png"
+              alt="Cardiac Institute" loading="lazy"></div>
+          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/hinduja.png"
+              alt="P. D. Hinduja Hospital and Medical Research Center" loading="lazy"></div>
+          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/saifee.png"
+              alt="Saifee Hospital" loading="lazy"></div>
+          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/breachcandy.png"
+              alt="Breach Candy Hospital" loading="lazy"></div>
+          </div>
+          <!-- Duplicate set makes the marquee loop without a visible jump. -->
+          <div class="trusted-clients-group" aria-hidden="true">
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/railways.png" alt=""></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/holy-cross.jpg" alt=""></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/cardiac.png" alt=""></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/hinduja.png" alt=""></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/saifee.png" alt=""></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/breachcandy.png" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php include 'includes/footer.php'; ?>

@@ -8,9 +8,8 @@
       <img src="<?php echo SITE_ROOT; ?>/images/logo.png" alt="Skan Inc." class="footer-logo">
       <p class="footer-follow-label">Follow Us On:</p>
       <div class="footer-social">
-        <a href="#"><img src="<?php echo SITE_ROOT; ?>/images/icon-instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="<?php echo SITE_ROOT; ?>/images/icon-facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="<?php echo SITE_ROOT; ?>/images/icon-twitter.svg" alt="Twitter"></a>
+        <a href="https://www.instagram.com/skaninc1/" target="_blank" rel="noopener noreferrer"><img src="<?php echo SITE_ROOT; ?>/images/icon-instagram.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/people/Skan-Inc/61579118570781/" target="_blank" rel="noopener noreferrer"><img src="<?php echo SITE_ROOT; ?>/images/icon-facebook.svg" alt="Facebook"></a>
       </div>
     </div>
 
@@ -46,11 +45,11 @@
       </div>
       <div class="contact-item">
         <img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt="" class="contact-icon">
-        <p><a href="tel:+917506082837">+91-7506082837</a></p>
+        <p><a href="tel:+919519336995">+91 9519336995</a></p>
       </div>
       <div class="contact-item">
         <img src="<?php echo SITE_ROOT; ?>/images/icon-email.svg" alt="" class="contact-icon">
-        <p><a href="mailto:skaninc1@gmail.com">skaninc1@gmail.com</a></p>
+        <p><a href="mailto:info@skaninc.com">info@skaninc.com</a></p>
       </div>
     </div>
   </div>

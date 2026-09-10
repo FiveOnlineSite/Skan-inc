@@ -11,6 +11,15 @@ $galleryImages = [
   'images/products/ot-7.png',
   'images/products/ot-8.png',
   'images/products/ot-9.png',
+  'images/products/ot-10.png',
+  'images/products/ot-11.png',
+  'images/products/ot-12.png',
+  'images/products/ot-13.png',
+  'images/products/ot-14.png',
+  'images/products/ot-15.png',
+  'images/products/ot-16.png',
+  'images/products/ot-17.png',
+  'images/products/ot-18.png',
 ];
 
 $videos = [

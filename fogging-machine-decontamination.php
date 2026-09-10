@@ -8,30 +8,36 @@ $tabs = [
     'products' => [
       [
         'title' => 'SKANFOG – ULV SKD1100',
-        'image' => 'images/products/ulv-skd1100.jpg',
+        'image' => 'images/products/ulv-skd1100-plastic.png',
         'desc' => 'SKANFOG ULV is a highly effective and economical product for vapor generation / dry fumigation. It is suitable for up-to 10000 Cu ft of space treatment with a height cover of up-to 20 Ft. It generates consistent submicron particle size to create a uniform spread & has enough contact time to achieve maximum disinfection. It comes with an easy to clean, non-corrosive 5 L SS tank. Plastic tank is optional. This machine is suitable for OT, Injectable Mfg., Vaccine Mfg. & Food processing industry usage.',
-        'variants' => ['Plastic', 'Stainless Steel'],
+        'variants' => [
+          ['label' => 'Plastic', 'image' => 'images/products/ulv-skd1100-plastic.png'],
+          ['label' => 'Stainless Steel', 'image' => 'images/products/ulv-skd1100-steel.png'],
+        ],
         'brochure' => 'pdf/skd-1100.pdf',
       ],
       [
         'title' => 'SKANFOG POWER-JET',
-        'image' => 'images/products/power-jet.png',
+        'image' => 'images/products/power-jet-plastic.png',
         'desc' => 'SKANFOG Power-jet an excellent product for air sterilization and disinfection. It is suitable for up-to 15000 Cu ft of space treatment with a height cover of up-to 20 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. Its specially designed double layer intake air filter prevents external dust/dirt entry which helps protect the motor. This machine is suitable for ICU, NICU, Vaccine Manufacturing, Hatchery & Poultry usage.',
-        'variants' => ['Plastic', 'Stainless Steel'],
+        'variants' => [
+          ['label' => 'Plastic', 'image' => 'images/products/power-jet-plastic.png'],
+          ['label' => 'Stainless Steel', 'image' => 'images/products/power-jet-steel.png'],
+        ],
         'brochure' => 'pdf/skaninc-power-jet.pdf',
       ],
       [
         'title' => 'SKANFOG VAPOR-JET',
-        'image' => 'images/products/vapor-jet.jpg',
-        'desc' => 'SKANFOG Vapor-jet machine generates a consistent particle size of 0.3 to 1 Micron. It is suitable for up-to 16000 Cu ft of space treatment with a height cover of up-to 25 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. It is equipped with a high-quality double stage, tapered fan vacuum motor and a timer for auto switch off. This machine is suitable for OT, ICU, Cathlab, Pharma lab, food processing & packaging industry usage.',
-        'variants' => ['Plastic', 'Stainless Steel'],
+        'image' => 'images/products/vapour-jet.png',
+        'desc' => 'SKANFOG Vapor-jet machine gSKANFOG POWER-JETenerates a consistent particle size of 0.3 to 1 Micron. It is suitable for up-to 16000 Cu ft of space treatment with a height cover of up-to 25 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. It is equipped with a high-quality double stage, tapered fan vacuum motor and a timer for auto switch off. This machine is suitable for OT, ICU, Cathlab, Pharma lab, food processing & packaging industry usage.',
+        'variants' => [],
         'brochure' => 'pdf/skan-fog-vapor-jet.pdf',
       ],
       [
         'title' => 'SKAN FOG ULV TANTRA',
-        'image' => 'images/products/ulv-tantra.jpg',
+        'image' => 'images/products/ulv-tantra.png',
         'desc' => 'SKAN FOG ULV TANTRA generates submicron size, non-wetting aerosol which can spread across 50ft and reach a height of 35 ft and is suitable for 50000 to 70000 Cu Ft of space treatment. It has a precision metering system & auto switch off timer with delay start facility. It creates a 360° contact with accuracy. It comes with a 14 L SS 304 solution tank assembly. It uses medical grade clean air for fog generation. This machine is built robustly and is extremely safe, reliable & efficient. It uses only 200ml of disinfectant solution for treating 1000 Cu ft of area. All the key components like nozzle assembly, rotator & strainer are made of SS.',
-        'variants' => ['Plastic', 'Stainless Steel'],
+        'variants' => [],
       ],
       [
         'title' => 'Roto-Matic Turn Table for Fogger',
@@ -56,7 +62,7 @@ $tabs = [
         'title' => 'INFECKTO CIDE N',
         'image' => 'images/products/infekto-cide-n.png',
         'desc' => 'Infeckto cide N is a cutting-edge, high-level surface & environment disinfectant for critical care areas. It is a product suitable for disinfection and cleaning of all washable surfaces and objects in high risk areas like OT\'s, ICU\'s and in production areas of Pharma industries. Mode of application can be Mopping or Fogging. For mopping, a 2/3rd bucket system is recommended and in case of fumigation or fogging, ULV fogger gives the best result.',
-        'variants' => ['Mopping', 'Fogging'],
+        'variants' => [],
       ],
       [
         'title' => 'INFEKTO DERM BKC',
@@ -110,7 +116,7 @@ $comparisonRows = [
 
 <!-- Product Hero -->
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/banner-fogging.png" alt="<?php echo $pageTitle; ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/abc.png" alt="<?php echo $pageTitle; ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo $pageTitle; ?></h1>
@@ -146,7 +152,7 @@ $comparisonRows = [
 
     </p>
 
-<div class="tabs-nav animate-on-scroll" role="tablist">
+    <div class="tabs-nav animate-on-scroll" role="tablist">
       <?php foreach ($tabs as $index => $tab): ?>
         <button type="button" class="tab-btn<?php echo $index === 0 ? ' active' : ''; ?>"
           data-tab-target="<?php echo $tab['id']; ?>" role="tab"
@@ -170,13 +176,22 @@ $comparisonRows = [
               <?php if (!empty($product['variants'])): ?>
                 <p class="variant-label">Available Variants:</p>
                 <div class="variant-tags">
-                  <?php foreach ($product['variants'] as $variant): ?>
-                    <span class="variant-tag"><?php echo htmlspecialchars($variant); ?></span>
+                  <?php foreach ($product['variants'] as $variantIndex => $variant): ?>
+                    <?php
+                    $variantLabel = is_array($variant) ? $variant['label'] : $variant;
+                    $variantImage = is_array($variant) && !empty($variant['image']) ? $variant['image'] : $product['image'];
+                    ?>
+                    <button class="variant-tag<?php echo $variantIndex === 0 ? ' is-active' : ''; ?>" type="button"
+                      data-variant-image="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($variantImage, '/')); ?>"
+                      data-variant-label="<?php echo htmlspecialchars($variantLabel, ENT_QUOTES); ?>">
+                      <?php echo htmlspecialchars($variantLabel); ?>
+                    </button>
                   <?php endforeach; ?>
                 </div>
               <?php endif; ?>
               <?php if (!empty($product['brochure'])): ?>
-                <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank"
+                  rel="noopener noreferrer">
                   Download Brochure
                   <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
                 </a>
@@ -191,7 +206,7 @@ $comparisonRows = [
 
 <!-- Testimonials Section -->
 <!-- Comparison At A Glance -->
-<section class="comparison fogging-page-section">
+<section class="comparison fogging-page-section" id="foggerComparison">
   <div class="comparison-inner">
     <h2 class="animate-on-scroll">Comparison At A Glance</h2>
 
@@ -219,9 +234,5 @@ $comparisonRows = [
     </div>
   </div>
 </section>
-
-<div class="fogging-testimonials">
-  <?php include 'includes/testimonials.php'; ?>
-</div>
 
 <?php include 'includes/footer.php'; ?>

@@ -10,6 +10,6 @@ return array_merge([
   'password' => getenv('SKAN_SMTP_PASSWORD') ?: '',
   'from_email' => getenv('SKAN_SMTP_FROM_EMAIL') ?: '',
   'from_name' => getenv('SKAN_SMTP_FROM_NAME') ?: 'Skan Inc. Website',
-  'recipient_email' => getenv('SKAN_CONTACT_RECIPIENT') ?: 'skaninc1@gmail.com',
+  'recipient_email' => getenv('SKAN_CONTACT_RECIPIENT') ?: 'info@skaninc.com',
   'recipient_name' => getenv('SKAN_CONTACT_RECIPIENT_NAME') ?: 'Skan Inc.',
 ], $localConfig);

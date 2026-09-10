@@ -19,11 +19,11 @@ $tabs = [
         'title' => 'Vertical Laminar Airflow Benches',
         'image' => 'images/products/ot-1.png',
         'desc' => 'Used in laboratories and smaller cleanroom operations where a specific work area, not the whole room, needs a higher cleanliness standard. Air drawn through a HEPA filter at the top, delivered downward across the work surface in a steady, unidirectional stream. Keeps particles from settling on the process happening at the bench.',
-        'variants' => ['Mopping', 'Fogging'],
+        'variants' => [],
       ],
       [
         'title' => 'Ceiling Suspended LAF (Modular OT)',
-        'image' => 'images/products/ot-2.png',
+        'image' => 'images/products/ot-1.png',
         'desc' => 'Same principle at a larger scale; the standard air delivery method over an operating table in a modular OT. Positioned directly above the surgical field, delivering continuous downward filtered airflow. Keeps the immediate surgical field cleaner than surrounding room air, even during an active procedure with staff movement nearby.',
         'variants' => [],
       ],
@@ -40,34 +40,30 @@ $tabs = [
     'label' => 'HVAC Distribution & Components',
     'title' => 'HVAC Distribution & Components',
     'description' => 'Getting conditioned, filtered air from the AHU to the room and back depends on distribution components that rarely get attention until one fails or is undersized.',
+    'text_only' => true,
     'products' => [
       [
         'title' => 'Ducting (GI / Aluminium)',
-        'image' => 'images/products/ot-1.png',
         'desc' => 'Carries air between the AHU and terminal outlets in the cleanroom or OT. Choice between galvanised iron and aluminium comes down to weight, cost, and corrosion exposure. Aluminium is the lighter option where weight matters for installation or structural reasons.',
-        'variants' => ['Mopping', 'Fogging'],
+        'variants' => [],
       ],
       [
         'title' => 'FRP Ducting',
-        'image' => 'images/products/ot-2.png',
         'desc' => 'Used where the airstream carries corrosive fumes or the environment itself is corrosive. Fibre-reinforced plastic resists chemical attack that would degrade GI or aluminium over time. More common in specific pharmaceutical fume extraction than general supply/return ductwork.',
         'variants' => [],
       ],
       [
         'title' => 'Volume Control Dampers (VCD)',
-        'image' => 'images/products/ot-3.png',
         'desc' => 'Regulate airflow quantity through a duct section. Balance the system so each room or zone gets the airflow it was designed for, rather than air following the path of least resistance.',
         'variants' => [],
       ],
       [
         'title' => 'Motorised Fire & Smoke Dampers',
-        'image' => 'images/products/ot-4.png',
         'desc' => 'Installed where ductwork passes through fire-rated walls or floors. Close automatically on fire or smoke detection, stopping flame and smoke travelling through the duct network. A life safety component as much as an HVAC one; placement is typically dictated by the building\'s fire safety design.',
         'variants' => [],
       ],
       [
         'title' => 'Return Air Risers',
-        'image' => 'images/products/ot-5.png',
         'desc' => 'Carry air back from the room to the AHU, completing the airflow loop. Sizing and placement affect how evenly a room\'s pressure and airflow pattern hold up in practice. Poorly placed risers are a common reason a room fails to hold its intended pressure cascade, even with a correctly sized AHU.',
         'variants' => [],
       ],
@@ -177,11 +173,13 @@ $ahuTableNote = '';
         <?php endif; ?>
 
         <?php foreach ($tab['products'] as $pIndex => $product): ?>
-          <div class="product-row<?php echo $pIndex % 2 === 1 ? ' reverse' : ''; ?> animate-on-scroll">
-            <div class="product-row-image">
-              <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>"
-                alt="<?php echo htmlspecialchars($product['title']); ?>">
-            </div>
+          <div class="product-row<?php echo $pIndex % 2 === 1 ? ' reverse' : ''; ?><?php echo !empty($tab['text_only']) ? ' product-row--text-only' : ''; ?> animate-on-scroll">
+            <?php if (empty($tab['text_only'])): ?>
+              <div class="product-row-image">
+                <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>"
+                  alt="<?php echo htmlspecialchars($product['title']); ?>">
+              </div>
+            <?php endif; ?>
 
             <div class="product-row-info">
               <h3><?php echo htmlspecialchars($product['title']); ?></h3>
@@ -265,8 +263,5 @@ $ahuTableNote = '';
     </div>
   </div>
 </section>
-
-<!-- Testimonials Section -->
-<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

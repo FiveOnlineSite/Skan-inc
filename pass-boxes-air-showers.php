@@ -158,6 +158,4 @@ $faqs = [
   <?php endforeach; ?>
 </section>
 
-<?php include 'includes/testimonials.php'; ?>
-
 <?php include 'includes/footer.php'; ?>

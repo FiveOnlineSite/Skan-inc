@@ -262,6 +262,11 @@ document.addEventListener("DOMContentLoaded", function () {
             });
           }
         });
+
+        var foggerComparison = document.getElementById("foggerComparison");
+        if (foggerComparison) {
+          foggerComparison.hidden = target === "decontamination-chemicals";
+        }
       });
     });
   }
@@ -335,6 +340,148 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
+    });
+  });
+});
+
+// Allow the continuously looping client-logo marquee to be dragged in either direction.
+document.addEventListener("DOMContentLoaded", function () {
+  var viewport = document.querySelector(".trusted-clients-viewport");
+  var track = document.querySelector(".trusted-clients-track");
+  var group = document.querySelector(".trusted-clients-group");
+
+  if (!viewport || !track || !group) return;
+
+  var startX = 0;
+  var startOffset = 0;
+  var offset = 0;
+  var isDragging = false;
+  var animationDuration = 28;
+
+  function getGroupWidth() {
+    return group.getBoundingClientRect().width;
+  }
+
+  function wrapOffset(value) {
+    var width = getGroupWidth();
+    if (!width) return value;
+    return ((value % width) + width) % width - width;
+  }
+
+  function getCurrentOffset() {
+    var transform = window.getComputedStyle(track).transform;
+    if (!transform || transform === "none") return 0;
+    var matrix = transform.match(/^matrix\((.+)\)$/);
+    return matrix ? parseFloat(matrix[1].split(",")[4]) || 0 : 0;
+  }
+
+  function resumeAnimation() {
+    var width = getGroupWidth();
+    if (!width) return;
+
+    offset = wrapOffset(offset);
+    track.style.transform = "";
+    track.style.animation = "";
+    track.style.animationDelay = (offset / width) * animationDuration + "s";
+  }
+
+  viewport.addEventListener("pointerdown", function (event) {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+
+    event.preventDefault();
+    isDragging = true;
+    startX = event.clientX;
+    startOffset = wrapOffset(getCurrentOffset());
+    offset = startOffset;
+    track.style.animation = "none";
+    track.style.animationDelay = "";
+    track.style.transform = "translateX(" + startOffset + "px)";
+    viewport.classList.add("is-dragging");
+    viewport.setPointerCapture(event.pointerId);
+  });
+
+  viewport.addEventListener("pointermove", function (event) {
+    if (!isDragging) return;
+    offset = wrapOffset(startOffset + event.clientX - startX);
+    track.style.transform = "translateX(" + offset + "px)";
+  });
+
+  function stopDragging(event) {
+    if (!isDragging) return;
+    isDragging = false;
+    viewport.classList.remove("is-dragging");
+    if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    resumeAnimation();
+  }
+
+  viewport.addEventListener("pointerup", stopDragging);
+  viewport.addEventListener("pointercancel", stopDragging);
+  viewport.addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+});
+
+// Keep testimonial cards compact and show the complete review in a modal.
+document.addEventListener("DOMContentLoaded", function () {
+  var modal = document.getElementById("testimonialModal");
+  var modalText = document.getElementById("testimonialModalText");
+  var modalTitle = document.getElementById("testimonialModalTitle");
+  var closeButton = modal && modal.querySelector(".testimonial-modal__close");
+  var trigger = null;
+
+  if (!modal || !modalText || !modalTitle || !closeButton) return;
+
+  function updateReadMoreButtons() {
+    document.querySelectorAll(".testimonial-toggle").forEach(function (button) {
+      var text = document.getElementById(button.dataset.testimonialId);
+      button.hidden = !text || text.scrollHeight <= text.clientHeight + 1;
+    });
+  }
+
+  updateReadMoreButtons();
+  window.addEventListener("resize", updateReadMoreButtons);
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = "";
+    if (trigger) trigger.focus();
+  }
+
+  document.querySelectorAll(".testimonial-toggle").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var text = document.getElementById(button.dataset.testimonialId);
+      if (!text) return;
+      trigger = button;
+      modalText.textContent = text.textContent;
+      modalTitle.textContent = button.dataset.testimonialTitle;
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+      closeButton.focus();
+    });
+  });
+
+  modal.querySelectorAll("[data-testimonial-close]").forEach(function (element) {
+    element.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+});
+
+// Swap a product image when a variant has its own product photograph.
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".variant-tag[data-variant-image]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      var productRow = button.closest(".product-row");
+      var productImage = productRow && productRow.querySelector(".product-row-image img");
+      if (!productImage) return;
+
+      productImage.src = button.dataset.variantImage;
+      productImage.alt = productRow.querySelector("h3").textContent + " — " + button.dataset.variantLabel;
+      productRow.querySelectorAll(".variant-tag[data-variant-image]").forEach(function (variant) {
+        variant.classList.toggle("is-active", variant === button);
+      });
     });
   });
 });

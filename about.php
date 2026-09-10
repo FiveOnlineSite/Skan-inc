@@ -12,7 +12,7 @@
     <div class="about-page-container">
       <div class="about-overview-copy animate-on-scroll">
         <h2>About Skan Inc</h2>
-        <p>Incorporated in Mumbai, we are a pioneer in the industry since 2002. We manufacture, supply and export high quality fogging machines and other equipment pertaining to clean rooms, including laminar airflow equipment and modular OTs. In addition, we are also a leading supplier of disposable products and disinfectant chemicals.</p>
+        <p>Incorporated in Mumbai, we are a pioneer in the industry since 2002. We manufacture, supply and export high quality fogging / fumigation machines and other equipment pertaining to clean rooms, including laminar airflow equipment and modular OTs. In addition, we are also a leading supplier of disposable products and disinfectant chemicals.</p>
         <p>Our in-depth understanding of the industry and market expertise allows us to provide tailor-made solutions for our customers' needs. We undertake projects from start to end, making us a one-stop solution provider for hygiene requirements. We are trusted partners of renowned medical institutions and hospitals.</p>
       </div>
 
@@ -20,17 +20,22 @@
         <article class="about-milestone animate-on-scroll">
           <img src="<?php echo SITE_ROOT; ?>/images/about-icon-calendar.svg" alt="">
           <h3>20+ Years Of Experience</h3>
-          <p>Delighting customers since 2000.</p>
+          <p>Delighting customers since 2002.</p>
         </article>
         <article class="about-milestone animate-on-scroll">
           <img src="<?php echo SITE_ROOT; ?>/images/about-icon-file.svg" alt="">
-          <h3>ISO 13485 Certified</h3>
+          <h3>ISO 13485:2016 Certified</h3>
           <p>World class quality assurance.</p>
         </article>
         <article class="about-milestone animate-on-scroll">
           <img src="<?php echo SITE_ROOT; ?>/images/about-icon-award.svg" alt="">
           <h3>Bhartiya Udyog Pratibha Award</h3>
           <p>For innovative fumigation method.</p>
+        </article>
+        <article class="about-milestone animate-on-scroll">
+          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-certificate.svg" alt="" class="about-icon--red">
+          <h3>CDSCO Registered</h3>
+          <p>Registered medical device manufacturer.</p>
         </article>
       </div>
     </div>

@@ -32,7 +32,7 @@ require __DIR__ . '/includes/contact-handler.php';
           <div class="contact-detail-icon"><img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt=""></div>
           <div>
             <h3>Call Us</h3>
-            <a href="tel:+917506082837">+91 75060 82837</a>
+            <a href="tel:+919519336995">+91 9519336995</a>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ require __DIR__ . '/includes/contact-handler.php';
           <div class="contact-detail-icon"><img src="<?php echo SITE_ROOT; ?>/images/icon-email.svg" alt=""></div>
           <div>
             <h3>Email Us</h3>
-            <a href="mailto:skaninc1@gmail.com">skaninc1@gmail.com</a>
+            <a href="mailto:info@skaninc.com">info@skaninc.com</a>
           </div>
         </div>
       </div>

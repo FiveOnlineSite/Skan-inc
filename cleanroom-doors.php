@@ -24,7 +24,7 @@ $tabs = [
         'title' => 'SS 304 Pharma Grade Swing Doors',
         'image' => 'images/products/ss-304.png',
         'desc' => 'Stainless steel 304 finish in place of painted or laminate surfaces. Specified for frequent washdown, corrosive cleaning agents, or higher hygiene requirements. Common in wet-process pharma areas, CSSD, and zones adjoining autoclave rooms',
-        'variants' => ['Plastic', 'Stainless Steel'],
+        'variants' => [],
       ],
     ],
   ],
@@ -38,7 +38,7 @@ $tabs = [
         'title' => 'Hermetically Sealed OT Doors (Automatic/Manual)',
         'image' => 'images/products/hermetic-ot-doors.png',
         'desc' => 'Full compression seal around thSingle Leaf Cleanroom Doorse frame, beyond what a gasketed swing door provides. Protects the OT&apos;s pressure cascade, where even small air leakage at the door can let contaminated air reach the sterile field. Automatic version preferred in OT settings, since it lets staff move between rooms without touching the door, important when hand contact needs to be minimised.',
-        'variants' => ['Mopping', 'Fogging'],
+        'variants' => [],
       ],
       [
         'title' => 'Automatic Sensor-Based Sliding Doors',
@@ -62,14 +62,14 @@ $tabs = [
   ],
 ];
 
-$comparisonColumns = ['Door Type', 'Hands-Free', 'Hands-Free', 'Typical Use'];
+$comparisonColumns = ['Door Type', 'Hands-Free', 'Seal Level', 'Typical Use'];
 
 $comparisonRows = [
-  'Single Leaf Swing' => ['Yes (auto version)', 'Gasket', 'Standard cleanroom entries, airlocks, labs, CSSD'],
-  'Double Leaf Swing' => ['Yes (auto version)', 'Gasket', 'Equipment/trolley/bed transfer, larger openings'],
-  'Hermetic OT Door' => ['Yes (auto version)', 'Full compression seal', 'OT entries, sterile field boundaries'],
-  'Sensor Sliding Door' => ['Yes', 'Standard', 'Corridors, non-critical transitions'],
-  'Lead-Lined Door' => ['No', 'Radiation shielding', 'Radiology, radiotherapy, nuclear medicine'],
+  'Single Leaf Swing' => ['Available', 'Gasket', 'Standard cleanroom entries, airlocks, labs, CSSD'],
+  'Double Leaf Swing' => ['Available', 'Gasket', 'Equipment/trolley/bed transfer, larger openings'],
+  'Hermetic OT Door' => ['Available', 'Full compression seal', 'OT entries, sterile field boundaries'],
+  'Sensor Sliding Door' => ['Available', 'Standard', 'Corridors, non-critical transitions'],
+  'Lead-Lined Door' => ['Not Available', 'Radiation shielding', 'Radiology, radiotherapy, nuclear medicine, cathlab'],
   'ICU Glass Sliding Door' => ['Optional', 'Standard', 'ICU rooms needing visual monitoring'],
 ];
 ?>
@@ -240,9 +240,5 @@ $comparisonRows = [
     </div>
   </div>
 </section>
-
-<!-- Testimonials Section -->
-
-<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>

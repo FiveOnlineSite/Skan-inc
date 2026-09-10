@@ -41,26 +41,23 @@ $tabs = [
     'label' => 'Validation & Services',
     'title' => 'Validation & Services',
     'description' => 'Commissioning, qualification, periodic testing, and scheduled maintenance demonstrate that a critical facility was built correctly and continues to perform within its intended operating limits.',
+    'text_only' => true,
     'products' => [
       [
         'title' => 'DQ / IQ / OQ / PQ Documentation Services',
-        'image' => 'images/products/ot-1.png',
         'description' => 'DQ, IQ, OQ, and PQ form the standard validation lifecycle a pharmaceutical cleanroom or critical facility follows before approval for use. Documentation through each stage is what a regulatory inspection or internal quality audit reviews, so the paperwork matters as much as the physical testing behind it.',
         'comparison' => 'qualification',
       ],
       [
         'title' => 'HEPA Filter Integrity Testing (DOP)',
-        'image' => 'images/products/ot-2.png',
         'description' => 'HEPA filter integrity testing is commonly called DOP testing after the dispersed oil particulate method historically used. A generated aerosol is introduced upstream of the filter and downstream air is scanned for particle concentration above the allowed threshold, indicating a breach in the filter media or a gap at the frame seal. Testing is repeated at defined intervals throughout a cleanroom\'s operational life because filter integrity degrades over time.',
       ],
       [
         'title' => 'Particle Count Mapping & Air Velocity Tests',
-        'image' => 'images/products/ot-3.png',
         'description' => 'Particle count mapping measures airborne particle concentration at multiple points to confirm that the room meets its intended ISO or GMP classification. Air velocity testing checks whether airflow at HEPA filter faces or within a laminar flow zone falls inside the design range. Both are performed at commissioning and repeated periodically because a room can drift out of classification over time without an obvious change in use.',
       ],
       [
         'title' => 'AMC (Annual Maintenance Contracts)',
-        'image' => 'images/products/ot-4.png',
         'description' => 'Annual maintenance contracts cover scheduled servicing, filter changes, damper checks, AHU servicing, and periodic testing rather than reactive repair after failure. Cleanrooms and OTs degrade quietly, and airflow, pressure, or filtration problems are not always obvious in daily use, which makes scheduled maintenance especially important in critical facilities.',
       ],
     ],
@@ -157,11 +154,13 @@ $faqs = [
         </div>
 
         <?php foreach ($tab['products'] as $productIndex => $product): ?>
-          <div class="product-row<?php echo $productIndex % 2 === 1 ? ' reverse' : ''; ?><?php echo ($product['comparison'] ?? '') === 'bsl' ? ' no-bottom-divider' : ''; ?> animate-on-scroll">
-            <div class="product-row-image">
-              <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>"
-                alt="<?php echo htmlspecialchars($product['title']); ?>">
-            </div>
+          <div class="product-row<?php echo $productIndex % 2 === 1 ? ' reverse' : ''; ?><?php echo !empty($tab['text_only']) ? ' product-row--text-only' : ''; ?><?php echo ($product['comparison'] ?? '') === 'bsl' ? ' no-bottom-divider' : ''; ?> animate-on-scroll">
+            <?php if (empty($tab['text_only'])): ?>
+              <div class="product-row-image">
+                <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>"
+                  alt="<?php echo htmlspecialchars($product['title']); ?>">
+              </div>
+            <?php endif; ?>
             <div class="product-row-info">
               <h3><?php echo htmlspecialchars($product['title']); ?></h3>
               <p><?php echo htmlspecialchars($product['description']); ?></p>
@@ -224,7 +223,5 @@ $faqs = [
     </div>
   <?php endforeach; ?>
 </section>
-
-<?php include 'includes/testimonials.php'; ?>
 
 <?php include 'includes/footer.php'; ?>
