@@ -257,6 +257,9 @@ document.addEventListener("DOMContentLoaded", function () {
           var isTarget = panel.id === target;
           panel.classList.toggle("active", isTarget);
           if (isTarget) {
+            panel.dataset.atTop = "true";
+            panel.dataset.scrollDirection = "";
+            panel.scrollTop = 0;
             panel.querySelectorAll(".animate-on-scroll").forEach(function (el) {
               el.classList.add("visible");
             });
@@ -269,6 +272,61 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+    document.querySelectorAll(".tab-panel").forEach(function (panel) {
+      var touchStartY = null;
+
+      panel.addEventListener("wheel", function (event) {
+        if (event.deltaY) panel.dataset.scrollDirection = event.deltaY > 0 ? "down" : "up";
+      });
+
+      panel.addEventListener(
+        "touchstart",
+        function (event) {
+          touchStartY = event.touches.length === 1 ? event.touches[0].clientY : null;
+        },
+        { passive: true }
+      );
+
+      panel.addEventListener(
+        "touchmove",
+        function (event) {
+          if (touchStartY === null || event.touches.length !== 1) return;
+          var currentTouchY = event.touches[0].clientY;
+          if (currentTouchY !== touchStartY) panel.dataset.scrollDirection = currentTouchY < touchStartY ? "down" : "up";
+          touchStartY = currentTouchY;
+        },
+        { passive: true }
+      );
+
+      panel.addEventListener("scroll", function () {
+        var atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2;
+        var activeButton = document.querySelector(".tab-btn.active");
+        var activeIndex = Array.prototype.indexOf.call(tabButtons, activeButton);
+        var direction = panel.dataset.scrollDirection;
+        var wasAtTop = panel.dataset.atTop === "true";
+
+        panel.dataset.atTop = panel.scrollTop <= 2 ? "true" : "false";
+
+        if (panel.classList.contains("active") && atBottom && direction !== "up") {
+          if (activeIndex < tabButtons.length - 1) {
+            tabButtons[activeIndex + 1].click();
+          }
+        } else if (panel.classList.contains("active") && panel.dataset.atTop === "true" && !wasAtTop && direction === "up") {
+          if (activeIndex > 0) {
+            var previousButton = tabButtons[activeIndex - 1];
+            previousButton.click();
+            var previousPanel = document.getElementById(previousButton.dataset.tabTarget);
+            if (previousPanel) {
+              previousPanel.dataset.atTop = "false";
+              previousPanel.dataset.scrollDirection = "up";
+              previousPanel.scrollTop = previousPanel.scrollHeight;
+            }
+          }
+        }
+      });
+    });
+
   }
 
   // Product Category Tabs end
