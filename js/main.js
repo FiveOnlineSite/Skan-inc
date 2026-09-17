@@ -257,9 +257,6 @@ document.addEventListener("DOMContentLoaded", function () {
           var isTarget = panel.id === target;
           panel.classList.toggle("active", isTarget);
           if (isTarget) {
-            panel.dataset.atTop = "true";
-            panel.dataset.scrollDirection = "";
-            panel.scrollTop = 0;
             panel.querySelectorAll(".animate-on-scroll").forEach(function (el) {
               el.classList.add("visible");
             });
@@ -267,81 +264,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
       });
-    });
-
-    document.querySelectorAll(".tab-panel").forEach(function (panel) {
-      var touchStartY = null;
-
-      function scrollTabPanel(distance) {
-        if (!panel.classList.contains("active") || !distance) return false;
-
-        var activeButton = document.querySelector(".tab-btn.active");
-        var activeIndex = Array.prototype.indexOf.call(tabButtons, activeButton);
-        var maxScroll = panel.scrollHeight - panel.clientHeight;
-
-        if (distance > 0) {
-          var remainingDown = distance - Math.max(0, maxScroll - panel.scrollTop);
-          panel.scrollTop = Math.min(maxScroll, panel.scrollTop + distance);
-
-          if (remainingDown <= 0) return true;
-          if (activeIndex >= tabButtons.length - 1) return false;
-
-          var nextButton = tabButtons[activeIndex + 1];
-          nextButton.click();
-          var nextPanel = document.getElementById(nextButton.dataset.tabTarget);
-          if (nextPanel) nextPanel.scrollTop = Math.min(remainingDown, nextPanel.scrollHeight - nextPanel.clientHeight);
-          return true;
-        }
-
-        var remainingUp = distance + Math.min(panel.scrollTop, Math.abs(distance));
-        panel.scrollTop = Math.max(0, panel.scrollTop + distance);
-
-        if (remainingUp >= 0) return true;
-        if (activeIndex <= 0) return false;
-
-        var previousButton = tabButtons[activeIndex - 1];
-        previousButton.click();
-        var previousPanel = document.getElementById(previousButton.dataset.tabTarget);
-        if (previousPanel) {
-          var previousMaxScroll = previousPanel.scrollHeight - previousPanel.clientHeight;
-          previousPanel.scrollTop = Math.max(0, previousMaxScroll + remainingUp);
-        }
-        return true;
-      }
-
-      panel.addEventListener(
-        "wheel",
-        function (event) {
-          if (!panel.classList.contains("active") || !event.deltaY) return;
-
-          panel.dataset.scrollDirection = event.deltaY > 0 ? "down" : "up";
-          if (scrollTabPanel(event.deltaY)) event.preventDefault();
-        },
-        { passive: false }
-      );
-
-      panel.addEventListener(
-        "touchstart",
-        function (event) {
-          touchStartY = event.touches.length === 1 ? event.touches[0].clientY : null;
-        },
-        { passive: true }
-      );
-
-      panel.addEventListener(
-        "touchmove",
-        function (event) {
-          if (touchStartY === null || event.touches.length !== 1) return;
-          var currentTouchY = event.touches[0].clientY;
-          if (!panel.classList.contains("active") || currentTouchY === touchStartY) return;
-
-          var scrollDistance = touchStartY - currentTouchY;
-          panel.dataset.scrollDirection = scrollDistance > 0 ? "down" : "up";
-          touchStartY = currentTouchY;
-          if (scrollTabPanel(scrollDistance)) event.preventDefault();
-        },
-        { passive: false }
-      );
     });
 
   }
