@@ -266,19 +266,59 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
 
-        var foggerComparison = document.getElementById("foggerComparison");
-        if (foggerComparison) {
-          foggerComparison.hidden = target === "decontamination-chemicals";
-        }
       });
     });
 
     document.querySelectorAll(".tab-panel").forEach(function (panel) {
       var touchStartY = null;
 
-      panel.addEventListener("wheel", function (event) {
-        if (event.deltaY) panel.dataset.scrollDirection = event.deltaY > 0 ? "down" : "up";
-      });
+      function scrollTabPanel(distance) {
+        if (!panel.classList.contains("active") || !distance) return false;
+
+        var activeButton = document.querySelector(".tab-btn.active");
+        var activeIndex = Array.prototype.indexOf.call(tabButtons, activeButton);
+        var maxScroll = panel.scrollHeight - panel.clientHeight;
+
+        if (distance > 0) {
+          var remainingDown = distance - Math.max(0, maxScroll - panel.scrollTop);
+          panel.scrollTop = Math.min(maxScroll, panel.scrollTop + distance);
+
+          if (remainingDown <= 0) return true;
+          if (activeIndex >= tabButtons.length - 1) return false;
+
+          var nextButton = tabButtons[activeIndex + 1];
+          nextButton.click();
+          var nextPanel = document.getElementById(nextButton.dataset.tabTarget);
+          if (nextPanel) nextPanel.scrollTop = Math.min(remainingDown, nextPanel.scrollHeight - nextPanel.clientHeight);
+          return true;
+        }
+
+        var remainingUp = distance + Math.min(panel.scrollTop, Math.abs(distance));
+        panel.scrollTop = Math.max(0, panel.scrollTop + distance);
+
+        if (remainingUp >= 0) return true;
+        if (activeIndex <= 0) return false;
+
+        var previousButton = tabButtons[activeIndex - 1];
+        previousButton.click();
+        var previousPanel = document.getElementById(previousButton.dataset.tabTarget);
+        if (previousPanel) {
+          var previousMaxScroll = previousPanel.scrollHeight - previousPanel.clientHeight;
+          previousPanel.scrollTop = Math.max(0, previousMaxScroll + remainingUp);
+        }
+        return true;
+      }
+
+      panel.addEventListener(
+        "wheel",
+        function (event) {
+          if (!panel.classList.contains("active") || !event.deltaY) return;
+
+          panel.dataset.scrollDirection = event.deltaY > 0 ? "down" : "up";
+          if (scrollTabPanel(event.deltaY)) event.preventDefault();
+        },
+        { passive: false }
+      );
 
       panel.addEventListener(
         "touchstart",
@@ -293,38 +333,15 @@ document.addEventListener("DOMContentLoaded", function () {
         function (event) {
           if (touchStartY === null || event.touches.length !== 1) return;
           var currentTouchY = event.touches[0].clientY;
-          if (currentTouchY !== touchStartY) panel.dataset.scrollDirection = currentTouchY < touchStartY ? "down" : "up";
+          if (!panel.classList.contains("active") || currentTouchY === touchStartY) return;
+
+          var scrollDistance = touchStartY - currentTouchY;
+          panel.dataset.scrollDirection = scrollDistance > 0 ? "down" : "up";
           touchStartY = currentTouchY;
+          if (scrollTabPanel(scrollDistance)) event.preventDefault();
         },
-        { passive: true }
+        { passive: false }
       );
-
-      panel.addEventListener("scroll", function () {
-        var atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2;
-        var activeButton = document.querySelector(".tab-btn.active");
-        var activeIndex = Array.prototype.indexOf.call(tabButtons, activeButton);
-        var direction = panel.dataset.scrollDirection;
-        var wasAtTop = panel.dataset.atTop === "true";
-
-        panel.dataset.atTop = panel.scrollTop <= 2 ? "true" : "false";
-
-        if (panel.classList.contains("active") && atBottom && direction !== "up") {
-          if (activeIndex < tabButtons.length - 1) {
-            tabButtons[activeIndex + 1].click();
-          }
-        } else if (panel.classList.contains("active") && panel.dataset.atTop === "true" && !wasAtTop && direction === "up") {
-          if (activeIndex > 0) {
-            var previousButton = tabButtons[activeIndex - 1];
-            previousButton.click();
-            var previousPanel = document.getElementById(previousButton.dataset.tabTarget);
-            if (previousPanel) {
-              previousPanel.dataset.atTop = "false";
-              previousPanel.dataset.scrollDirection = "up";
-              previousPanel.scrollTop = previousPanel.scrollHeight;
-            }
-          }
-        }
-      });
     });
 
   }

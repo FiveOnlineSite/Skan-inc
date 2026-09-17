@@ -199,39 +199,39 @@ $comparisonRows = [
             </div>
           </div>
         <?php endforeach; ?>
+
+        <?php if ($tab['id'] === 'fogger-machines'): ?>
+          <section class="comparison tab-panel-comparison">
+            <div class="comparison-inner">
+              <h2 class="animate-on-scroll">Comparison At A Glance</h2>
+
+              <div class="comparison-table-wrap animate-on-scroll">
+                <table class="comparison-table">
+                  <thead>
+                    <tr>
+                      <th class="comparison-feature-col">Features</th>
+                      <?php foreach ($comparisonColumns as $col): ?>
+                        <th><?php echo htmlspecialchars($col); ?></th>
+                      <?php endforeach; ?>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php foreach ($comparisonRows as $feature => $values): ?>
+                      <tr>
+                        <td class="comparison-feature-col"><?php echo htmlspecialchars($feature); ?></td>
+                        <?php foreach ($values as $value): ?>
+                          <td><?php echo htmlspecialchars($value); ?></td>
+                        <?php endforeach; ?>
+                      </tr>
+                    <?php endforeach; ?>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        <?php endif; ?>
       </div>
     <?php endforeach; ?>
-  </div>
-</section>
-
-<!-- Testimonials Section -->
-<!-- Comparison At A Glance -->
-<section class="comparison fogging-page-section" id="foggerComparison">
-  <div class="comparison-inner">
-    <h2 class="animate-on-scroll">Comparison At A Glance</h2>
-
-    <div class="comparison-table-wrap animate-on-scroll">
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th class="comparison-feature-col">Features</th>
-            <?php foreach ($comparisonColumns as $col): ?>
-              <th><?php echo htmlspecialchars($col); ?></th>
-            <?php endforeach; ?>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($comparisonRows as $feature => $values): ?>
-            <tr>
-              <td class="comparison-feature-col"><?php echo htmlspecialchars($feature); ?></td>
-              <?php foreach ($values as $value): ?>
-                <td><?php echo htmlspecialchars($value); ?></td>
-              <?php endforeach; ?>
-            </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
-    </div>
   </div>
 </section>
 
