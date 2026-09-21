@@ -17,7 +17,7 @@ $tabs = [
     'products' => [
       [
         'title' => 'Vertical Laminar Airflow Benches',
-        'image' => 'images/products/ot-1.png',
+        'image' => 'images/products/vertical-laf.png',
         'desc' => 'Used in laboratories and smaller cleanroom operations where a specific work area, not the whole room, needs a higher cleanliness standard. Air drawn through a HEPA filter at the top, delivered downward across the work surface in a steady, unidirectional stream. Keeps particles from settling on the process happening at the bench.',
         'variants' => [],
       ],
@@ -29,7 +29,7 @@ $tabs = [
       ],
       [
         'title' => 'HEPA Filter Modules (Mini-Pleat, Gel Seal)',
-        'image' => 'images/products/ot-3.png',
+        'image' => 'images/products/hepa.png',
         'desc' => 'HEPA filter modules are the filtration component that makes both LAF systems above work, not a separate category of unit. Mini-pleat construction packs more filter media into a compact housing, increasing effective filtration area without increasing footprint, useful where space above the OT ceiling is limited. Gel seal closes the filter pack into its frame using a gel-filled channel the filter\'s knife-edges seat into, eliminating the gap air could otherwise bypass through. A HEPA filter is only as effective as its seal. Excellent filter media with a poor frame seal will still leak unfiltered air around its edges.',
         'variants' => [],
       ],
