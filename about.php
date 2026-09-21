@@ -3,7 +3,7 @@
 
 <main class="about-page">
   <section class="about-hero-page animate-fade-up">
-    <img src="<?php echo SITE_ROOT; ?>/images/banner-about.png" alt="Modern commercial buildings">
+    <img src="<?php echo SITE_ROOT; ?>/images/banner-about.jpg" alt="Modern commercial buildings">
     <div class="about-hero-page-overlay"></div>
     <h1>About Us</h1>
   </section>
@@ -83,7 +83,7 @@
         </div>
 
         <div class="about-trust-image animate-on-scroll">
-          <img src="<?php echo SITE_ROOT; ?>/images/about-trust.png" alt="Skan Inc manufacturing team">
+          <img src="<?php echo SITE_ROOT; ?>/images/trust.png" alt="Skan Inc manufacturing team">
         </div>
 
         <div class="about-trust-column">
