@@ -116,7 +116,7 @@ $comparisonRows = [
 
 <!-- Product Hero -->
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/abc.png" alt="<?php echo $pageTitle; ?>">
+  <img src="<?php echo SITE_ROOT; ?>/images/banner1.png" alt="<?php echo $pageTitle; ?>">
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo $pageTitle; ?></h1>

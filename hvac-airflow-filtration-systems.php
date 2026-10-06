@@ -16,9 +16,9 @@ $tabs = [
     'description' => 'LAF systems deliver a unidirectional stream of filtered air across a defined work zone, maintaining a consistently clean environment at the point where it matters most, a workbench or an entire operating field.',
     'products' => [
       [
-        'title' => 'Vertical Laminar Airflow Benches',
+        'title' => 'HEPA for modular OT ',
         'image' => 'images/products/vertical-laf.png',
-        'desc' => 'Used in laboratories and smaller cleanroom operations where a specific work area, not the whole room, needs a higher cleanliness standard. Air drawn through a HEPA filter at the top, delivered downward across the work surface in a steady, unidirectional stream. Keeps particles from settling on the process happening at the bench.',
+        'desc' => 'HEPA filtration for Modular OTs helps maintain a clean, controlled, and contamination-free surgical environment. It efficiently captures fine airborne particles, dust, and microorganisms while supporting consistent airflow. Designed for reliable performance, the system helps maintain required air quality standards within operation theatres.',
         'variants' => [],
       ],
       [
@@ -33,6 +33,12 @@ $tabs = [
         'desc' => 'HEPA filter modules are the filtration component that makes both LAF systems above work, not a separate category of unit. Mini-pleat construction packs more filter media into a compact housing, increasing effective filtration area without increasing footprint, useful where space above the OT ceiling is limited. Gel seal closes the filter pack into its frame using a gel-filled channel the filter\'s knife-edges seat into, eliminating the gap air could otherwise bypass through. A HEPA filter is only as effective as its seal. Excellent filter media with a poor frame seal will still leak unfiltered air around its edges.',
         'variants' => [],
       ],
+      [
+        'title' => 'Vertical Laminar Airflow Benches',
+        'image' => 'images/vertical.png',
+        'desc' => 'Used in laboratories and smaller cleanroom operations where a specific work area, not the whole room, needs a higher cleanliness standard. Air drawn through a HEPA filter at the top, delivered downward across the work surface in a steady, unidirectional stream. Keeps particles from settling on the process happening at the bench.',
+        'variants' => [],
+      ]
     ],
   ],
   [

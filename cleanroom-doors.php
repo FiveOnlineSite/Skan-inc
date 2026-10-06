@@ -37,7 +37,7 @@ $tabs = [
       [
         'title' => 'Hermetically Sealed OT Doors (Automatic/Manual)',
         'image' => 'images/products/hermetic-ot-doors.png',
-        'desc' => 'Full compression seal around thSingle Leaf Cleanroom Doorse frame, beyond what a gasketed swing door provides. Protects the OT&apos;s pressure cascade, where even small air leakage at the door can let contaminated air reach the sterile field. Automatic version preferred in OT settings, since it lets staff move between rooms without touching the door, important when hand contact needs to be minimised.',
+        'desc' => 'Full compression seal around thSingle Leaf Cleanroom Doorse frame, beyond what a gasketed swing door provides. Protects the OT&apos;s pressure cascade, where even small air leakage at the door can let contaminated air reach the sterile field. Automatic version preferred in modularOT settings, since it lets staff move between rooms without touching the door, important when hand contact needs to be minimised.',
         'variants' => [],
       ],
       [
@@ -49,7 +49,7 @@ $tabs = [
       [
         'title' => 'Lead-Lined Radiation Shielding Doors',
         'image' => 'images/products/lead-lining-door.png',
-        'desc' => 'Shielding layer, typically lead, contains radiation within the room during operation. Required shielding level is determined by the equipment type and output inside the room. Specified as part of the facility&apos;s radiation safety design, in line with AERB requirements. Lead equivalence varies by application and is confirmed against the specific room and equipment during project planning, not supplied as a fixed standard specification.',
+        'desc' => 'Shielding layer, typically lead, contains radiation within the room during operation. Required shielding level is determined by the equipment type and output inside the room. Specified as part of the facility&apos;s radiation safety design, in line with AERB requirements. Lead equivalence varies by application and is confirmed against the specific room and equipment during project planning, not supplied as a fixed standard specification mainly usefull in catahlabs and radiology centers.',
         'variants' => [],
       ],
       [
@@ -68,7 +68,7 @@ $comparisonRows = [
   'Single Leaf Swing' => ['Available', 'Gasket', 'Standard cleanroom entries, airlocks, labs, CSSD'],
   'Double Leaf Swing' => ['Available', 'Gasket', 'Equipment/trolley/bed transfer, larger openings'],
   'Hermetic OT Door' => ['Available', 'Full compression seal', 'OT entries, sterile field boundaries'],
-  'Sensor Sliding Door' => ['Available', 'Standard', 'Corridors, non-critical transitions'],
+  'Sensor Sliding Door' => ['Available', 'Full compression seal', 'Corridors, non-critical transitions'],
   'Lead-Lined Door' => ['Not Available', 'Radiation shielding', 'Radiology, radiotherapy, nuclear medicine, cathlab'],
   'ICU Glass Sliding Door' => ['Optional', 'Standard', 'ICU rooms needing visual monitoring'],
 ];
@@ -93,7 +93,7 @@ $comparisonRows = [
       particle ingress, pressure loss, or seal wear. Leaf material, frame detailing, seal type, and operating mechanism
       all determine how well the opening holds its classification over years of use, not just on installation day.
       Skan Inc provides cleanroom doors from standard single leaf swing doors for general pharma and industrial
-      cleanrooms to specialised systems for OTs, radiology areas, and ICUs. Selection is driven by room function,
+      cleanrooms to specialised systems for modular OTs, radiology areas, and ICUs. Selection is driven by room function,
       traffic, whether hands-free operation is required, and, in some cases, regulatory requirements specific to the
       application, such as radiation shielding.
     </p>
@@ -211,7 +211,7 @@ $comparisonRows = [
       <span>+</span>
     </button>
     <div class="faq-answer">
-      <p>Yes, in practice. The pressure cascade an OT depends on to keep contaminated air out of the sterile field is
+      <p>Yes, in practice. The modular OT'spressure cascade an OT depends on to keep contaminated air out of the sterile field is
         only as good as its weakest seal, and a standard gasketed swing door is more prone to leakage at the frame than
         a compression-sealed hermetic door.</p>
     </div>

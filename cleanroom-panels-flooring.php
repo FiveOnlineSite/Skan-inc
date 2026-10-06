@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Cleanroom Panels & Flooring';
+$pageTitle = 'Modular OT/Cleanroom Panels & Flooring';
 
 $tabs = [
   [
@@ -11,7 +11,7 @@ $tabs = [
       [
         'title' => 'PUF (Polyurethane Foam) Insulated Panels',
         'image' => 'images/products/puf-pannels.png',
-        'desc' => 'Rigid foam core, strong thermal insulation for its weight. Standard choice where fire rating is not the primary driver. Available in 30mm, 50mm, 80mm, and 100mm, selected by insulation need and structural span. Skin options: PPGI — cost-effective, general manufacturing areas. Stainless steel (304/316L) — frequent washdown, high corrosion exposure, areas near autoclaves. HPL (antibacterial) — smoother finish, more common in hospital/OT interiors than heavy industrial pharma. The skin is a specification decision based on the room&apos;s use, not a finish preference. We work through this with the client and consultant during design.',
+        'desc' => 'Rigid foam core, strong thermal insulation for its weight. Standard choice where fire rating is not the primary driver. Available in 30mm, 50mm, 80mm, and 100mm, selected by insulation need and structural span. Skin options: PPGI — cost-effective, general manufacturing areas. Stainless steel (304/316L) — frequent washdown, high corrosion exposure, areas near autoclaves. HPL (antibacterial) — smoother finish, more common in hospital/Modular OT/Pharma cleanrooms interiors than heavy industrial pharma. The skin is a specification decision based on the room&apos;s use, not a finish preference. We work through this with the client and consultant during design.',
         'variants' => [],
       ],
       [
@@ -43,13 +43,13 @@ $tabs = [
       [
         'title' => 'Vinyl Flooring',
         'image' => 'images/products/vinyl-flooring.jpg',
-        'desc' => 'Vinyl flooring is supplied in sheet form and welded at the seams to create a continuous, monolithic surface with no open joints for contamination to collect in. We generally install vinyl flooring at 2mm thickness, which is standard for this category of product. Conductive / anti-static vinyl — controls static discharge to protect equipment or reduce ignition risk around fine powders and solvents. Surface resistance depends on the specific brand and product used per project; we confirm the figure against the material actually specified, rather than quote one number for every job. Homogeneous vinyl — uniform composition through its full depth, so wear doesn&apos;t expose a different layer underneath. Standard choice for general cleanroom areas, corridors, and non-OT hospital zones.',
+        'desc' => 'Vinyl flooring is supplied in sheet form and welded at the seams to create a continuous, monolithic surface with no open joints for contamination to collect in. We generally install vinyl flooring at 2mm thickness, which is standard for this category of product. Conductive / anti-static vinyl — controls static discharge to protect equipment or reduce ignition risk around fine powders and solvents. Surface resistance depends on the specific brand and product used per project; we confirm the figure against the material actually specified, rather than quote one number for every job. Homogeneous vinyl — uniform composition through its full depth, so wear doesn&apos;t expose a different layer underneath. Standard choice for general cleanroom areas, Modular OT, corridors, and non-OT hospital zones.',
         'variants' => [],
       ],
       [
         'title' => 'Epoxy & Specialized Flooring',
         'image' => 'images/products/epoxy-flooring.png',
-        'desc' => 'Self-levelling epoxy — poured and trowelled, fully seamless including into the coving detail. Common for OT flooring and sterile manufacturing where seam-free continuity matters. Good chemical resistance to disinfectants. PU coating — protective topcoat over epoxy or as a standalone finish, applied thinner than the base flooring system. Adds abrasion, chemical, or UV resistance depending on formulation and expected wear profile.',
+        'desc' => 'Self-levelling epoxy — poured and trowelled, fully seamless including into the coving detail. Common for Modular OT flooring and sterile manufacturing where seam-free continuity matters. Good chemical resistance to disinfectants. PU coating — protective topcoat over epoxy or as a standalone finish, applied thinner than the base flooring system. Adds abrasion, chemical, or UV resistance depending on formulation and expected wear profile.',
         'variants' => [],
       ],
     ],
@@ -83,7 +83,7 @@ $comparisonRows = [
       specification wrong for the room's classification and cleaning regime, and the weaknesses show up within a few
       years, sometimes sooner.
       At Skan Inc, panel and flooring selection starts with the application, not a fixed catalogue answer. A
-      pharmaceutical manufacturing suite, a hospital operation theatre, and a research laboratory each place different
+      pharmaceutical manufacturing suite, a hospital modular operation theatre, and a research laboratory each place different
       demands on the same square metre of wall or floor, and the right specification reflects those requirements through
       our in-house manufactured panels.
     </p>
