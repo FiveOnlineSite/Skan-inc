@@ -9,7 +9,8 @@
   </div>
   <div class="hero-content animate-fade-up">
     <h1>Advanced Hygiene &amp; Disinfection Solutions for Critical Spaces</h1>
-    <p>Manufacturing certified fogging machines, OT solutions, and controlled environment systems backed by quality, customization, and
+    <p>Manufacturing certified fogging machines, OT solutions, and controlled environment systems backed by quality,
+      customization, and
       prompt service support.</p>
     <a href="#products" class="btn btn-primary">Our Products</a>
   </div>
@@ -32,7 +33,8 @@
       <p>For Innovative fumigation method.</p>
     </div>
     <div class="award-item">
-      <img src="<?php echo SITE_ROOT; ?>/images/products/Central_Drugs_Standard_Control_Organization.jpg" alt="" class="award-icon">
+      <img src="<?php echo SITE_ROOT; ?>/images/products/Central_Drugs_Standard_Control_Organization.jpg" alt=""
+        class="award-icon">
       <h3>CDSCO Registered</h3>
       <p>Registered medical device manufacturer.</p>
     </div>
@@ -66,9 +68,14 @@
     <h2 class="animate-on-scroll">Solutions for Hygiene, Disinfection &amp; Controlled Environments</h2>
     <div class="products-grid">
       <div class="product-card animate-on-scroll">
-        <img src="<?php echo SITE_ROOT; ?>/images/products/fogging-machine.png" alt="Fogging Machine">
+        <video autoplay muted loop playsinline preload="metadata"
+          style="width:100%; height: auto; object-fit: cover;">
+          <source src="<?php echo SITE_ROOT; ?>/images/products/rotate.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <div class="product-overlay"></div>
-        <a href="<?php echo SITE_ROOT; ?>/fogging-machine-decontamination.php" class="product-arrow" aria-label="View Fogging Machine solutions">
+        <a href="<?php echo SITE_ROOT; ?>/fogging-machine-decontamination.php" class="product-arrow"
+          aria-label="View Fogging Machine solutions">
           <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon.svg" alt="">
         </a>
         <div class="product-label">
@@ -78,7 +85,8 @@
       <div class="product-card animate-on-scroll">
         <img src="<?php echo SITE_ROOT; ?>/images/products/puf-pannels.png" alt="Mosquito Fogging Machine">
         <div class="product-overlay"></div>
-        <a href="<?php echo SITE_ROOT; ?>/cleanroom-panels-flooring.php" class="product-arrow" aria-label="View Cleanroom Panels and Flooring">
+        <a href="<?php echo SITE_ROOT; ?>/cleanroom-panels-flooring.php" class="product-arrow"
+          aria-label="View Cleanroom Panels and Flooring">
           <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
         </a>
         <div class="product-label">
@@ -98,7 +106,8 @@
       <div class="product-card animate-on-scroll">
         <img src="<?php echo SITE_ROOT; ?>/images/products/air-handling-unit.png" alt="Disposables">
         <div class="product-overlay"></div>
-        <a href="<?php echo SITE_ROOT; ?>/hvac-airflow-filtration-systems.php" class="product-arrow" aria-label="View HVAC, Airflow and Filtration Systems">
+        <a href="<?php echo SITE_ROOT; ?>/hvac-airflow-filtration-systems.php" class="product-arrow"
+          aria-label="View HVAC, Airflow and Filtration Systems">
           <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
         </a>
         <div class="product-label">
@@ -108,7 +117,8 @@
       <div class="product-card product-card-wide animate-on-scroll">
         <img src="<?php echo SITE_ROOT; ?>/images/products/led-surgical-lights.png" alt="Clean Room Equipment">
         <div class="product-overlay"></div>
-        <a href="<?php echo SITE_ROOT; ?>/ot-equipment-control-systems.php" class="product-arrow" aria-label="View OT Equipment and Control Systems">
+        <a href="<?php echo SITE_ROOT; ?>/ot-equipment-control-systems.php" class="product-arrow"
+          aria-label="View OT Equipment and Control Systems">
           <img src="<?php echo SITE_ROOT; ?>/images/arrow-icon-2.svg" alt="">
         </a>
         <div class="product-label">
@@ -179,18 +189,18 @@
       <div class="trusted-clients-viewport">
         <div class="trusted-clients-track">
           <div class="trusted-clients-group">
-          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/railways.png"
-              alt="Indian Railways"></div>
-          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/holy-cross.jpg"
-              alt="Holy Cross Hospital" loading="lazy"></div>
-          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/cardiac.png"
-              alt="Cardiac Institute" loading="lazy"></div>
-          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/hinduja.png"
-              alt="P. D. Hinduja Hospital and Medical Research Center" loading="lazy"></div>
-          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/saifee.png"
-              alt="Saifee Hospital" loading="lazy"></div>
-          <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/breachcandy.png"
-              alt="Breach Candy Hospital" loading="lazy"></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/railways.png"
+                alt="Indian Railways"></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/holy-cross.jpg"
+                alt="Holy Cross Hospital" loading="lazy"></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/cardiac.png"
+                alt="Cardiac Institute" loading="lazy"></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/hinduja.png"
+                alt="P. D. Hinduja Hospital and Medical Research Center" loading="lazy"></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/saifee.png"
+                alt="Saifee Hospital" loading="lazy"></div>
+            <div class="trusted-client-slide"><img src="<?php echo SITE_ROOT; ?>/images/breachcandy.png"
+                alt="Breach Candy Hospital" loading="lazy"></div>
           </div>
           <!-- Duplicate set makes the marquee loop without a visible jump. -->
           <div class="trusted-clients-group" aria-hidden="true">

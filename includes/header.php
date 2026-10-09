@@ -79,7 +79,7 @@ function ariaCurrent(bool $isActive): string
               <div class="mega-menu-inner">
                 <a href="<?php echo SITE_ROOT; ?>/fogging-machine-decontamination.php" class="mega-menu-card">
                   <div class="mega-menu-img">
-                    <img src="<?php echo SITE_ROOT; ?>/images/products/ulv-skd1100-plastic.png" alt="Fogging Machine">
+                    <img src="<?php echo SITE_ROOT; ?>/images/products/ulv-skd1100-steel.png" alt="Fogging Machine">
                   </div>
                   <h5>Fogging Machine</h5>
                 </a>
