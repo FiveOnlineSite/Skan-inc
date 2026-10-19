@@ -6,6 +6,7 @@ $tabs = [
     'id' => 'pass-boxes',
     'label' => 'Pass Boxes',
     'title' => 'Pass Boxes',
+    'image' => 'images/banner-pass-box.png',
     'description' => 'A pass box is a two-door transfer chamber built into the wall between two spaces. Regardless of type, the core function is the same: the two doors can never be open at once, so the box never creates a direct, uncontrolled air path between the rooms it connects.',
     'table_title' => 'Pass Box Types at a Glance',
     'columns' => ['Type', 'Mechanism', 'Specified When'],
@@ -27,6 +28,7 @@ $tabs = [
     'id' => 'air-showers-tunnels',
     'label' => 'Air Showers & Tunnels',
     'title' => 'Air Showers & Tunnels',
+    'image' => 'images/products/air-shower.png',
     'description' => 'Gowning alone does not fully solve surface contamination. Loose particles and fibres can cling to the outside of a gown, or to equipment being wheeled in, even when garment protocol is followed correctly. Air showers and tunnels strip that contamination off at the last point of entry using high-velocity HEPA-filtered air jets, rather than letting it travel into the room.',
     'table_title' => 'Air Cleaning Systems at a Glance',
     'columns' => ['Type', 'Used For'],
@@ -103,10 +105,23 @@ $faqs = [
     <?php foreach ($tabs as $index => $tab): ?>
       <div class="tab-panel<?php echo $index === 0 ? ' active' : ''; ?>"
         id="<?php echo htmlspecialchars($tab['id']); ?>" role="tabpanel">
-        <div class="tab-panel-intro animate-on-scroll">
-          <h3><?php echo htmlspecialchars($tab['title']); ?></h3>
-          <p><?php echo htmlspecialchars($tab['description']); ?></p>
-        </div>
+        <?php if (!empty($tab['image'])): ?>
+          <div class="product-row animate-on-scroll">
+            <div class="product-row-image">
+              <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($tab['image'], '/')); ?>"
+                alt="<?php echo htmlspecialchars($tab['title']); ?>">
+            </div>
+            <div class="product-row-info">
+              <h3><?php echo htmlspecialchars($tab['title']); ?></h3>
+              <p><?php echo htmlspecialchars($tab['description']); ?></p>
+            </div>
+          </div>
+        <?php else: ?>
+          <div class="tab-panel-intro animate-on-scroll">
+            <h3><?php echo htmlspecialchars($tab['title']); ?></h3>
+            <p><?php echo htmlspecialchars($tab['description']); ?></p>
+          </div>
+        <?php endif; ?>
 
         <section class="comparison">
           <div class="comparison-inner">

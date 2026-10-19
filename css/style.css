@@ -2121,6 +2121,16 @@ button.variant-tag.is-active {
   padding: 0 80px;
 }
 
+/* Product-page tables align with the full width of the product rows. */
+.product-list-inner .comparison-inner {
+  max-width: none;
+  padding-inline: 0;
+}
+
+.product-list-inner .comparison-table-wrap {
+  width: 100%;
+}
+
 .comparison-inner > h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;

@@ -86,7 +86,7 @@ $tabs = [
         'title' => 'INFEKTO ZYME MULTI',
         'image' => 'images/products/infekto-zyme-multi.png',
         'desc' => 'Infekto Zyme Multi is an ISO & QA certified enzymatic cleaner that helps achieve high quality cleaning of medical, surgical and orthopedic instruments & endoscopes. It has fast action with superior cleaning performance and a pleasant fragrance. The multi-enzymatic formulation dissolves all types of bio burden and has a low usage concentration which makes it highly economical.',
-        'variants' => ['6x2 L Bottle', '2x5 L Canister'],
+        // 'variants' => ['6x2 L Bottle', '2x5 L Canister'],
       ],
       [
         'title' => 'HUWA-SAN',

@@ -117,7 +117,7 @@ $faqs = [
 <section class="product-intro">
   <div class="product-intro-inner animate-on-scroll">
     <h2>What are Turnkey Projects &amp; Validation?</h2>
-    <p>Most cleanroom and hospital infrastructure projects fail not because a single component was wrong, but because components were not coordinated—a panel system installed before HVAC ductwork was finalised, or a room built to a classification that validation testing later shows it does not meet. A turnkey approach closes that gap, treating the project as one coordinated build from design through commissioning rather than a sequence of separately managed trades.</p>
+    <p>Most cleanroom and hospital infrastructure projects fail not because a single component was wrong, but because components weren't coordinated, a panel system installed before HVAC ductwork was finalised, or a room built to a classification the validation testing later shows it doesn't meet. A turnkey approach closes that gap, treating the project as one coordinated build from design through commissioning rather than a sequence of separately managed trades.</p>
     <p>Skan Inc undertakes turnkey pharmaceutical cleanroom, modular OT, and hospital infrastructure projects, drawing on the panel, HVAC, door, and equipment capabilities covered elsewhere on this site and coordinating them into a single project timeline. Where a project needs expertise or components outside our direct manufacturing scope, we work with established partners and take responsibility for how those pieces integrate into the finished facility.</p>
   </div>
 </section>

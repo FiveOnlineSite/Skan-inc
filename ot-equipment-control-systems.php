@@ -139,35 +139,18 @@ $faqs = [
         <?php endif; ?>
 
         <?php foreach ($tab['products'] as $productIndex => $product): ?>
-          <div class="product-row<?php echo $productIndex % 2 === 1 ? ' reverse' : ''; ?><?php echo !empty($product['table_below']) ? ' no-bottom-divider' : ''; ?> animate-on-scroll">
+          <div class="product-row<?php echo $productIndex % 2 === 1 ? ' reverse' : ''; ?><?php echo !empty($product['spec_rows']) ? ' no-bottom-divider' : ''; ?> animate-on-scroll">
             <div class="product-row-image"><img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($product['image'], '/')); ?>"
                 alt="<?php echo htmlspecialchars($product['title']); ?>"></div>
             <div class="product-row-info">
               <h3><?php echo htmlspecialchars($product['title']); ?></h3>
               <p><?php echo htmlspecialchars($product['desc']); ?></p>
-              <?php if (!empty($product['spec_rows']) && empty($product['table_below'])): ?>
-                <div class="comparison-table-wrap product-spec-table">
-                  <table class="comparison-table">
-                    <thead>
-                      <tr><?php foreach ($product['spec_columns'] as $column): ?>
-                          <th><?php echo htmlspecialchars($column); ?></th><?php endforeach; ?>
-                      </tr>
-                    </thead>
-                    <tbody><?php foreach ($product['spec_rows'] as $row): ?>
-                        <tr><?php foreach ($row as $cellIndex => $cell): ?>
-                            <td<?php echo $cellIndex === 0 ? ' class="comparison-feature-col"' : ''; ?>>
-                              <?php echo htmlspecialchars($cell); ?></td><?php endforeach; ?>
-                        </tr><?php endforeach; ?>
-                    </tbody>
-                  </table>
-                </div>
-              <?php endif; ?>
               <?php if (!empty($product['brochure'])): ?>
                 <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">Download Brochure <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt=""></a>
               <?php endif; ?>
             </div>
           </div>
-          <?php if (!empty($product['spec_rows']) && !empty($product['table_below'])): ?>
+          <?php if (!empty($product['spec_rows'])): ?>
             <div class="comparison-table-wrap product-spec-table product-spec-table--full animate-on-scroll">
               <table class="comparison-table">
                 <thead>

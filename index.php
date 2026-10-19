@@ -9,7 +9,7 @@
   </div>
   <div class="hero-content animate-fade-up">
     <h1>Advanced Hygiene &amp; Disinfection Solutions for Critical Spaces</h1>
-    <p>Manufacturing certified fogging machines, OT solutions, and controlled environment systems backed by quality,
+    <p>Manufacturing certified Fogging machines, OT solutions, Modular OT and controlled environment systems backed by quality,
       customization, and
       prompt service support.</p>
     <a href="#products" class="btn btn-primary">Our Products</a>
@@ -18,22 +18,22 @@
   <!-- Awards Bar -->
   <div class="awards-bar animate-fade-up">
     <div class="award-item">
-      <img src="<?php echo SITE_ROOT; ?>/images/products/glass logo.png" alt="" class="award-icon">
+      <img src="<?php echo SITE_ROOT; ?>/images/products/glass-logo.png" alt="" class="award-icon">
       <h3>24+ Years Of Experience</h3>
       <p>Delighting customers since 2002.</p>
     </div>
     <div class="award-item">
-      <img src="<?php echo SITE_ROOT; ?>/images/products/ISO-Logo-13485-2016.webp" alt="" class="award-icon">
+      <img src="<?php echo SITE_ROOT; ?>/images/products/iso.webp" alt="" class="award-icon">
       <h3>ISO 13485:2016 Accredited</h3>
       <p>World class quality assurance.</p>
     </div>
     <div class="award-item">
-      <img src="<?php echo SITE_ROOT; ?>/images/products/logo12.webp" alt="" class="award-icon">
+      <img src="<?php echo SITE_ROOT; ?>/images/products/bup.webp" alt="" class="award-icon">
       <h3>Bhartiya Udyog Pratibha Award</h3>
       <p>For Innovative fumigation method.</p>
     </div>
     <div class="award-item">
-      <img src="<?php echo SITE_ROOT; ?>/images/products/Central_Drugs_Standard_Control_Organization.jpg" alt=""
+      <img src="<?php echo SITE_ROOT; ?>/images/products/cdso.jpg" alt=""
         class="award-icon">
       <h3>CDSCO Registered</h3>
       <p>Registered medical device manufacturer.</p>
