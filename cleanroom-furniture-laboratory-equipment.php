@@ -20,12 +20,12 @@ $tabs = [
       ],
       [
         'title' => 'SS Cleanroom Lockers & Writing Desks',
-        'image' => 'images/products/cross-over-bench.png',
+        'image' => 'images/products/lockers.png',
         'description' => 'SS cleanroom lockers and writing desks provide personal storage and workspace built to the same hygiene standard as fixed cleanroom furniture. Unlike standard office furniture, they avoid seams, joints, and absorbent surfaces that would make wipe-down and disinfection difficult.',
       ],
       [
         'title' => 'Instrument & Dressing Trolleys',
-        'image' => 'images/products/garment-storage-cabinet.png',
+        'image' => 'images/products/dressing-trolley.png',
         'description' => 'Instrument and dressing trolleys are mobile units for moving sterile instruments, dressings, and supplies within the OT or cleanroom. They use smooth, easily wiped surfaces with locking castors for stability while stationary and are built to the same cleanability standard as fixed furniture because they may move between classification zones during a single shift.',
       ],
     ],

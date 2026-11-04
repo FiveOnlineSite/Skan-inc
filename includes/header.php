@@ -128,7 +128,7 @@ function ariaCurrent(bool $isActive): string
                 </a>
                 <a href="<?php echo SITE_ROOT; ?>/turnkey-projects-validation.php" class="mega-menu-card">
                   <div class="mega-menu-img">
-                    <img src="<?php echo SITE_ROOT; ?>/images/products/ot-2.png" alt="Disposables">
+                    <img src="<?php echo SITE_ROOT; ?>/images/banner-turnkey.png" alt="Disposables">
                   </div>
                   <h5>Turnkey Projects &amp; Validation</h5>
                 </a>
@@ -136,6 +136,7 @@ function ariaCurrent(bool $isActive): string
             </div>
           </div>
           <a href="<?php echo SITE_ROOT; ?>/media.php" class="nav-link<?php echo navActiveClass($currentPage === 'media.php'); ?>"<?php echo ariaCurrent($currentPage === 'media.php'); ?>>Media</a>
+          <a href="<?php echo SITE_ROOT; ?>/blog.php" class="nav-link<?php echo navActiveClass($currentPage === 'blog.php'); ?>"<?php echo ariaCurrent($currentPage === 'blog.php'); ?>>Blogs</a>
         </nav>
         <a href="<?php echo SITE_ROOT; ?>/contact.php" class="btn btn-primary nav-cta<?php echo navActiveClass($currentPage === 'contact.php'); ?>"<?php echo ariaCurrent($currentPage === 'contact.php'); ?>>Contact Us</a>
       </div>

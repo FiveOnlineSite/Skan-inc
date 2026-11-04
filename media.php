@@ -44,70 +44,109 @@ $videos = [
     </div>
   </section>
 
-  <section class="media-gallery-section">
+  <section class="media-content-section">
     <div class="media-container">
-      <div class="media-gallery-header animate-on-scroll">
-        <div class="media-section-heading">
-          <h2>Images</h2>
-          <p>A closer look at the equipment and environments we engineer for healthcare, pharmaceutical and laboratory
-            facilities.</p>
-        </div>
+      <div class="media-section-heading media-content-heading animate-on-scroll">
+        <h2>Explore Our Project Gallery</h2>
+        <p>Click one of the tabs below to explore our project images and videos.</p>
       </div>
 
-      <div class="media-gallery-carousel">
-        <div class="media-gallery-grid">
-          <?php foreach ($galleryImages as $image): ?>
-            <a href="<?php echo htmlspecialchars(SITE_ROOT . '/' . $image); ?>"
-              class="media-gallery-card animate-on-scroll" target="_blank" rel="noopener noreferrer">
-              <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . $image); ?>"
-                alt="Skan Inc. project gallery image" loading="lazy">
-            </a>
-          <?php endforeach; ?>
+      <div class="media-tabs" data-media-tabs>
+        <div class="media-tab-list" role="tablist" aria-label="Media type">
+          <button class="media-tab active" type="button" role="tab" id="media-images-tab"
+            aria-selected="true" aria-controls="media-images-panel">Images</button>
+          <button class="media-tab" type="button" role="tab" id="media-videos-tab"
+            aria-selected="false" aria-controls="media-videos-panel" tabindex="-1">Videos</button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="media-videos-section">
-    <div class="media-container">
-      <div class="media-video-header animate-on-scroll">
-        <div class="media-section-heading">
-          <h2>Videos</h2>
-          <p>Product demonstrations, facility showcases and insights from our team.</p>
-        </div>
-      </div>
-
-      <?php if (!empty($videos)): ?>
-        <div class="media-video-carousel">
-          <div class="media-video-grid">
-            <?php foreach ($videos as $video): ?>
-              <article class="media-video-card animate-on-scroll">
-                <?php if (!empty($video['youtube_id'])): ?>
-                  <iframe src="https://www.youtube-nocookie.com/embed/<?php echo rawurlencode($video['youtube_id']); ?>"
-                    title="<?php echo htmlspecialchars($video['title']); ?>" loading="lazy"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <?php else: ?>
-                  <video controls preload="metadata" <?php echo !empty($video['poster']) ? ' poster="' . htmlspecialchars(SITE_ROOT . '/' . $video['poster']) . '"' : ''; ?>>
-                    <source src="<?php echo htmlspecialchars(SITE_ROOT . '/' . $video['src']); ?>" type="video/mp4">
-                    Your browser does not support the video element.
-                  </video>
-                <?php endif; ?>
-              </article>
+        <div class="media-tab-panel" id="media-images-panel" role="tabpanel" aria-labelledby="media-images-tab">
+          <div class="media-gallery-grid">
+            <?php foreach ($galleryImages as $image): ?>
+              <a href="<?php echo htmlspecialchars(SITE_ROOT . '/' . $image); ?>"
+                class="media-gallery-card animate-on-scroll" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo htmlspecialchars(SITE_ROOT . '/' . $image); ?>"
+                  alt="Skan Inc. project gallery image" loading="lazy">
+              </a>
             <?php endforeach; ?>
           </div>
         </div>
-      <?php else: ?>
-        <div class="media-video-empty animate-on-scroll">
-          <div class="media-play-icon" aria-hidden="true">
-            <span></span>
-          </div>
-          <h3>Videos coming soon</h3>
-          <p>We are preparing product demonstrations and project walkthroughs. Check back soon.</p>
+
+        <div class="media-tab-panel" id="media-videos-panel" role="tabpanel" aria-labelledby="media-videos-tab" hidden>
+          <?php if (!empty($videos)): ?>
+            <div class="media-video-grid">
+              <?php foreach ($videos as $video): ?>
+                <article class="media-video-card animate-on-scroll">
+                  <?php if (!empty($video['youtube_id'])): ?>
+                    <iframe src="https://www.youtube-nocookie.com/embed/<?php echo rawurlencode($video['youtube_id']); ?>"
+                      title="<?php echo htmlspecialchars($video['title']); ?>" loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <?php else: ?>
+                    <video controls preload="metadata" <?php echo !empty($video['poster']) ? ' poster="' . htmlspecialchars(SITE_ROOT . '/' . $video['poster']) . '"' : ''; ?>>
+                      <source src="<?php echo htmlspecialchars(SITE_ROOT . '/' . $video['src']); ?>" type="video/mp4">
+                      Your browser does not support the video element.
+                    </video>
+                  <?php endif; ?>
+                </article>
+              <?php endforeach; ?>
+            </div>
+          <?php else: ?>
+            <div class="media-video-empty animate-on-scroll">
+              <div class="media-play-icon" aria-hidden="true">
+                <span></span>
+              </div>
+              <h3>Videos coming soon</h3>
+              <p>We are preparing product demonstrations and project walkthroughs. Check back soon.</p>
+            </div>
+          <?php endif; ?>
         </div>
-      <?php endif; ?>
+      </div>
     </div>
   </section>
 </main>
+
+<script>
+  (function () {
+    var tabGroup = document.querySelector('[data-media-tabs]');
+    if (!tabGroup) return;
+
+    var tabs = Array.prototype.slice.call(tabGroup.querySelectorAll('[role="tab"]'));
+    var panels = Array.prototype.slice.call(tabGroup.querySelectorAll('[role="tabpanel"]'));
+
+    function selectTab(tab, moveFocus) {
+      tabs.forEach(function (item) {
+        var selected = item === tab;
+        item.classList.toggle('active', selected);
+        item.setAttribute('aria-selected', String(selected));
+        item.tabIndex = selected ? 0 : -1;
+      });
+
+      panels.forEach(function (panel) {
+        var selected = panel.id === tab.getAttribute('aria-controls');
+        panel.hidden = !selected;
+        if (selected) {
+          panel.querySelectorAll('.animate-on-scroll').forEach(function (element) {
+            element.classList.add('visible');
+          });
+        }
+      });
+
+      if (moveFocus) tab.focus();
+    }
+
+    tabs.forEach(function (tab, index) {
+      tab.addEventListener('click', function () {
+        selectTab(tab, false);
+      });
+
+      tab.addEventListener('keydown', function (event) {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        var nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        selectTab(tabs[nextIndex], true);
+      });
+    });
+  })();
+</script>
 
 <?php include 'includes/footer.php'; ?>

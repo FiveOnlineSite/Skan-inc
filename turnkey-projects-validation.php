@@ -10,28 +10,28 @@ $tabs = [
     'products' => [
       [
         'title' => 'Turnkey Pharma Cleanroom Projects',
-        'image' => 'images/products/ot-1.png',
+        'image' => 'images/products/pharma.png',
         'description' => 'A turnkey pharmaceutical cleanroom project starts from the classification the space needs to hold, whether an ISO 14644 class or GMP grade, and works backward to the panel specification, HVAC capacity, utilities, and layout. Civil work, panel installation, HVAC integration, and utilities are planned against the same classification target from the outset rather than allowing each trade to work from separate assumptions.',
       ],
       [
         'title' => 'Modular Operation Theatre Turnkey Setup',
-        'image' => 'images/products/ot-2.png',
+        'image' => 'images/products/ot-7.png',
         'description' => 'A modular operation theatre turnkey setup brings together panels and flooring, hermetically sealed doors, HVAC and laminar airflow, OT equipment and control panels, and medical gas outlets in one room designed around the surgical workflow. It is delivered as one coordinated build because a modular OT rarely performs as intended when these systems are assembled without considering how they interact.',
       ],
       [
         'title' => 'BSL-2 / BSL-3 Laboratory Infrastructure',
-        'image' => 'images/products/ot-3.png',
+        'image' => 'images/products/lab.png',
         'description' => 'Biosafety-level laboratories are built around containment, not just cleanliness. The correct infrastructure is selected against the risk of the biological agents involved and the facility-specific containment standard, with BSL-3 environments requiring considerably more demanding engineering controls than a standard pharmaceutical cleanroom.',
         'comparison' => 'bsl',
       ],
       [
         'title' => 'IVF Lab Controlled Environments',
-        'image' => 'images/products/ot-4.png',
+        'image' => 'images/products/ivf.png',
         'description' => 'IVF laboratory controlled environments account for embryo sensitivity to air quality, temperature stability, and volatile organic compound levels beyond standard cleanroom particle counts. They are built with tighter VOC filtration and environmental stability control than a general pharmaceutical cleanroom.',
       ],
       [
         'title' => 'CSSD',
-        'image' => 'images/products/ot-5.png',
+        'image' => 'images/products/cssd.png',
         'description' => 'A Central Sterile Services Department handles the receiving, cleaning, sterilisation, and storage of surgical instruments for an entire hospital. Its layout follows a strict one-directional flow from dirty to clean to sterile storage so instruments never move backward through a completed stage. A poorly planned flow creates cross-contamination risk regardless of the quality of the sterilisation equipment.',
       ],
     ],

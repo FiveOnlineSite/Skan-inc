@@ -88,8 +88,7 @@ $testimonialClientLogos = [
               <?php echo htmlspecialchars($testimonial['text']); ?>
             </p>
             <button class="testimonial-toggle" type="button" aria-haspopup="dialog" aria-controls="testimonialModal"
-              data-testimonial-id="testimonialText<?php echo $index; ?>"
-              data-testimonial-title="<?php echo htmlspecialchars($testimonial['name'], ENT_QUOTES); ?>">Read
+              data-testimonial-id="testimonialText<?php echo $index; ?>">Read
               more</button>
             <div class="testimonial-author">
               <?php if (isset($testimonialClientLogos[$testimonial['name']])): ?>
@@ -117,13 +116,12 @@ $testimonialClientLogos = [
   </div>
 </section>
 
-<div class="testimonial-modal" id="testimonialModal" role="dialog" aria-modal="true"
-  aria-labelledby="testimonialModalTitle" hidden>
+<div class="testimonial-modal" id="testimonialModal" role="dialog" aria-modal="true" aria-label="Client testimonial" hidden>
   <div class="testimonial-modal__backdrop" data-testimonial-close></div>
   <div class="testimonial-modal__content" role="document">
     <button class="testimonial-modal__close" type="button" aria-label="Close testimonial"
       data-testimonial-close>&times;</button>
-    <h2 id="testimonialModalTitle">Client testimonial</h2>
+    <div class="testimonial-modal__author" id="testimonialModalAuthor"></div>
     <p id="testimonialModalText"></p>
   </div>
 </div>

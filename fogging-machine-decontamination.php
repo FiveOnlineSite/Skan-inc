@@ -8,9 +8,11 @@ $tabs = [
     'products' => [
       [
         'title' => 'SKANFOG – ULV SKD1100',
-        'image' => 'images/products/ulv-skd1100-plastic.png',
+        'image' => 'images/products/ulv-plastic-timer.png',
         'desc' => 'SKANFOG ULV is a highly effective and economical product for vapor generation / dry fumigation. It is suitable for up-to 10000 Cu ft of space treatment with a height cover of up-to 20 Ft. It generates consistent submicron particle size to create a uniform spread & has enough contact time to achieve maximum disinfection. It comes with an easy to clean, non-corrosive 5 L SS tank. Plastic tank is optional. This machine is suitable for OT, Injectable Mfg., Vaccine Mfg. & Food processing industry usage.',
         'variants' => [
+          ['label' => 'Plastic Digital Timer', 'image' => 'images/products/ulv-plastic-timer.png'],
+          ['label' => 'Stainless Steel Digital Timer', 'image' => 'images/products/ulv-steel-timer.png'],
           ['label' => 'Plastic', 'image' => 'images/products/ulv-skd1100-plastic.png'],
           ['label' => 'Stainless Steel', 'image' => 'images/products/ulv-skd1100-steel.png'],
         ],
@@ -62,37 +64,51 @@ $tabs = [
         'title' => 'INFECKTO CIDE N',
         'image' => 'images/products/infekto-cide-n.png',
         'desc' => 'Infeckto cide N is a cutting-edge, high-level surface & environment disinfectant for critical care areas. It is a product suitable for disinfection and cleaning of all washable surfaces and objects in high risk areas like OT\'s, ICU\'s and in production areas of Pharma industries. Mode of application can be Mopping or Fogging. For mopping, a 2/3rd bucket system is recommended and in case of fumigation or fogging, ULV fogger gives the best result.',
-        'variants' => [],
+        'variants' =>[
+         ['label' => '1L'],
+         ['label' => '5L']
+        ],
       ],
       [
         'title' => 'INFEKTO DERM BKC',
         'image' => 'images/products/infekto-derm-bkc.png',
         'desc' => 'Infekto Derm BKC is a ready to use solution for hygienic & surgical hand disinfection which is highly effective and gentle on skin. It offers microbicidal action against bacteria, mycobacteria, fungi and viruses. Suitable for skin disinfection before operation procedures, injections, sample collections and vaccinations. It has a longer residual effect and a pleasant fragrance.',
-        'variants' => [],
+        'variants' =>[
+         ['label' => '500ML'],
+        ],
       ],
       [
         'title' => 'INFEKTO CIDE N SPRAY',
         'image' => 'images/products/infekto-cide-n-spray.png',
         'desc' => 'Infekto Cide N Spray is a ready to use, rapid disinfectant for sensitive medical devices and surfaces. Its range of applications includes quick disinfection of operation tables between patients, disinfection of OT, ICCU\'s, surfaces and objects that cannot be washed with water-based disinfectants. It is recommended to switch off all electrical/electronic equipment before spraying, and spraying should be done by manual sprayers only.',
-        'variants' => [],
+        'variants' =>[
+         ['label' => '500ML'],
+        ],
       ],
       [
         'title' => 'INFEKTO DERM CHG',
         'image' => 'images/products/infekto-derm-chg.png',
         'desc' => 'Infekto Derm CHG is a chlorohexidine and propanol based powerful formulation which offers microbicidal action against bacteria, mycobacteria, fungi and viruses. Suitable for skin disinfection before operation procedures, injections, sample collections and vaccinations. It has a longer residual effect, a pleasant fragrance, and a skin-friendly neutral pH that remains gentle to the skin even after frequent use.',
-        'variants' => [],
+        'variants' =>[
+         ['label' => '500ML'],
+        ],
       ],
       [
         'title' => 'INFEKTO ZYME MULTI',
         'image' => 'images/products/infekto-zyme-multi.png',
         'desc' => 'Infekto Zyme Multi is an ISO & QA certified enzymatic cleaner that helps achieve high quality cleaning of medical, surgical and orthopedic instruments & endoscopes. It has fast action with superior cleaning performance and a pleasant fragrance. The multi-enzymatic formulation dissolves all types of bio burden and has a low usage concentration which makes it highly economical.',
-        // 'variants' => ['6x2 L Bottle', '2x5 L Canister'],
+         'variants' =>[
+         ['label' => '1L'],
+        ],
       ],
       [
         'title' => 'HUWA-SAN',
         'image' => 'images/products/huwa-san.png',
         'desc' => 'Huwa-San is a disinfection solution for hospitals which provides protection from cross infections of MDR strains, MRSA & Legionella. Huwa-San is environmentally friendly and its technology protects the environment and human health alike. Using varied concentrations of Huwa-San, the highest level of disinfection can be effectively achieved for service water, cooling tower water, walls & floors of hospitals, surgical instruments & lab equipment, endoscopes, laryngoscopes and operation theatres.',
-        'variants' => [],
+        'variants' =>[
+         ['label' => '1L'],
+         ['label' => '5L']
+        ],
       ],
     ],
   ],
@@ -110,6 +126,8 @@ $comparisonRows = [
   'Solution Tank Capacity' => ['5L SS / 7L PL', '5L SS / 7L PL', '5L SS / 7L PL', '14L'],
   'Tank Material' => ['Plastic / SS (304 & 316)', 'Plastic / SS (304 & 316)', 'SS (304 & 316)', 'SS (304 & 316)'],
   'Unique Highlight' => ['Economical & Highly Effective', 'Specialized Motor-Protecting Filter', 'Auto-Regulated Micron Precision', 'Medical Grade Clean Air Tech'],
+  'Timer' => ['Mechanical/ Digital/ Bluetooth', 'Mechanical/ Digital/ Bluetooth', 'Mechanical/ Digital/ Bluetooth', 'Mechanical/ DIgital/ Bluetooth'],
+
 ];
 ?>
 <?php include 'includes/header.php'; ?>

@@ -23,8 +23,7 @@ require __DIR__ . '/includes/contact-handler.php';
           <div class="contact-detail-icon"><img src="<?php echo SITE_ROOT; ?>/images/icon-address.svg" alt=""></div>
           <div>
             <h3>Visit Us</h3>
-            <p>Skan Inc.<br>219, 2nd Floor, Udyog Mandir - 1,<br>7-C, Pitamber Lane, Bhagoji Keer Marg,<br>Behind
-              Paradise Cinema,<br>Mahim West, Mumbai - 400016.</p>
+            <p><a class="address-directions" href="https://www.google.com/maps?cid=6498647858832160246" target="_blank" rel="noopener noreferrer" aria-label="View Skan Inc. on Google Maps">Skan Inc.<br>219, 2nd Floor, Udyog Mandir - 1,<br>7-C, Pitamber Lane, Bhagoji Keer Marg,<br>Behind Paradise Cinema,<br>Mahim West, Mumbai - 400016.</a></p>
           </div>
         </div>
 

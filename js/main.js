@@ -324,14 +324,24 @@ if (formStatus) {
 // Scroll to Top Button Functionality
 document.addEventListener("DOMContentLoaded", function () {
   const scrollBtn = document.getElementById("scrollToTopBtn");
+  const whatsappButton = document.querySelector(".whatsapp-float");
 
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
+  function updateFloatingButtons() {
+    const showScrollButton = window.scrollY > 300;
+
+    if (showScrollButton) {
       scrollBtn.classList.add("show");
     } else {
       scrollBtn.classList.remove("show");
     }
-  });
+
+    if (whatsappButton) {
+      whatsappButton.classList.toggle("with-scroll-to-top", showScrollButton);
+    }
+  }
+
+  window.addEventListener("scroll", updateFloatingButtons);
+  updateFloatingButtons();
 
   scrollBtn.addEventListener("click", function () {
     window.scrollTo({
@@ -422,11 +432,11 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   var modal = document.getElementById("testimonialModal");
   var modalText = document.getElementById("testimonialModalText");
-  var modalTitle = document.getElementById("testimonialModalTitle");
+  var modalAuthor = document.getElementById("testimonialModalAuthor");
   var closeButton = modal && modal.querySelector(".testimonial-modal__close");
   var trigger = null;
 
-  if (!modal || !modalText || !modalTitle || !closeButton) return;
+  if (!modal || !modalText || !modalAuthor || !closeButton) return;
 
   function updateReadMoreButtons() {
     document.querySelectorAll(".testimonial-toggle").forEach(function (button) {
@@ -447,10 +457,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".testimonial-toggle").forEach(function (button) {
     button.addEventListener("click", function () {
       var text = document.getElementById(button.dataset.testimonialId);
+      var author = button.closest(".testimonial-card").querySelector(".testimonial-author");
       if (!text) return;
       trigger = button;
       modalText.textContent = text.textContent;
-      modalTitle.textContent = button.dataset.testimonialTitle;
+      modalAuthor.innerHTML = author ? author.outerHTML : "";
       modal.hidden = false;
       document.body.style.overflow = "hidden";
       closeButton.focus();

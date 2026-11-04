@@ -18,6 +18,7 @@
       <a href="<?php echo SITE_ROOT; ?>/">Home</a>
       <a href="<?php echo SITE_ROOT; ?>/about.php">About Us</a>
       <a href="<?php echo SITE_ROOT; ?>/media.php">Media</a>
+      <a href="<?php echo SITE_ROOT; ?>/blog.php">Blogs</a>
       <a href="<?php echo SITE_ROOT; ?>/contact.php">Contact Us</a>
     </div>
 
@@ -40,8 +41,7 @@
       <h4>Contact Info</h4>
       <div class="contact-item">
         <img src="<?php echo SITE_ROOT; ?>/images/icon-address.svg" alt="" class="contact-icon">
-        <p>Skan Inc.<br>219, 2nd Floor, Udyog Mandir -1,<br>7-C, Pitamber Lane, Bhagoji Keer Marg,<br>Behind Paradise
-          Cinema,<br>Mahim West, Mumbai - 400016.</p>
+        <p><a class="address-directions" href="https://www.google.com/maps?cid=6498647858832160246" target="_blank" rel="noopener noreferrer" aria-label="View Skan Inc. on Google Maps">Skan Inc.<br>219, 2nd Floor, Udyog Mandir -1,<br>7-C, Pitamber Lane, Bhagoji Keer Marg,<br>Behind Paradise Cinema,<br>Mahim West, Mumbai - 400016.</a></p>
       </div>
       <div class="contact-item">
         <img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt="" class="contact-icon">
@@ -55,9 +55,14 @@
   </div>
 
   <div class="footer-bottom">
-    <p>Copyright &copy; 2020 Skan Inc.</p>
+    <p>Copyright &copy; <?php echo date('Y'); ?> Skan Inc.</p>
   </div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/919519336995" target="_blank" rel="noopener noreferrer"
+  aria-label="Chat with Skan Inc. on WhatsApp" title="Chat with us on WhatsApp">
+  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+</a>
 
 <button id="scrollToTopBtn" aria-label="Scroll to top">
   <i class="fa fa-angle-up"></i>

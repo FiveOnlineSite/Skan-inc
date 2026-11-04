@@ -69,8 +69,8 @@
     <div class="products-grid">
       <div class="product-card animate-on-scroll">
         <video autoplay muted loop playsinline preload="metadata"
-          style="width:100%; height: auto; object-fit: cover;">
-          <source src="<?php echo SITE_ROOT; ?>/images/products/rotate.mp4" type="video/mp4">
+          style="width:100%; height: 100%; object-fit: cover;">
+          <source src="<?php echo SITE_ROOT; ?>/images/products/skan.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="product-overlay"></div>
