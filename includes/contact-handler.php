@@ -38,6 +38,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
   } elseif (!filter_var($values['email'], FILTER_VALIDATE_EMAIL)) {
     $formStatus = 'error';
     $formMessage = 'Please enter a valid email address.';
+  } elseif (preg_match('/^\d{10}$/', $values['phone']) !== 1) {
+    $formStatus = 'error';
+    $formMessage = 'Please enter a valid 10-digit phone number.';
   } elseif ($mailConfig['username'] === '' || $mailConfig['password'] === '') {
     $formStatus = 'error';
     $formMessage = 'Email delivery is not configured yet. Please email us directly at info@skaninc.com.';

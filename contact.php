@@ -76,7 +76,8 @@ require __DIR__ . '/includes/contact-handler.php';
         <div class="form-field">
           <label for="phone">Phone *</label>
           <input type="tel" id="phone" name="phone" value="<?php echo htmlspecialchars($values['phone']); ?>" required
-            autocomplete="tel">
+            inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10"
+            title="Please enter a 10-digit phone number." autocomplete="tel">
         </div>
 
         <div class="form-field">
