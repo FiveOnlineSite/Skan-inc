@@ -24,6 +24,23 @@ function ariaCurrent(bool $isActive): string
 {
   return $isActive ? ' aria-current="page"' : '';
 }
+
+$pageLabels = [
+  'about.php' => 'About Us',
+  'blog.php' => 'Blogs',
+  'contact.php' => 'Contact Us',
+  'media.php' => 'Media',
+];
+$breadcrumbTitle = $pageTitle ?? ($pageLabels[$currentPage] ?? ucwords(str_replace(['-', '.php'], [' ', ''], $currentPage)));
+$breadcrumbParent = null;
+
+if ($currentPage === 'blog-detail.php') {
+  $breadcrumbParent = ['label' => 'Blogs', 'url' => SITE_ROOT . '/blog.php'];
+} elseif (in_array($currentPage, $categoryPages, true)) {
+  $breadcrumbParent = ['label' => 'Categories', 'url' => null];
+}
+
+$showBreadcrumbs = $currentPage !== 'index.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,3 +159,21 @@ function ariaCurrent(bool $isActive): string
       </div>
     </div>
   </header>
+
+  <?php if ($showBreadcrumbs): ?>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <div class="breadcrumbs-inner">
+        <a href="<?php echo SITE_ROOT; ?>/">Home</a>
+        <?php if ($breadcrumbParent !== null): ?>
+          <span class="breadcrumbs-separator" aria-hidden="true">/</span>
+          <?php if ($breadcrumbParent['url'] !== null): ?>
+            <a href="<?php echo htmlspecialchars($breadcrumbParent['url']); ?>"><?php echo htmlspecialchars($breadcrumbParent['label']); ?></a>
+          <?php else: ?>
+            <span><?php echo htmlspecialchars($breadcrumbParent['label']); ?></span>
+          <?php endif; ?>
+        <?php endif; ?>
+        <span class="breadcrumbs-separator" aria-hidden="true">/</span>
+        <span aria-current="page"><?php echo htmlspecialchars($breadcrumbTitle); ?></span>
+      </div>
+    </nav>
+  <?php endif; ?>

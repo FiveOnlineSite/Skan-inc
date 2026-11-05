@@ -36,7 +36,7 @@ if ($post === null) {
           Back to Blogs
         </a>
         <h1 class="blog-article-title"><?php echo htmlspecialchars($post['title']); ?></h1>
-        <img class="blog-article-feature-image" src="<?php echo htmlspecialchars(SITE_ROOT . '/' . $post['image']); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>">
+        <img class="blog-article-feature-image" src="<?php echo htmlspecialchars(SITE_ROOT . '/' . ($post['detail_image'] ?? $post['image'])); ?>" alt="<?php echo htmlspecialchars($post['title']); ?>">
         <p class="blog-article-intro"><?php echo htmlspecialchars($post['excerpt']); ?></p>
         <?php foreach ($post['content'] as $paragraph): ?>
           <p><?php echo htmlspecialchars($paragraph); ?></p>

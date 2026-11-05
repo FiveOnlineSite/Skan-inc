@@ -143,6 +143,38 @@ img {
   width: auto;
 }
 
+.breadcrumbs {
+  padding: 112px 20px 18px;
+  background: #f7f7f7;
+}
+
+.breadcrumbs-inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  width: min(1240px, 100%);
+  margin: 0 auto;
+  color: #737373;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.breadcrumbs a {
+  color: #ed1c24;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus-visible {
+  text-decoration: underline;
+}
+
+.breadcrumbs-separator {
+  color: #aaa;
+}
+
 .nav-wrapper {
   display: flex;
   align-items: center;

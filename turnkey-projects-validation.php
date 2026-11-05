@@ -15,7 +15,7 @@ $tabs = [
       ],
       [
         'title' => 'Modular Operation Theatre Turnkey Setup',
-        'image' => 'images/products/ot-7.png',
+        'image' => 'images/products/ot.png',
         'description' => 'A modular operation theatre turnkey setup brings together panels and flooring, hermetically sealed doors, HVAC and laminar airflow, OT equipment and control panels, and medical gas outlets in one room designed around the surgical workflow. It is delivered as one coordinated build because a modular OT rarely performs as intended when these systems are assembled without considering how they interact.',
       ],
       [
