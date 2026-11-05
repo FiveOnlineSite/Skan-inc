@@ -321,6 +321,23 @@ if (formStatus) {
   }, 5000);
 }
 
+// Keep the contact phone field limited to ten numeric digits while typing or pasting.
+document.addEventListener("DOMContentLoaded", function () {
+  const phoneInput = document.getElementById("phone");
+
+  if (!phoneInput) return;
+
+  phoneInput.addEventListener("keydown", function (event) {
+    if (event.ctrlKey || event.metaKey || event.altKey || event.key.length !== 1) return;
+    if (!/^\d$/.test(event.key)) event.preventDefault();
+  });
+
+  phoneInput.addEventListener("input", function () {
+    const digits = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+    if (phoneInput.value !== digits) phoneInput.value = digits;
+  });
+});
+
 // Scroll to Top Button Functionality
 document.addEventListener("DOMContentLoaded", function () {
   const scrollBtn = document.getElementById("scrollToTopBtn");
