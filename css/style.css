@@ -3320,7 +3320,7 @@ body:has(#scrollToTopBtn.show) .whatsapp-float {
   .blog-card-image { height: 230px; }
 }
 
-.blog-article { padding: 150px 0 96px; }
+.blog-article { padding: 64px 0 96px; }
 .blog-article-content { width: min(760px, calc(100% - 40px)); margin: 0 auto; color: #444; font-size: 16px; line-height: 1.65; }
 .blog-article-content p { margin: 0 0 22px; }
 .blog-article-title { margin: 0 0 28px; color: #1d1d1d; font-family: "Montserrat", sans-serif; font-size: 28px; line-height: 1.2; }
@@ -3329,14 +3329,21 @@ body:has(#scrollToTopBtn.show) .whatsapp-float {
 .blog-back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px; color: #ed1c24; font-family: "Montserrat", sans-serif; font-size: 14px; font-weight: 700; }
 .blog-back-link svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; transition: transform .2s ease; }
 .blog-back-link:hover svg { transform: translateX(-4px); }
+.blog-article-pagination { display: flex; justify-content: center; gap: 12px; margin-top: 48px; padding-top: 28px; border-top: 1px solid #e1e7e9; }
+.blog-article-pagination-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 110px; padding: 11px 18px; border: 1px solid #153946; border-radius: 5px; color: #153946; font-family: "Montserrat", sans-serif; font-size: 13px; font-weight: 700; line-height: 1; transition: background .2s ease, border-color .2s ease, color .2s ease; }
+.blog-article-pagination-link svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.blog-article-pagination-link:not(.is-disabled):hover { border-color: #ed1c24; background: #ed1c24; color: #fff; }
+.blog-article-pagination-link.is-disabled { border-color: #d7dfe1; color: #9aa8ad; cursor: not-allowed; }
 .blog-detail-not-found { display: grid; min-height: 60vh; place-items: center; padding: 150px 20px 80px; text-align: center; }
 .blog-detail-not-found h1 { margin: 0 0 12px; font-family: "Montserrat", sans-serif; }
 .blog-detail-not-found p { margin: 0 0 24px; }
 
 @media (max-width: 600px) {
-  .blog-article { padding: 124px 0 64px; }
+  .blog-article { padding: 64px 0 64px; }
   .blog-article-title { font-size: 24px; }
   .blog-article-intro { font-size: 16px; }
+  .blog-article-pagination { gap: 10px; margin-top: 36px; }
+  .blog-article-pagination-link { font-size: 12px; }
 }
 
 .map-section {

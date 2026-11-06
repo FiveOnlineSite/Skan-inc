@@ -24,8 +24,7 @@ return [
     'category' => 'Fogging & decontamination',
     'title' => 'Choosing a Fogging Machine: Key Factors for Effective Coverage',
     'excerpt' => 'A practical guide to selecting ULV fogging equipment for your space, workflow and treatment requirements.',
-    'image' => 'images/products/ulv-skd1100-steel.png',
-    'detail_image' => 'images/products/ulv-tantra.png',
+    'image' => 'images/blogs/blog1.png',
     'content' => $foggingMachineContent,
   ],
   [
@@ -33,8 +32,7 @@ return [
     'category' => 'Operating theatre design',
     'title' => 'Operating Theatre Equipment: Planning a Functional OT',
     'excerpt' => 'Key planning considerations for coordinated, maintainable operating theatre equipment and layouts.',
-    'image' => 'images/products/led-surgical-lights.png',
-    'detail_image' => 'images/products/ot-pendant.png',
+    'image' => 'images/blogs/blog2.png',
     'content' => $otEquipmentContent,
   ],
   [
@@ -42,8 +40,7 @@ return [
     'category' => 'Industrial cleaning',
     'title' => 'Industrial Ultrasonic Cleaners: A Guide to Selection and Use',
     'excerpt' => 'Understand tank capacity, cleaning cycles and workflow considerations when selecting an ultrasonic cleaner.',
-    'image' => 'images/products/ultrasonic-cleaners.png',
-    'detail_image' => 'images/product-cleanroom.jpg',
+    'image' => 'images/blogs/blog3.png',
     'content' => $ultrasonicCleanerContent,
   ],
 ];
