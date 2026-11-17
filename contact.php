@@ -20,7 +20,7 @@ require __DIR__ . '/includes/contact-handler.php';
 
       <div class="contact-details">
         <div class="contact-detail-card">
-          <div class="contact-detail-icon"><img src="<?php echo SITE_ROOT; ?>/images/icon-address.svg" alt=""></div>
+          <a class="contact-detail-icon" href="https://www.google.com/maps?cid=6498647858832160246" target="_blank" rel="noopener noreferrer" aria-label="View Skan Inc. on Google Maps"><img src="<?php echo SITE_ROOT; ?>/images/icon-address.svg" alt=""></a>
           <div>
             <h3>Visit Us</h3>
             <p><a class="address-directions" href="https://www.google.com/maps?cid=6498647858832160246" target="_blank" rel="noopener noreferrer" aria-label="View Skan Inc. on Google Maps">Skan Inc.<br>219, 2nd Floor, Udyog Mandir - 1,<br>7-C, Pitamber Lane, Bhagoji Keer Marg,<br>Behind Paradise Cinema,<br>Mahim West, Mumbai - 400016.</a></p>
@@ -28,7 +28,7 @@ require __DIR__ . '/includes/contact-handler.php';
         </div>
 
         <div class="contact-detail-card">
-          <div class="contact-detail-icon"><img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt=""></div>
+          <a class="contact-detail-icon" href="tel:+919519336995" aria-label="Call Skan Inc. at +91 9519336995"><img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt=""></a>
           <div>
             <h3>Call Us</h3>
             <a href="tel:+919519336995">+91 9519336995</a>
@@ -36,7 +36,7 @@ require __DIR__ . '/includes/contact-handler.php';
         </div>
 
         <div class="contact-detail-card">
-          <div class="contact-detail-icon"><img src="<?php echo SITE_ROOT; ?>/images/icon-email.svg" alt=""></div>
+          <a class="contact-detail-icon" href="mailto:info@skaninc.com" aria-label="Email Skan Inc. at info@skaninc.com"><img src="<?php echo SITE_ROOT; ?>/images/icon-email.svg" alt=""></a>
           <div>
             <h3>Email Us</h3>
             <a href="mailto:info@skaninc.com">info@skaninc.com</a>

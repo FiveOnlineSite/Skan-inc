@@ -40,22 +40,28 @@
     <div class="footer-contact">
       <h4>Contact Info</h4>
       <div class="contact-item">
-        <img src="<?php echo SITE_ROOT; ?>/images/icon-address.svg" alt="" class="contact-icon">
+        <a href="https://www.google.com/maps?cid=6498647858832160246" target="_blank" rel="noopener noreferrer" aria-label="View Skan Inc. on Google Maps">
+          <img src="<?php echo SITE_ROOT; ?>/images/icon-address.svg" alt="" class="contact-icon">
+        </a>
         <p><a class="address-directions" href="https://www.google.com/maps?cid=6498647858832160246" target="_blank" rel="noopener noreferrer" aria-label="View Skan Inc. on Google Maps">Skan Inc.<br>219, 2nd Floor, Udyog Mandir -1,<br>7-C, Pitamber Lane, Bhagoji Keer Marg,<br>Behind Paradise Cinema,<br>Mahim West, Mumbai - 400016.</a></p>
       </div>
       <div class="contact-item">
-        <img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt="" class="contact-icon">
+        <a href="tel:+919519336995" aria-label="Call Skan Inc. at +91 9519336995">
+          <img src="<?php echo SITE_ROOT; ?>/images/icon-phone.svg" alt="" class="contact-icon">
+        </a>
         <p><a href="tel:+919519336995">+91 9519336995</a></p>
       </div>
       <div class="contact-item">
-        <img src="<?php echo SITE_ROOT; ?>/images/icon-email.svg" alt="" class="contact-icon">
+        <a href="mailto:info@skaninc.com" aria-label="Email Skan Inc. at info@skaninc.com">
+          <img src="<?php echo SITE_ROOT; ?>/images/icon-email.svg" alt="" class="contact-icon">
+        </a>
         <p><a href="mailto:info@skaninc.com">info@skaninc.com</a></p>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>Copyright &copy; <?php echo date('Y'); ?> Skan Inc.</p>
+    <p>Copyright &copy; <?php echo date('Y'); ?> Skan Inc. Designed by Fiveonline.</p>
   </div>
 </footer>
 
