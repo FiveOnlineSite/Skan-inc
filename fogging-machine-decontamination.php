@@ -55,6 +55,15 @@ $tabs = [
         'title' => 'SKAN FOG ULV TANTRA',
         'image' => 'images/products/ulv-tantra.png',
         'desc' => 'SKAN FOG ULV TANTRA generates submicron size, non-wetting aerosol which can spread across 50ft and reach a height of 35 ft and is suitable for 50000 to 70000 Cu Ft of space treatment. It has a precision metering system & auto switch off timer with delay start facility. It creates a 360° contact with accuracy. It comes with a 14 L SS 304 solution tank assembly. It uses medical grade clean air for fog generation. This machine is built robustly and is extremely safe, reliable & efficient. It uses only 200ml of disinfectant solution for treating 1000 Cu ft of area. All the key components like nozzle assembly, rotator & strainer are made of SS.',
+        'variantOptions' => [
+          ['label' => 'Stainless Steel', 'image' => 'images/products/ulv-tantra.png'],
+          ['label' => 'Plastic'],
+        ],
+        'controlOptions' => [
+          ['label' => 'Mechanical'],
+          ['label' => 'Digital Timer'],
+          ['label' => 'Bluetooth'],
+        ],
       ],
       [
         'title' => 'Roto-Matic Turn Table for Fogger',
