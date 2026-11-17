@@ -496,15 +496,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Swap a product image when a variant has its own product photograph.
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".variant-tag[data-variant-image]").forEach(function (button) {
+  document.querySelectorAll(".variant-tag").forEach(function (button) {
     button.addEventListener("click", function () {
       var productRow = button.closest(".product-row");
       var productImage = productRow && productRow.querySelector(".product-row-image img");
-      if (!productImage) return;
 
-      productImage.src = button.dataset.variantImage;
-      productImage.alt = productRow.querySelector("h3").textContent + " — " + button.dataset.variantLabel;
-      productRow.querySelectorAll(".variant-tag[data-variant-image]").forEach(function (variant) {
+      if (productImage && button.dataset.variantImage) {
+        productImage.src = button.dataset.variantImage;
+        productImage.alt = productRow.querySelector("h3").textContent + " — " + button.dataset.variantLabel;
+      }
+
+      if (!productRow) return;
+      productRow.querySelectorAll(".variant-tag").forEach(function (variant) {
         variant.classList.toggle("is-active", variant === button);
       });
     });

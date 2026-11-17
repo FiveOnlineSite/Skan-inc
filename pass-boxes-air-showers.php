@@ -64,7 +64,10 @@ $faqs = [
 <?php include 'includes/header.php'; ?>
 
 <section class="product-hero animate-fade-up">
-  <img src="<?php echo SITE_ROOT; ?>/images/banner-pass-box.png" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  <picture>
+    <source media="(max-width: 767px)" srcset="<?php echo SITE_ROOT; ?>/images/passbox-mobile.png">
+    <img src="<?php echo SITE_ROOT; ?>/images/banner-pass-box.png" alt="<?php echo htmlspecialchars($pageTitle); ?>">
+  </picture>
   <div class="product-hero-overlay"></div>
   <div class="product-hero-content">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>

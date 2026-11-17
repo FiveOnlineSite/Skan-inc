@@ -1739,6 +1739,11 @@ img {
   object-fit: cover;
 }
 
+.product-hero picture {
+  position: absolute;
+  inset: 0;
+}
+
 .product-hero-overlay {
   position: absolute;
   inset: 0;
@@ -1897,6 +1902,50 @@ section.fogging-page-section,
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
+}
+
+.variant-groups {
+  display: grid;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.variant-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.variant-group-title {
+  flex: 0 0 120px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1d1d1d;
+}
+
+.variant-group .variant-tags {
+  flex: 1;
+  margin-top: 0;
+}
+
+@media (max-width: 575px) {
+  .variant-group {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .variant-group-title {
+    flex-basis: auto;
+  }
+
 }
 
 .variant-tag {
