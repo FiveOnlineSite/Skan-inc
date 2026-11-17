@@ -61,7 +61,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p>Copyright &copy; <?php echo date('Y'); ?> Skan Inc. Designed by Fiveonline.</p>
+    <p>Copyright &copy; <?php echo date('Y'); ?> Skan Inc. <a href="https://fiveonline.in/" target="_blank" rel="noopener noreferrer">Designed by Fiveonline.</a></p>
   </div>
 </footer>
 

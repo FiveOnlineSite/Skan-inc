@@ -1406,6 +1406,11 @@ img {
   color: #000;
 }
 
+.footer-bottom a:hover,
+.footer-bottom a:focus-visible {
+  color: #ed1c24;
+}
+
 /* ══════════════════════════════
   ABOUT US PAGE
    ══════════════════════════════ */
