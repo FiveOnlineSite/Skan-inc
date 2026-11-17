@@ -507,7 +507,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (!productRow) return;
-      productRow.querySelectorAll(".variant-tag").forEach(function (variant) {
+      var variantScope = button.closest(".variant-option-row") || productRow;
+      variantScope.querySelectorAll(".variant-tag").forEach(function (variant) {
         variant.classList.toggle("is-active", variant === button);
       });
     });

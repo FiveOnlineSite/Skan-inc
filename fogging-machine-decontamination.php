@@ -1,32 +1,6 @@
 <?php
 $pageTitle = 'Fogging Machine & Decontamination';
 
-$foggerVariantGroups = function ($plasticImage = null, $steelImage = null, $digitalPlasticImage = null, $digitalSteelImage = null) {
-  return [
-    [
-      'label' => 'Mechanical',
-      'variants' => [
-        ['label' => 'Plastic', 'image' => $plasticImage],
-        ['label' => 'Stainless Steel', 'image' => $steelImage],
-      ],
-    ],
-    [
-      'label' => 'Digital Timer',
-      'variants' => [
-        ['label' => 'Plastic Digital', 'image' => $digitalPlasticImage],
-        ['label' => 'Stainless Steel Digital', 'image' => $digitalSteelImage],
-      ],
-    ],
-    [
-      'label' => 'Bluetooth',
-      'variants' => [
-        ['label' => 'Plastic Bluetooth', ],
-        ['label' => 'Stainless Steel Bluetooth', ],
-      ],
-    ],
-  ];
-};
-
 $tabs = [
   [
     'id' => 'fogger-machines',
@@ -36,29 +10,45 @@ $tabs = [
         'title' => 'SKANFOG – ULV SKD1100',
         'image' => 'images/products/ulv-plastic-timer.png',
         'desc' => 'SKANFOG ULV is a highly effective and economical product for vapor generation / dry fumigation. It is suitable for up-to 10000 Cu ft of space treatment with a height cover of up-to 20 Ft. It generates consistent submicron particle size to create a uniform spread & has enough contact time to achieve maximum disinfection. It comes with an easy to clean, non-corrosive 5 L SS tank. Plastic tank is optional. This machine is suitable for OT, Injectable Mfg., Vaccine Mfg. & Food processing industry usage.',
-        'variantGroups' => $foggerVariantGroups(
-          'images/products/ulv-skd1100-plastic.png',
-          'images/products/ulv-skd1100-steel.png',
-          'images/products/ulv-plastic-timer.png',
-          'images/products/ulv-steel-timer.png'
-        ),
+        'variantOptions' => [
+          ['label' => 'Plastic', 'image' => 'images/products/ulv-skd1100-plastic.png'],
+          ['label' => 'Stainless Steel', 'image' => 'images/products/ulv-skd1100-steel.png'],
+        ],
+        'controlOptions' => [
+          ['label' => 'Mechanical', 'image' => 'images/products/ulv-skd1100-plastic.png'],
+          ['label' => 'Digital Timer', 'image' => 'images/products/ulv-plastic-timer.png'],
+          ['label' => 'Bluetooth'],
+        ],
         'brochure' => 'pdf/skd-1100.pdf',
       ],
       [
         'title' => 'SKANFOG POWER-JET',
         'image' => 'images/products/power-jet-plastic.png',
         'desc' => 'SKANFOG Power-jet an excellent product for air sterilization and disinfection. It is suitable for up-to 15000 Cu ft of space treatment with a height cover of up-to 20 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. Its specially designed double layer intake air filter prevents external dust/dirt entry which helps protect the motor. This machine is suitable for ICU, NICU, Vaccine Manufacturing, Hatchery & Poultry usage.',
-        'variantGroups' => $foggerVariantGroups(
-          'images/products/power-jet-plastic.png',
-          'images/products/power-jet-steel.png'
-        ),
+        'variantOptions' => [
+          ['label' => 'Plastic', 'image' => 'images/products/power-jet-plastic.png'],
+          ['label' => 'Stainless Steel', 'image' => 'images/products/power-jet-steel.png'],
+        ],
+        'controlOptions' => [
+          ['label' => 'Mechanical', 'image' => 'images/products/power-jet-plastic.png'],
+          ['label' => 'Digital Timer'],
+          ['label' => 'Bluetooth'],
+        ],
         'brochure' => 'pdf/skaninc-power-jet.pdf',
       ],
       [
         'title' => 'SKANFOG VAPOR-JET',
         'image' => 'images/products/vapour-jet.png',
         'desc' => 'SKANFOG Vapor-jet machine gSKANFOG POWER-JETenerates a consistent particle size of 0.3 to 1 Micron. It is suitable for up-to 16000 Cu ft of space treatment with a height cover of up-to 25 Ft. It comes with a Premium grade 5 L SS tank and a plastic tank option is available too. It is equipped with a high-quality double stage, tapered fan vacuum motor and a timer for auto switch off. This machine is suitable for OT, ICU, Cathlab, Pharma lab, food processing & packaging industry usage.',
-        'variantGroups' => $foggerVariantGroups(),
+        'variantOptions' => [
+          ['label' => 'Plastic'],
+          ['label' => 'Stainless Steel'],
+        ],
+        'controlOptions' => [
+          ['label' => 'Mechanical'],
+          ['label' => 'Digital Timer'],
+          ['label' => 'Bluetooth'],
+        ],
         'brochure' => 'pdf/skan-fog-vapor-jet.pdf',
       ],
       [
@@ -212,8 +202,8 @@ $comparisonRows = [
       <div class="tab-panel<?php echo $index === 0 ? ' active' : ''; ?>" id="<?php echo $tab['id']; ?>" role="tabpanel">
         <?php foreach ($tab['products'] as $pIndex => $product): ?>
           <?php
-          $defaultVariantImage = !empty($product['variantGroups'][0]['variants'][0]['image'])
-            ? $product['variantGroups'][0]['variants'][0]['image']
+          $defaultVariantImage = !empty($product['variantOptions'][0]['image'])
+            ? $product['variantOptions'][0]['image']
             : $product['image'];
           ?>
           <div class="product-row<?php echo $pIndex % 2 === 1 ? ' reverse' : ''; ?> animate-on-scroll">
@@ -224,26 +214,30 @@ $comparisonRows = [
             <div class="product-row-info">
               <h3><?php echo htmlspecialchars($product['title']); ?></h3>
               <p><?php echo $product['desc']; ?></p>
-              <?php if (!empty($product['variantGroups'])): ?>
-                <p class="variant-label">Available Variants:</p>
-                <div class="variant-groups">
-                  <?php foreach ($product['variantGroups'] as $groupIndex => $group): ?>
-                    <div class="variant-group">
-                      <h4 class="variant-group-title"><?php echo htmlspecialchars($group['label']); ?></h4>
-                      <div class="variant-tags">
-                        <?php foreach ($group['variants'] as $variantIndex => $variant): ?>
-                          <?php
-                          $variantLabel = $variant['label'];
-                          $variantImage = !empty($variant['image']) ? $variant['image'] : null;
-                          ?>
-                          <button class="variant-tag<?php echo $groupIndex === 0 && $variantIndex === 0 ? ' is-active' : ''; ?>" type="button"
-                            <?php if ($variantImage): ?>data-variant-image="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($variantImage, '/')); ?>"<?php endif; ?>
-                            data-variant-label="<?php echo htmlspecialchars($variantLabel, ENT_QUOTES); ?>">
-                            <?php echo htmlspecialchars($variantLabel); ?>
-                          </button>
-                        <?php endforeach; ?>
+              <?php if (!empty($product['variantOptions']) || !empty($product['controlOptions'])): ?>
+                <div class="variant-option-rows">
+                  <?php
+                  $optionRows = [
+                    ['label' => 'Available Variants:', 'options' => $product['variantOptions'] ?? []],
+                    ['label' => 'Control Type:', 'options' => $product['controlOptions'] ?? []],
+                  ];
+                  ?>
+                  <?php foreach ($optionRows as $optionRow): ?>
+                    <?php if (!empty($optionRow['options'])): ?>
+                      <div class="variant-option-row">
+                        <h4 class="variant-option-label"><?php echo htmlspecialchars($optionRow['label']); ?></h4>
+                        <div class="variant-tags">
+                          <?php foreach ($optionRow['options'] as $optionIndex => $option): ?>
+                            <?php $optionImage = !empty($option['image']) ? $option['image'] : null; ?>
+                            <button class="variant-tag<?php echo $optionIndex === 0 ? ' is-active' : ''; ?>" type="button"
+                              <?php if ($optionImage): ?>data-variant-image="<?php echo htmlspecialchars(SITE_ROOT . '/' . ltrim($optionImage, '/')); ?>"<?php endif; ?>
+                              data-variant-label="<?php echo htmlspecialchars($option['label'], ENT_QUOTES); ?>">
+                              <?php echo htmlspecialchars($option['label']); ?>
+                            </button>
+                          <?php endforeach; ?>
+                        </div>
                       </div>
-                    </div>
+                    <?php endif; ?>
                   <?php endforeach; ?>
                 </div>
               <?php elseif (!empty($product['variants'])): ?>

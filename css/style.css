@@ -1910,6 +1910,33 @@ section.fogging-page-section,
   margin-top: 12px;
 }
 
+.variant-option-rows {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.variant-option-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.variant-option-label {
+  flex: 0 0 180px;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1d1d1d;
+}
+
+.variant-option-row .variant-tags {
+  flex: 1;
+  margin-top: 0;
+}
+
 .variant-group {
   display: flex;
   align-items: center;
@@ -1936,6 +1963,16 @@ section.fogging-page-section,
 }
 
 @media (max-width: 575px) {
+  .variant-option-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .variant-option-label {
+    flex-basis: auto;
+  }
+
   .variant-group {
     align-items: flex-start;
     flex-direction: column;
