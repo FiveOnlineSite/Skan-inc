@@ -18,22 +18,22 @@
 
       <div class="about-milestones">
         <article class="about-milestone animate-on-scroll">
-          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-calendar.svg" alt="">
+          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-calendar.svg" alt="Years of experience">
           <h3>20+ Years Of Experience</h3>
           <p>Delighting customers since 2002.</p>
         </article>
         <article class="about-milestone animate-on-scroll">
-          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-file.svg" alt="">
+          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-file.svg" alt="Company documentation">
           <h3>ISO 13485:2016 Certified</h3>
           <p>World class quality assurance.</p>
         </article>
         <article class="about-milestone animate-on-scroll">
-          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-award.svg" alt="">
+          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-award.svg" alt="Awards and recognition">
           <h3>Bhartiya Udyog Pratibha Award</h3>
           <p>For innovative fumigation method.</p>
         </article>
         <article class="about-milestone animate-on-scroll">
-          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-certificate.svg" alt="" class="about-icon--red">
+          <img src="<?php echo SITE_ROOT; ?>/images/about-icon-certificate.svg" alt="Certifications">
           <h3>CDSCO Registered</h3>
           <p>Registered medical device manufacturer.</p>
         </article>
@@ -73,11 +73,11 @@
       <div class="about-trust-layout">
         <div class="about-trust-column">
           <article class="about-trust-item animate-on-scroll">
-            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-quality.svg" alt=""><h3>Quality Management</h3></div>
+            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-quality.svg" alt="Quality management"><h3>Quality Management</h3></div>
             <p>Every product undergoes strict quality checks by trained analysts, ensuring reliable performance, advanced manufacturing standards, and consistent compliance with international quality expectations.</p>
           </article>
           <article class="about-trust-item animate-on-scroll">
-            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-certificate.svg" alt=""><h3>Certification &amp; Clientele</h3></div>
+            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-certificate.svg" alt="Certification and clientele"><h3>Certification &amp; Clientele</h3></div>
             <p>Our ISO accreditation, CE-certified fogger machine, and respected industry recognition reflect our credibility, trusted processes, and strong clientele across healthcare facilities.</p>
           </article>
         </div>
@@ -88,11 +88,11 @@
 
         <div class="about-trust-column">
           <article class="about-trust-item animate-on-scroll">
-            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-pricing.svg" alt=""><h3>Pricing</h3></div>
+            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-pricing.svg" alt="Pricing"><h3>Pricing</h3></div>
             <p>We offer competitive pricing without compromising quality, helping customers access dependable products in required volumes while maintaining value in every purchase.</p>
           </article>
           <article class="about-trust-item animate-on-scroll">
-            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-service.svg" alt=""><h3>Customer Service</h3></div>
+            <div class="about-trust-title"><img src="<?php echo SITE_ROOT; ?>/images/about-icon-service.svg" alt="Customer service"><h3>Customer Service</h3></div>
             <p>Our support team promptly handles queries, orders, payments, and dispatches, ensuring smooth communication and dependable assistance beyond product delivery.</p>
           </article>
         </div>

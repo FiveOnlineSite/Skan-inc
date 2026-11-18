@@ -18,8 +18,12 @@ $nextPost = $postIndex !== null && $postIndex < count($posts) - 1 ? $posts[$post
 if ($post === null) {
   http_response_code(404);
   $pageTitle = 'Blog Post Not Found';
+  $metaTitle = 'Blog Post Not Found | Skan Inc.';
+  $metaDescription = 'The requested Skan Inc. blog post could not be found. Browse our latest cleanroom, hygiene and decontamination insights.';
 } else {
   $pageTitle = $post['title'];
+  $metaTitle = $post['title'] . ' | Skan Inc. Blog';
+  $metaDescription = $post['excerpt'];
 }
 ?>
 <?php include 'includes/header.php'; ?>

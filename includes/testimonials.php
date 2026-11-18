@@ -74,6 +74,15 @@ $testimonialClientLogos = [
   'Breach Candy Hospital Trust' => 'breachcandy.png',
   'Premchand Cardiac Institute' => 'cardiac.png'
 ];
+$testimonialClientLogoAlts = [
+  'P.D Hinduja National Hospital' => 'P. D. Hinduja Hospital and Medical Research Center logo with the Quality Healthcare for All tagline',
+  'Holy Cross Hospital' => 'Holy Cross Hospital logo with a dove and the words Service in Love',
+  'C Rly Hospital, Byculla' => 'Indian Railways logo with a locomotive and the Ashoka emblem',
+  'Jagjivan Ram Hospital' => 'Indian Railways logo with a locomotive and the Ashoka emblem',
+  'Saifee Hospital' => 'Saifee Hospital logo with a stylized gold and gray emblem',
+  'Breach Candy Hospital Trust' => 'Breach Candy Hospital logo with a blue circular wave emblem',
+  'Premchand Cardiac Institute' => 'Smt. S. R. Mehta and Sir K. P. Cardiac Institute logo with a heart emblem',
+];
 ?>
 
 <section id="testimonials" class="testimonials">
@@ -93,7 +102,7 @@ $testimonialClientLogos = [
             <div class="testimonial-author">
               <?php if (isset($testimonialClientLogos[$testimonial['name']])): ?>
                 <img src="<?php echo SITE_ROOT; ?>/images/<?php echo $testimonialClientLogos[$testimonial['name']]; ?>"
-                  alt="<?php echo htmlspecialchars($testimonial['name']); ?> logo"
+                  alt="<?php echo htmlspecialchars($testimonialClientLogoAlts[$testimonial['name']] ?? ('Profile image for ' . $testimonial['name'])); ?>"
                   class="testimonial-avatar testimonial-avatar--logo">
               <?php else: ?>
                 <?php

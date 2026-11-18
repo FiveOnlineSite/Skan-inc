@@ -178,7 +178,7 @@ $comparisonRows = [
               <?php if (!empty($product['brochure'])): ?>
                 <a href="<?php echo htmlspecialchars($product['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
                   Download Brochure
-                  <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+                  <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="Download brochure">
                 </a>
               <?php endif; ?>
             </div>

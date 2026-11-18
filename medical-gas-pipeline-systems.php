@@ -75,7 +75,7 @@ $faqs = [
           <?php if (!empty($solution['brochure'])): ?>
             <a href="<?php echo htmlspecialchars($solution['brochure']); ?>" class="btn-outline" target="_blank" rel="noopener noreferrer">
               Download Brochure
-              <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="">
+              <img src="<?php echo SITE_ROOT; ?>/images/icon-download.svg" alt="Download brochure">
             </a>
           <?php endif; ?>
         </div>
