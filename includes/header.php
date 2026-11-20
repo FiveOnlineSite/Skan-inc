@@ -165,7 +165,7 @@ $showBreadcrumbs = $currentPage !== 'index.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo htmlspecialchars($metaTitle, ENT_QUOTES, 'UTF-8'); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($metaDescription, ENT_QUOTES, 'UTF-8'); ?>">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="<?php echo htmlspecialchars($robots ?? 'index, follow', ENT_QUOTES, 'UTF-8'); ?>">
   <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl, ENT_QUOTES, 'UTF-8'); ?>">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Skan Inc.">

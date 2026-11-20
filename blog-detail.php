@@ -1,6 +1,14 @@
 <?php
+require_once __DIR__ . '/includes/config.php';
+
+$slug = trim((string) ($_GET['post'] ?? ''));
+
+if ($slug === '') {
+  header('Location: ' . SITE_ROOT . '/blog.php', true, 301);
+  exit;
+}
+
 $posts = require __DIR__ . '/includes/blog-posts.php';
-$slug = $_GET['post'] ?? '';
 $post = null;
 $postIndex = null;
 
@@ -17,6 +25,7 @@ $nextPost = $postIndex !== null && $postIndex < count($posts) - 1 ? $posts[$post
 
 if ($post === null) {
   http_response_code(404);
+  $robots = 'noindex, follow';
   $pageTitle = 'Blog Post Not Found';
   $metaTitle = 'Blog Post Not Found | Skan Inc.';
   $metaDescription = 'The requested Skan Inc. blog post could not be found. Browse our latest cleanroom, hygiene and decontamination insights.';
